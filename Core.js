@@ -1267,6 +1267,8 @@ function Flixpicker() {
 		if(element.innerText.indexOf("Flix") > -1)
 			element.style.color = color;
 	return;
+	})
+}
 
 
 function login(password) {
@@ -1772,6 +1774,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 })
 }
 	}
-}
-	})
 }
