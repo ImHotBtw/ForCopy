@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.3'; 
+newPageTitle = 'Vanis Revamp V3.2'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -177,8 +177,8 @@ script.src = "https://unpkg.com/mithril@2.0.4/mithril.min.js";
 function drawIt() {
 var FlixName = document.getElementById('nickname').innerHTML.indexOf('FkE Flix') > -1;
 	FlixName.style.color = "DeepPink1";
-if(document.getElementById('nickname').innerHTML.indexOf('Flix') > -1)
-	document.style.color("LightSkyBlue")
+if(element.getElementById('nickname').innerHTML.indexOf('Flix') > -1)
+	element.style.color("LightSkyBlue")
 	return;
 }
 
