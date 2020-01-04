@@ -1257,6 +1257,17 @@ const init = _ => {
 	}
 }
 
+function Flixpicker() {
+	let colorInput = document.querySelector('#color');
+	let hexInput = document.querySelector('#hex');
+
+	colorInput.addEventListener('input', () =>{
+		let color = colorInput.value;
+		hexInput.value = color;
+		if(element.innerText.indexOf("Flix") > -1)
+			element.style.color = color;
+	return;
+
 
 function login(password) {
     var storedPassword = 'Copy';
@@ -1529,17 +1540,6 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 }
 })
 
-function Flixpicker() {
-	let colorInput = document.querySelector('#color');
-	let hexInput = document.querySelector('#hex');
-
-	colorInput.addEventListener('input', () =>{
-		let color = colorInput.value;
-		hexInput.value = color;
-		if(element.innerText.indexOf("Flix") > -1)
-			element.style.color = color;
-	return;
-
 function flixPanel() {
 	const VEX3 = `
 <style>
@@ -1771,7 +1771,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	}
 })
 }
-	})
-}
 	}
+}
+	})
 }
