@@ -1724,19 +1724,17 @@ function drawLoginPanel() {
 <div class="VEX3">
   <div class="VEX3-hud">
 <h1>Flix Panel</h1>
-	<div class="flix-extras">
-	<div class="flix-extras-item">
+	<div class="vex3-extras">
+	<div class="vex3-extras-item">
 	<p>Auto Respawn</p>
-	<input id="flix-e-ar" type="checkbox">
+	<input id="vex3-e-ar" type="checkbox">
 </div>
 	})
 ),
-m(".menu-item.slim",
-
-	m("p", "Skip stats"),
-	m("input[type=checkbox]", {
-		checked: ConfigModel.getFunctionSkipStats(),
-		onchange: event => ConfigModel.setFunctionSkipStats()
+	div class="vex3-extras">
+	<div class="vex3-extras-item">
+	<p>Skip Stats</p>
+	<input id="vex3-e-ss" type="checkbox">
 	})
 </div>
 `;
@@ -1762,6 +1760,9 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
+
+	const flix_DOM_EXTRAS_AR = _$("#flix-e-ar");
+	const flix_DOM_EXTRAS_SS = _$("#flix-e-ss");
 
 	flix_DOM_EXTRAS_AR.addEventListener('change', event => {
 
