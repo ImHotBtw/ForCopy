@@ -905,6 +905,8 @@ const init = _ => {
 			}
 	}, 1000 / 25);
 
+}
+
 	const Player = {
 
 		nick: '',
@@ -1255,7 +1257,7 @@ const init = _ => {
 		Functions: Functions
 		
 	}
-}
+
 
 function login(password) {
     var storedPassword = 'Copy';
@@ -1528,7 +1530,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 }
 })
 
-function flixPanel() {
+function drawLoginPanel() {
 	const VEX3 = `
 <style>
 
