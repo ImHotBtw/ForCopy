@@ -1301,12 +1301,9 @@ function getInfo() {
 	var password = document.getElementById('password').value
 
 	for(var i = 0; i < objPeople.length; i++) {
-		if(username == objPeople[i].username && password == objPeople[i].password) {
-			alert("Welcome to Revamp " + copy)
-			console.log(username + " is logged in!!!")
-			drawIt();
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
 			console.log("omg ur copy")
+			drawIt();
 			return
 		}
 	}
