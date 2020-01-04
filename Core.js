@@ -1306,6 +1306,7 @@ function getInfo() {
 		}
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			alert("Welcome back to Revamp Flix!")
+			drawLoginPanel();
 		}
 		if(username == objPeople[i].username2 && password == objPeople[i].password) {
 			alert("Welcome back to Revamp Reverse!")
@@ -1542,6 +1543,7 @@ function drawLoginPanel() {
 
   width : 350px;
   height: 300px;
+  bottom: 0%;
   right: 2%;
   position: fixed;
   top: calc(50% - 400px);
