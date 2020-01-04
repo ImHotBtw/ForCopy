@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'Vanis Revamp V3.3'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
