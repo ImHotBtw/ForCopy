@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'Vanis ffff'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -906,9 +906,9 @@ const init = _ => {
 	}, 1000 / 25);
 
 function drawIt() {
-	if(username = "Copy")alert("lmfao")
+	if(username = "Copy")console.log("you are copy!")
 else
-	alert("you are not copy")
+	console.log("you are not copy!")
 	return;
 }
 
