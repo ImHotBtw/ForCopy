@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'bad'; 
+newPageTitle = 'Vanis Revamp V3.2'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1282,7 +1282,7 @@ function status() {
 
 var objPeople = [
 	{ // Object @ 0 index
-		username: "Copy",
+		copy: "Copy",
 		password: ""
 	},
 	{ // Object @ 1 index
@@ -1295,16 +1295,14 @@ var objPeople = [
 	}
 
 ]
-
 function getInfo() {
-	var username = document.getElementById('username').value
-	var copy = document.getElementById('username').innerHTML.indexOf("Copy")
-	var password = document.getElementById('password').value
+	var usernames = document.getElementById('copy').value
+	var passwords = document.getElementById('password').value
 
 	for(var i = 0; i < objPeople.length; i++) {
-		if(username == objPeople[i].username && password == objPeople[i].password) {
+		if(usernames == objPeople[i].copy && password == objPeople[i].password) {
 			alert("Welcome to Revamp " + copy)
-			console.log(username + " is logged in!!!")
+			console.log(usernames + " is logged in!!!")
 			drawIt();
 			return
 		}
