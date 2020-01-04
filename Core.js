@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Refreshed'; 
+newPageTitle = 'Vanis Revamp for you'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -173,6 +173,13 @@ let script, link;
 script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "https://unpkg.com/mithril@2.0.4/mithril.min.js";
+
+<script language="javascript">
+if (
+	document.getElementById('ElementName').innerHTML.indexOf('Text to search for') != -1){
+		document.write('hi')
+}
+</script>
 
 document.querySelector("head").appendChild(script);
 
@@ -1740,13 +1747,6 @@ m(".menu-item.slim",
 	})
 </div>
 `;
-
-<script language="javascript">
-if (
-   document.getElementById('ElementName').innerHTML.indexOf('Text to search for') != -1){
-	   document.write('hi')
-}
-</script>
 
 setTimeout(()=>{
 window.showHud = () => {
