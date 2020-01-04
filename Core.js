@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.1'; 
+newPageTitle = 'Vanis Revamp V3.2'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -175,8 +175,8 @@ script.type = "text/javascript";
 script.src = "https://unpkg.com/mithril@2.0.4/mithril.min.js";
 
 function drawIt() {
-var FlixName = document.getElementById('nickname').innerHTML.indexOf('fake') > -1;
-	console.log("hotass")
+var name = document.getElementById("nickname").innerText;
+	console.log(name)
 	return;
 }
 
