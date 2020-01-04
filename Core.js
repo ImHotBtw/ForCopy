@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'fat flix'; 
+newPageTitle = 'Vanis Revamp V3.2'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1282,7 +1282,7 @@ function status() {
 
 var objPeople = [
 	{ // Object @ 0 index
-		copy: "Copy",
+		username1: "Copy",
 		password: ""
 	},
 	{ // Object @ 1 index
@@ -1295,15 +1295,18 @@ var objPeople = [
 	}
 
 ]
+
 function getInfo() {
-	var username = document.getElementById('copy').value
+	var username = document.getElementById('username').value
 	var password = document.getElementById('password').value
 
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
-			alert("Welcome to Revamp " + username)
+			alert("Welcome to Revamp " + copy)
 			console.log(username + " is logged in!!!")
 			drawIt();
+		if(username == objPeople[i].username1 && password == objPeople[i].password) {
+			console.log("omg ur copy")
 			return
 		}
 	}
