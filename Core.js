@@ -1312,7 +1312,7 @@ function getInfo() {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			alert("Welcome to Revamp " + username)
 			console.log(username + " is logged in!!!")
-			drawItPanel();
+			drawIt();
 			return
 		}
 	}
