@@ -1723,15 +1723,13 @@ function drawLoginPanel() {
 
 <div class="VEX3">
   <div class="VEX3-hud">
-<h1>LOGIN</h1>
-m(".item-group",
-
-m(".menu-item.slim",
-
-	m("p", "Auto respawn"),
-	m("input[type=checkbox]", {
-		checked: ConfigModel.getFunctionAutoRespawn(),
-		onchange: event => ConfigModel.setFunctionAutoRespawn()
+<h1>Flix Panel</h1>
+	<div class="flix-extras">
+	<div class="flix-extras-item">
+	<p>Auto Respawn</p>
+	<input id="flix-e-ar" type="checkbox">
+	ConfigModel.getFunctionAutoRespawn()
+</div>
 	})
 ),
 m(".menu-item.slim",
@@ -1757,7 +1755,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 }
 
   document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX3;
-  document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Login Panel</a>';
+  document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Flix Panel</a>';
 
     window._$ = selector => {
 
