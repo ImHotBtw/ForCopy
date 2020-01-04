@@ -1286,11 +1286,11 @@ var objPeople = [
 		password: ""
 	},
 	{ // Object @ 1 index
-		username: "Reverse",
+		username2: "Reverse",
 		password: ""
 	},
 	{ // Object @ 2 index
-		username: "Flix",
+		username3: "Flix",
 		password: ""
 	}
 
@@ -1302,9 +1302,14 @@ function getInfo() {
 
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
-			console.log("omg ur copy")
-			drawIt();
-			return
+			alert("Welcome back to Revamp Copy!")
+			copyPanel();
+		if(username == objPeople[i].username2 && password == objPeople[i].password) {
+			alert("Welcome back to Revamp Reverse!")
+			revPanel();
+		if(username == objPeople[i].username3 && password == objPeople[i].password) {
+			alert("Welcome back to Revamp Flix!")
+			flixPanel();
 		}
 	}
     console.log("incorrect username or password")
@@ -1760,4 +1765,6 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
 })
+}
+	}
 }
