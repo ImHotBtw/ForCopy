@@ -1765,11 +1765,10 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	checkbox.addEventListener('change', (event) => {
 	  if (event.target.checked) {
-		alert('Auto Respawn - ON');
-		ConfigModel.getFunctionAutoRespawn(),
-		event => ConfigModel.setFunctionAutoRespawn()
+		alert("Auto Respawn - ON");
+		checked: ConfigModel.getFunctionAutoRespawn()
 	  } else {
-		alert('Auto Respawn - OFF');
+		alert("Auto Respawn - OFF");
 	  }
 	})
 	})
