@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'Vanis Revamp V3.4444'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -906,6 +906,8 @@ const init = _ => {
 
 				if(element.innerText.indexOf(Player.tag) > -1)
 					element.style.color = "hotpink";//|| ConfigModel.getHudColor();
+				if(element.innerText.indexOf("Flix") > -1)
+					element.style.color = "tomato";
 			}
 	}, 1000 / 25);
 
