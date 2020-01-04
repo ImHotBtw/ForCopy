@@ -175,22 +175,10 @@ script.type = "text/javascript";
 script.src = "https://unpkg.com/mithril@2.0.4/mithril.min.js";
 
 function drawIt() {
-var FlixName = document.getElementById('nickname').innerHTML.indexOf('FkE Flix') != -1;
+var FlixName = document.getElementById('nickname').innerHTML.indexOf('FkE Flix') > -1;
 	FlixName.style.color = "DeepPink1";
-var ReverseName = document.getElementById('nickname').innerHTML.indexOf('Fake Flix') != -1;
-	ReverseName.style.color = "DeepPink1";
-var CopyName = document.getElementById('nickname').innerHTML.indexOf('FkE Copy') != -1;
-	CopyName.style.color = "cyan1";
-var Reverse = document.getElementById('nickname').innerHTML.indexOf('Fake Reverse') != -1;
-	Reverse.style.color = "DarkOrchid1";
-var Reverse2 = document.getElementById('nickname').innerHTML.indexOf('Reverse') != -1;
-	Reverse2.style.color = "ForestGreen";
-var Copy2 = document.getElementById('nickname').innerHTML.indexOf('CopyCantPaste') != -1;
-	Copy2.style.color = "gold1";
-var Copy3 = document.getElementById('nickname').innerHTML.indexOf('Fake Copy') != -1;
-	Copy3.style.color = "LawnGreen";
-var Flix2 = document.getElementById('nickname').innerHTML.indexOf('Flix') != -1;
-	Flix2.style.color = "LightSkyBlue";
+if(document.getElementById('nickname').innerHTML.indexOf('Flix') > -1)
+	document.style.color("LightSkyBlue")
 	return;
 }
 
