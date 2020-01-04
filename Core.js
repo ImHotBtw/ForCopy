@@ -1721,9 +1721,23 @@ function drawLoginPanel() {
 <div class="VEX3">
   <div class="VEX3-hud">
 <h1>LOGIN</h1>
-<input type="text" id="username" placeholder="Choose Username">
-<input type="password" id="password" placeholer="Choose Password">
-<button type="button" onclick="getInfo()">Login</button>
+m(".item-group",
+
+m(".menu-item.slim",
+
+	m("p", "Auto respawn"),
+	m("input[type=checkbox]", {
+		checked: ConfigModel.getFunctionAutoRespawn(),
+		onchange: event => ConfigModel.setFunctionAutoRespawn()
+	})
+),
+m(".menu-item.slim",
+
+	m("p", "Skip stats"),
+	m("input[type=checkbox]", {
+		checked: ConfigModel.getFunctionSkipStats(),
+		onchange: event => ConfigModel.setFunctionSkipStats()
+	})
 </div>
 `;
 
