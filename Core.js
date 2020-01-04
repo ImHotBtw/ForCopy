@@ -905,6 +905,10 @@ const init = _ => {
 			}
 	}, 1000 / 25);
 
+function drawIt() {
+	username.includes("Copy");
+	console.log("you are Copy")
+	return;
 }
 
 	const Player = {
@@ -1257,6 +1261,7 @@ const init = _ => {
 		Functions: Functions
 		
 	}
+}
 
 
 function login(password) {
@@ -1298,13 +1303,10 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
 			alert("Welcome back to Revamp Copy!")
-			copyPanel();
 		if(username == objPeople[i].username2 && password == objPeople[i].password) {
 			alert("Welcome back to Revamp Reverse!")
-			revPanel();
 		if(username == objPeople[i].username3 && password == objPeople[i].password) {
 			alert("Welcome back to Revamp Flix!")
-			flixPanel();
 		}
 	}
     console.log("incorrect username or password")
@@ -1760,6 +1762,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
 })
-}
-	}
 }
