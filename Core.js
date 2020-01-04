@@ -1763,3 +1763,5 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	}
 })
 }
+	}
+}
