@@ -1727,11 +1727,7 @@ function drawLoginPanel() {
 	<div class="vex3-extras">
 	<div class="vex3-extras-item">
 	<p>Auto Respawn</p>
-	<input id="vex3-e-ar" type="checkbox">
-<script>
-	Functions.RESPAWN();
-	alert("finally")
-</script>
+	<input type="checkbox" onchange="Functions.RESPAWN();"
 </div>
 	})
 ),
