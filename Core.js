@@ -1286,11 +1286,11 @@ var objPeople = [
 		password: ""
 	},
 	{ // Object @ 1 index
-		username2: "Reverse",
+		username: "Reverse",
 		password: ""
 	},
 	{ // Object @ 2 index
-		username3: "Flix",
+		username: "Flix",
 		password: ""
 	}
 
@@ -1303,10 +1303,6 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
 			alert("Welcome back to Revamp Copy!")
-		if(username == objPeople[i].username2 && password == objPeople[i].password) {
-			alert("Welcome back to Revamp Reverse!")
-		if(username == objPeople[i].username3 && password == objPeople[i].password) {
-			alert("Welcome back to Revamp Flix!")
 		}
 	}
     console.log("incorrect username or password")
