@@ -1539,10 +1539,6 @@ function Flixpicker() {
 		if(element.innerText.indexOf("Flix") > -1)
 			element.style.color = color;
 	return;
-	}
-	,{
-	}
-,
 
 function flixPanel() {
 	const VEX3 = `
@@ -1775,8 +1771,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	}
 })
 }
-	,{
-})
+	})
 }
 	}
 }
