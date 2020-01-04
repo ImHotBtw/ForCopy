@@ -1741,6 +1741,19 @@ m(".menu-item.slim",
 </div>
 `;
 
+button.addEventListener('click', e => {
+	const treeWalker = document.createTreeWalker(document.body);
+	while (treeWalker.nextNode()) {
+	  const node = treeWalker.currentNode;
+	  node.textContent = node.textContent.replace(/FkE Flix/g, 'Lmfao Flix');
+	}
+  })
+
+  <html>
+  <span>This is an FkE Flix in a span in @ div.</span>
+  }
+	<input id="button" type="button" value="Replace @ with $" />
+	</html>
 
 
 setTimeout(()=>{
