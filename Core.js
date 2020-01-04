@@ -1728,7 +1728,6 @@ function drawLoginPanel() {
 	<div class="flix-extras-item">
 	<p>Auto Respawn</p>
 	<input id="flix-e-ar" type="checkbox">
-	Functions.RESPAWN();
 </div>
 	})
 ),
@@ -1763,5 +1762,23 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
+
+	flix_DOM_EXTRAS_AR.addEventListener('change', event => {
+
+		const state = event.target.checked;
+	  
+		if(state == true){
+	  
+		  flix_EXTRAS_AR_INTERVAL = setInterval(()=>{
+	  
+			if(!_$(".container")[2].style.display){
+	  
+			  _$("button.continue").click();
+			  Player.spawn();
+			  _$("#overlay").style.display = "none";
+	}
+})
+}
+	})
 })
 }
