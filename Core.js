@@ -174,12 +174,8 @@ script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "https://unpkg.com/mithril@2.0.4/mithril.min.js";
 
-<script language="javascript">
-if (
-	document.getElementById('ElementName').innerHTML.indexOf('Text to search for') != -1){
-		document.write('hi')
-}
-</script>
+document.getElementById('nickname').innerHTML.indexOf('FkE Flix') != -1;
+	console.log("trashcan")
 
 document.querySelector("head").appendChild(script);
 
