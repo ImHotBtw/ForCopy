@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.4444'; 
+newPageTitle = 'Vanis Revamp V3.2'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -173,12 +173,6 @@ let script, link;
 script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "https://unpkg.com/mithril@2.0.4/mithril.min.js";
-
-function drawIt() {
-var name = document.getElementById("nickname").innerText;
-	console.log(name)
-	return;
-}
 
 document.querySelector("head").appendChild(script);
 
@@ -910,6 +904,13 @@ const init = _ => {
 					element.style.color = "tomato";
 			}
 	}, 1000 / 25);
+
+function drawIt() {
+	if(username = "Copy")alert("lmfao")
+else
+	alert("you are not copy")
+	return;
+}
 
 	const Player = {
 
