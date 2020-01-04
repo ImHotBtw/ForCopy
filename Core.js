@@ -176,9 +176,7 @@ script.src = "https://unpkg.com/mithril@2.0.4/mithril.min.js";
 
 function drawIt() {
 var FlixName = document.getElementById('nickname').innerHTML.indexOf('FkE Flix') > -1;
-	FlixName.style.color = "DeepPink1";
-if(element.getElementById('nickname').innerHTML.indexOf('Flix') > -1)
-	element.style.color("LightSkyBlue")
+	console.log("hotass")
 	return;
 }
 
