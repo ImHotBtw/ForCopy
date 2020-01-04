@@ -1766,7 +1766,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	checkbox.addEventListener('change', (event) => {
 	  if (event.target.checked) {
 		alert('Auto Respawn - ON');
-		Functions.RESPAWN();
+		ConfigModel.getFunctionAutoRespawn(),
+		event => ConfigModel.setFunctionAutoRespawn()
 	  } else {
 		alert('Auto Respawn - OFF');
 	  }
