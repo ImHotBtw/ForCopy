@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp for you'; 
+newPageTitle = 'Refreshed'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1741,8 +1741,12 @@ m(".menu-item.slim",
 </div>
 `;
 
-document.body.innerHTML.search("Vanis.io");
-	console.log("hi")
+<script language="javascript">
+if (
+   document.getElementById('ElementName').innerHTML.indexOf('Text to search for') != -1){
+	   document.write('hi')
+}
+</script>
 
 setTimeout(()=>{
 window.showHud = () => {
