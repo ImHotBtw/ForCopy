@@ -1727,7 +1727,7 @@ function drawLoginPanel() {
 	<div class="vex3-extras">
 	<div class="vex3-extras-item">
 	<p>Auto Respawn</p>
-	<input type="checkbox" onchange="Functions.RESPAWN();"
+	<input id="respawnCheck" type="checkbox" />
 </div>
 	})
 ),
@@ -1738,6 +1738,17 @@ function drawLoginPanel() {
 	})
 </div>
 `;
+
+const checkbox = document.getElementById('respawnCheck')
+
+checkbox.addEventListener('change', (event) => {
+  if (event.target.checked) {
+	alert('Auto Respawn - ON');
+	Functions.RESPAWN();
+  } else {
+    alert('Auto Respawn - OFF');
+  }
+})
 
 setTimeout(()=>{
 window.showHud = () => {
