@@ -1739,17 +1739,6 @@ function drawLoginPanel() {
 </div>
 `;
 
-const checkbox = document.getElementById('respawnCheck')
-
-checkbox.addEventListener('change', (event) => {
-  if (event.target.checked) {
-	alert('Auto Respawn - ON');
-	Functions.RESPAWN();
-  } else {
-    alert('Auto Respawn - OFF');
-  }
-})
-
 setTimeout(()=>{
 window.showHud = () => {
 document.querySelector(".VEX3").style.display ="block";
@@ -1771,5 +1760,16 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-})
+
+	const checkbox = document.getElementById('respawnCheck')
+
+	checkbox.addEventListener('change', (event) => {
+	  if (event.target.checked) {
+		alert('Auto Respawn - ON');
+		Functions.RESPAWN();
+	  } else {
+		alert('Auto Respawn - OFF');
+	  }
+	})
+	})
 }
