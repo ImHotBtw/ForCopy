@@ -1728,7 +1728,7 @@ function drawLoginPanel() {
 	<div class="flix-extras-item">
 	<p>Auto Respawn</p>
 	<input id="flix-e-ar" type="checkbox">
-	ConfigModel.getFunctionAutoRespawn()
+	Functions.RESPAWN();
 </div>
 	})
 ),
