@@ -174,8 +174,11 @@ script = document.createElement("script");
 script.type = "text/javascript";
 script.src = "https://unpkg.com/mithril@2.0.4/mithril.min.js";
 
+function drawIt() {
 document.getElementById('nickname').innerHTML.indexOf('FkE Flix') != -1;
 	console.log("trashcan")
+	return;
+}
 
 document.querySelector("head").appendChild(script);
 
@@ -1309,7 +1312,7 @@ function getInfo() {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			alert("Welcome to Revamp " + username)
 			console.log(username + " is logged in!!!")
-			drawLoginPanel();
+			drawItPanel();
 			return
 		}
 	}
