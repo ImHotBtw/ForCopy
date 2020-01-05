@@ -1726,6 +1726,7 @@ function reversePanel() {
 	<div class="VEX4-extras">
 	<div class="VEX4-extras-item">
 	<p>Name: Reverse - Color Changer</p>
+	<p>Secondary: Fake Reverse - Color Changer</p>
 	<input id="color" type="text" />
 	<input id="submitColor" value="Submit" type="button" />
 </div>
@@ -1745,7 +1746,7 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 }
 
   document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX4;
-  document.querySelector(".social-container").innerHTML += '<a id="toggleHud2" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud2()">Flix Panel</a>';
+  document.querySelector(".social-container").innerHTML += '<a id="toggleHud2" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud2()">Reverse Panel</a>';
 
     window._$ = selector => {
 
@@ -1777,7 +1778,9 @@ setInterval(_ => {
 
 			element.style.color = "#ffffff";
 
-			if(element.innerText.indexOf("Fake Flix") > -1)
+			if(element.innerText.indexOf("Fake Reverse") > -1)
+				element.style.color = nameColor;
+			if(element.innerText.indexOf("Reverse") > -1)
 				element.style.color = nameColor;
 		}
 }, 1 / 25);
@@ -1787,229 +1790,257 @@ setInterval(_ => {
 
 function drawLoginPanel() {
 	const VEX3 = `
-<style>
-
-.VEX3 {
-
-  width : 350px;
-  height: 300px;
-  bottom: 0%;
-  right: 2%;
-  position: fixed;
-  top: calc(50% - 400px);
-
-  display: none;
-  flex-wrap : wrap;
-  justify-content: center;
-
-  background: rgba(30, 30, 30, .75);
-  border: 1px solid red;
-
-  font-family : Monospace;
-
-  z-index: 9999;
-}
-
-.VEX3 > .VEX3-hud {
-
-  width: 90%;
-
-  display : flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.VEX3 > .VEX3-hud > p {
-
-  width: 100%;
-  text-align: center;
-
-  color : white;
-}
-.VEX3 > .VEX3-hud > input {
-
-  width: 100%;
-
-  background : rgba(30, 30, 30, .65);
-  border: 1px solid rgba(30, 30, 30, 1);
-
-  text-align: center;
-  color: #ffffff;
-
-  outline : 0;
-  box-shadow: none;
-}
-
-.VEX3 > .VEX3-skins {
-
-  width: 90%;
-
-  display : flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.VEX3 > .VEX3-skins > .VEX3-skins-item {
-
-  width: 100%;
-}
-.VEX3 > .VEX3-skins > .VEX3-skins-item > p {
-
-  width: 100%;
-  text-align: center;
-
-  color : white;
-}
-
-.VEX3 > .VEX3-skins > .VEX3-skins-item > input {
-
-  width: 100%;
-
-  background : rgba(30, 30, 30, .65);
-  border: 1px solid rgba(30, 30, 30, 1);
-
-  text-align: center;
-  color: #ffffff;
-
-  outline : 0;
-  box-shadow: none;
-}
-
-.VEX3 > .VEX3-controls {
-
-  width: 90%;
-
-  display : flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.VEX3 > .VEX3-controls > p {
-
-  width: 100%;
-  text-align: center;
-
-  color : white;
-}
-
-.VEX3 > .VEX3-controls > button {
-
-  width: 50%;
-
-  background : rgba(30, 30, 30, .65);
-  border: 1px solid rgba(30, 30, 30, 1);
-
-  text-align: center;
-  color: #ffffff;
-
-  outline : 0;
-  box-shadow: none;
-}
-
-#VEX3-r-start {}
-#VEX3-r-start.active {
-
-  color: lime;
-}
-#VEX3-r-start:hover {
-
-  color: lime;
-}
-
-#VEX3-r-stop {}
-#VEX3-r-stop.active {
-
-  color: aquamarine1;
-}
-#VEX3-r-stop:hover {
-
-  color: aquamarine1;
-}
-
-.VEX3 > .VEX3-extras {
-
-  width: 90%;
-
-  display : flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.VEX3 > .VEX3-extras {
-
-  width: 90%;
-
-  text-align: center;
-  color: white;
-}
-.VEX3 > .VEX3-extras > .VEX3-extras-item {
-
-  width: 100%;
-  display: inline-flex;
-}
-.VEX3 > .VEX3-extras > .VEX3-extras-item > p {
-
-  width: 80%;
-  text-align: center;
-
-  color : white;
-}
-
-.VEX3 > .VEX3-extras > .VEX3-extras-item > input {
-
-  margin-left: 10px;
-
-  background : rgba(30, 30, 30, .65);
-  border: 1px solid rgba(30, 30, 30, 1);
-
-  text-align: center;
-  color: #ffffff;
-
-  outline : 0;
-  box-shadow: none;
-}
-
-</style>
-
-<div class="VEX3">
-  <div class="VEX3-hud">
-<h1>Flix Panel</h1>
-	<div class="vex3-extras">
-	<div class="vex3-extras-item">
-	<p>Name: Flix - Color Changer</p>
-	<input id="vex-hc" type="text" placeholder="hex/rgb ex. HEX - #ffffff RGB - (255, 0, 0)">
-</div>
-	})
-),
-	div class="vex3-extras">
-	<div class="vex3-extras-item">
-	<p>Skip Stats</p>
-	<input id="vex3-e-ss" type="checkbox">
-	})
-</div>
-`;
-
-setTimeout(()=>{
-window.showHud = () => {
-document.querySelector(".VEX3").style.display ="block";
-document.querySelector("#toggleHud").setAttribute("onclick", "hideHud()");
-
-}
-
-window.hideHud = () => {
-document.querySelector(".VEX3").style.display ="none";
-document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
-}
-
-  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX3;
-  document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Flix Panel</a>';
-
-    window._$ = selector => {
-
-    const nodes = document.querySelectorAll(selector);
-
-	return nodes.length == 1 ? nodes[0] : nodes;
+	<style>
+	
+	.VEX3 {
+	
+	  width : 350px;
+	  height: 300px;
+	  bottom: 0%;
+	  right: 2%;
+	  position: fixed;
+	  top: calc(50% - 400px);
+	
+	  display: none;
+	  flex-wrap : wrap;
+	  justify-content: center;
+	
+	  background: rgba(30, 30, 30, .75);
+	  border: 1px solid red;
+	
+	  font-family : Monospace;
+	
+	  z-index: 9999;
 	}
+	
+	.VEX3 > .VEX3-hud {
+	
+	  width: 90%;
+	
+	  display : flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+	
+	.VEX3 > .VEX3-hud > p {
+	
+	  width: 100%;
+	  text-align: center;
+	
+	  color : white;
+	}
+	.VEX3 > .VEX3-hud > input {
+	
+	  width: 100%;
+	
+	  background : rgba(30, 30, 30, .65);
+	  border: 1px solid rgba(30, 30, 30, 1);
+	
+	  text-align: center;
+	  color: #ffffff;
+	
+	  outline : 0;
+	  box-shadow: none;
+	}
+	
+	.VEX3 > .VEX3-skins {
+	
+	  width: 90%;
+	
+	  display : flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+	
+	.VEX3 > .VEX3-skins > .VEX3-skins-item {
+	
+	  width: 100%;
+	}
+	.VEX3 > .VEX3-skins > .VEX3-skins-item > p {
+	
+	  width: 100%;
+	  text-align: center;
+	
+	  color : white;
+	}
+	
+	.VEX3 > .VEX3-skins > .VEX3-skins-item > input {
+	
+	  width: 100%;
+	
+	  background : rgba(30, 30, 30, .65);
+	  border: 1px solid rgba(30, 30, 30, 1);
+	
+	  text-align: center;
+	  color: #ffffff;
+	
+	  outline : 0;
+	  box-shadow: none;
+	}
+	
+	.VEX3 > .VEX3-controls {
+	
+	  width: 90%;
+	
+	  display : flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+	
+	.VEX3 > .VEX3-controls > p {
+	
+	  width: 100%;
+	  text-align: center;
+	
+	  color : white;
+	}
+	
+	.VEX3 > .VEX3-controls > button {
+	
+	  width: 50%;
+	
+	  background : rgba(30, 30, 30, .65);
+	  border: 1px solid rgba(30, 30, 30, 1);
+	
+	  text-align: center;
+	  color: #ffffff;
+	
+	  outline : 0;
+	  box-shadow: none;
+	}
+	
+	#VEX3-r-start {}
+	#VEX3-r-start.active {
+	
+	  color: lime;
+	}
+	#VEX3-r-start:hover {
+	
+	  color: lime;
+	}
+	
+	#VEX3-r-stop {}
+	#VEX3-r-stop.active {
+	
+	  color: aquamarine1;
+	}
+	#VEX3-r-stop:hover {
+	
+	  color: aquamarine1;
+	}
+	
+	.VEX3 > .VEX3-extras {
+	
+	  width: 90%;
+	
+	  display : flex;
+	  flex-wrap: wrap;
+	  justify-content: center;
+	}
+	
+	.VEX3 > .VEX3-extras {
+	
+	  width: 90%;
+	
+	  text-align: center;
+	  color: white;
+	}
+	.VEX3 > .VEX3-extras > .VEX3-extras-item {
+	
+	  width: 100%;
+	  display: inline-flex;
+	}
+	.VEX3 > .VEX3-extras > .VEX3-extras-item > p {
+	
+	  width: 80%;
+	  text-align: center;
+	
+	  color : white;
+	}
+	
+	.VEX3 > .VEX3-extras > .VEX3-extras-item > input {
+	
+	  margin-left: 10px;
+	
+	  background : rgba(30, 30, 30, .65);
+	  border: 1px solid rgba(30, 30, 30, 1);
+	
+	  text-align: center;
+	  color: #ffffff;
+	
+	  outline : 0;
+	  box-shadow: none;
+	}
+	
+	</style>
+	
+	<div class="VEX3">
+	  <div class="VEX3-hud">
+	<h1>Reverse Panel</h1>
+		<div class="VEX3-extras">
+		<div class="VEX3-extras-item">
+		<p>Name: Fake Flix - Color Changer</p>
+		<p>Secondary: FkE Flix - Color Changer</p>
+		<input id="color2" type="text" />
+		<input id="submitColor2" value="Submit" type="button" />
+	</div>
+	</div>
+	`;
+
+	setTimeout(()=>{
+		window.showHud3 = () => {
+		document.querySelector(".VEX3").style.display ="block";
+		document.querySelector("#toggleHud3").setAttribute("onclick", "hideHud2()");
+		
+		}
+		
+		window.hideHud3 = () => {
+		document.querySelector(".VEX3").style.display ="none";
+		document.querySelector("#toggleHud3").setAttribute("onclick", "showHud2()");
+		}
+		
+		  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX4;
+		  document.querySelector(".social-container").innerHTML += '<a id="toggleHud3" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud3()">Flix Panel</a>';
+		
+			window._$ = selector => {
+		
+			const nodes = document.querySelectorAll(selector);
+		
+			return nodes.length == 1 ? nodes[0] : nodes;
+		}
+		document.getElementById("submitColor2").addEventListener("click", changeBackground, false);
+		
+		function changeBackground2() {
+			var nameColor2 = document.getElementById("color2").value;
+			alert("If youre changing colors, restart vanis :)")
+		
+		setInterval(_ => {
+		
+			if(_$(".slider.draw-delay").length != 0){
+		
+				_$(".slider.draw-delay").setAttribute("min", 5)
+				_$(".slider.draw-delay").setAttribute("min-value", 5)
+			}
+		
+			if(_$("#leaderboard").style.display != "none")
+		
+				if(_$(".leaderboard-label") != undefined)
+					_$(".leaderboard-label")[0].style.color = "tomato";
+					_$(".leaderboard-label")[0].style.color = "hotpink";
+		
+				for(const element of _$(".leaderboard-label")){
+		
+					element.style.color = "#ffffff";
+		
+					if(element.innerText.indexOf("Fake Flix") > -1)
+						element.style.color = nameColor2;
+					if(element.innerText.indexOf("FkE Flix") > -1)
+						element.style.color = nameColor2;
+				}
+		}, 1 / 25);
+		
+		}
+		})
 
 	const VEX_DOM_HC = _$("#vex-hc");
 	let VEX_HUD_COLOR = "";
