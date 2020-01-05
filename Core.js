@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'peniscolor'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1728,11 +1728,12 @@ function reversePanel() {
     <input type="color" id="body" name="body"
             value="#f6b73c">
 	<label for="body">Body</label>
-	if(element.innerText.indexOf("Flix") > -1)
-		element.style.color = (body);
 </div>
 </div>
 `;
+
+if(element.innerText.indexOf("Flix") > -1)
+element.style.color = (body);
 
 setTimeout(()=>{
 window.showHud2 = () => {
