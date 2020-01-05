@@ -1981,3 +1981,46 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
 })}})}
+
+<html>
+<div class="picker">
+    Select a color: <span class="color-choice" value="red" style="color: red;">Red</span> | <span class="color-choice" value="green" style="color: green;">Green</span> | <span class="color-choice" value="blue" style="color: blue;">Blue</span>
+</div>
+
+<div id="shapeArea">
+</div>
+</html>
+
+var width = 500,
+    height = 500
+    diameter = width/4;
+
+var svg = d3.select("#shapeArea").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+var circle = svg.selectAll("circle")
+    .data(['#ccc'])
+  .enter().append("circle")
+    .attr("cy", diameter/2 + 20)
+    .attr("cx", diameter/2 + 60)
+    .attr("r", diameter/2)
+    .attr('fill',function(d){
+        return d;
+    });
+
+d3.selectAll('.color-choice').on('click', function(e){    
+  var newColor = d3.select(this).attr('value');
+  d3.select("circle").attr("fill", newColor);
+});
+
+const picker_css = `
+.picker {
+	font-family: helvetica, sans-serif;
+	font-weight: bold;
+  }
+  
+  .color-choice {
+	  cursor: pointer;
+  }
+  `;
