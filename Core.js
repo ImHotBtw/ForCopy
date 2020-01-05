@@ -1757,6 +1757,8 @@ document.getElementById("submitColor").addEventListener("click", changeBackgroun
 
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
+	alert("Revamp has to be restarted to take changes!")
+	window.location.href = "/";
 
 setInterval(_ => {
 
