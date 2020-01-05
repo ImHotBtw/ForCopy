@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'colortewst'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -900,16 +900,6 @@ const init = _ => {
 
 				if(element.innerText.indexOf("Flix") > -1)
 					element.style.color = "tomato";
-
-				function revPinkon() {
-					if(element.innerText.indexOf("Fake Reverse") > -1)
-						element.style.color = "hotpink1";
-				}
-				
-				function revPinkoff() {
-					if(element.innerText.indexOf("Fake Reverse") > -1)
-						element.style.color = "ghostwhite";
-				}
 			}
 	}, 1000 / 25);
 
@@ -1735,16 +1725,8 @@ function reversePanel() {
 <h1>Flix Panel</h1>
 	<div class="VEX4-extras">
 	<div class="VEX4-extras-item">
-	<p>Name: Reverse - Color: Pink</p>
-	<input id="RevPink" type="checkbox" />
-	<p>Name: Fake Reverse - Color: Turqoise</p>
-	<input id="RevTurq" type="checkbox" />
-	<p>Name: Fake Reverse - Color: Purple</p>
-	<input id="RevPurp" type="checkbox" />
-	<p>Name: Fake Reverse - Color: Red</p>
-	<input id="RevRed" type"checkbox" />
-	<p>Name: Fake Reverse - Color: Gray</p>
-	<input id="RevGray" type"checkbox" />
+	<script src="jscolor.js"></script>
+	Color: <input class="jscolor" value="ab2567">
 </div>
 </div>
 `;
