@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanispls'; 
+newPageTitle = 'Vanis Revamp V3.2'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1779,7 +1779,7 @@ setInterval(_ => {
 			if(element.innerText.indexOf("Flix") > -1)
 				element.style.color = nameColor;
 		}
-}, 1000 / 25);
+}, 500 / 25);
 
 }
 })
