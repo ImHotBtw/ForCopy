@@ -1945,9 +1945,8 @@ function drawLoginPanel() {
 <h1>Flix Panel</h1>
 	<div class="vex3-extras">
 	<div class="vex3-extras-item">
-	<p>Name: Flix - Color: Blue</p>
-	<input id="FlixBlue" type="checkbox" />
-	<p>Name: Fake Flix - Color: Pink</p>
+	<p>Name: Flix - Color Changer</p>
+	<input id="vex-hc" type="text" placeholder="hex/rgb ex. HEX - #ffffff RGB - (255, 0, 0)">
 </div>
 	})
 ),
@@ -1980,37 +1979,22 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
+
+	const VEX_DOM_HC = _$("#vex-hc");
+
+	VEX_DOM_HC.addEventListener("change", event => {
+
+		if(event.target.value == localStorage.getItem("vex-hc"))
+		  return;
+	  
+		localStorage.setItem("vex-hc", event.target.value);
+	  
+		VEX_HUD_COLOR = localStorage.getItem("vex-hc");
+	  
+		VEX_HUD_COLOR_FUNC();
+	  }, false)
+
+	VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
+	VEX_HUD_COLOR = VEX_DOM_HC.value;
+	VEX_HUD_COLOR_FUNC();
 })}})}
-
-<html>
-<script>
-function setColor()
-{
-    var newColor = document.getElementById('color_pick').value;
-    d3.select("circle").attr("fill", newColor);
-}
-</script>
-<div class="picker">
-    Select a color: 
-    <input type="color" name="favcolor" value="#cccccc" id="color_pick" onchange="setColor();"/></div>
-<div id="shapeArea">
-</div>
-</html>
-
-var width = 500,
-    height = 500
-    diameter = width/4;
-
-var svg = d3.select("#shapeArea").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-var circle = svg.selectAll("circle")
-    .data(['#ccc'])
-  .enter().append("circle")
-    .attr("cy", diameter/2 + 20)
-    .attr("cx", diameter/2 + 60)
-    .attr("r", diameter/2)
-    .attr('fill',function(d){
-        return d;
-    });
