@@ -1722,12 +1722,11 @@ function reversePanel() {
 
 <div class="VEX4">
   <div class="VEX4-hud">
-<h1>Flix Panel</h1>
+<h1>Reverse Panel</h1>
 	<div class="VEX4-extras">
 	<div class="VEX4-extras-item">
-    <input type="color" id="body" name="body"
-            value="#f6b73c">
-	<label for="body">Body</label>
+	<p>Name: Reverse - Color Changer</p>
+	<input id="vex-hc" type="text" placeholder="hex/rgb ex. HEX - #ffffff RGB - (255, 0, 0)">
 </div>
 </div>
 `;
