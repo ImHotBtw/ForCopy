@@ -1789,7 +1789,7 @@ setInterval(_ => {
 })
 }
 
-function drawLoginPanel() {
+function drawLoginPanel()
 	const VEX3 = `
 	<style>
 	
@@ -2000,7 +2000,7 @@ function drawLoginPanel() {
 		document.querySelector("#toggleHud3").setAttribute("onclick", "showHud3()");
 		}
 		
-		  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX4;
+		  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX3;
 		  document.querySelector(".social-container").innerHTML += '<a id="toggleHud3" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud3()">Flix Panel</a>';
 		
 			window._$ = selector => {
@@ -2058,10 +2058,16 @@ function drawLoginPanel() {
 		VEX_HUD_COLOR_FUNC();
 	  }, false)
 
-	  const init2 = () => {
+	  const init = () => {
 		VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
 		VEX_HUD_COLOR = VEX_DOM_HC.value;
 		VEX_HUD_COLOR_FUNC();
 
+	const VEX_HUD_COLOR_FUNC = () => {
+
+		for(const element of _$(".fade"))
+		  element.style.background = VEX_HUD_COLOR;
+	  
+		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
 }
