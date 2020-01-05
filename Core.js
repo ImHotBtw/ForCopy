@@ -1777,7 +1777,7 @@ setInterval(_ => {
 
 			element.style.color = "#ffffff";
 
-			if(element.innerText.indexOf("Flix") > -1)
+			if(element.innerText.indexOf("Fake Flix") > -1)
 				element.style.color = nameColor;
 		}
 }, 1 / 25);
