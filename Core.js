@@ -1755,15 +1755,16 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 }
 document.getElementById("submitColor").addEventListener("click", changeBackground, false);
 
+for(const element of _$(".leaderboard-label")){
+
+	element.style.color = "#ffffff";
+
+	if(element.innerText.indexOf("Flix") > -1)
+		element.style.color = nameColor;
+
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
-
-	for(const element of _$(".leaderboard-label")){
-
-		element.style.color = "#ffffff";
-
-		if(element.innerText.indexOf("Flix") > -1)
-			element.style.color = nameColor;
+	
 }
 {
 }
