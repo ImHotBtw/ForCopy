@@ -1779,7 +1779,7 @@ setInterval(_ => {
 			if(element.innerText.indexOf("Flix") > -1)
 				element.style.color = nameColor;
 		}
-}, 5 / 25);
+}, 1 / 25);
 
 }
 })
