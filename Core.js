@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'Revamp -_-'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1789,7 +1789,7 @@ setInterval(_ => {
 })
 }
 
-function drawLoginPanel() {
+function drawLoginPanel()
 	const VEX3 = `
 	<style>
 	
@@ -2070,4 +2070,4 @@ function drawLoginPanel() {
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}}
+}
