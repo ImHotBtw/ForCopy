@@ -1762,6 +1762,16 @@ for(const element of _$(".leaderboard-label")){
 	if(element.innerText.indexOf("Flix") > -1)
 		element.style.color = nameColor;
 
+function setColor() {
+	for(const element of _$(".leaderboard-label")){
+
+		element.style.color = "#ffffff";
+	
+		if(element.innerText.indexOf("Flix") > -1)
+			element.style.color = nameColor;
+			setTimeout()
+	}
+
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
 	
@@ -2022,4 +2032,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}})}}})}
+}})}}}})}
