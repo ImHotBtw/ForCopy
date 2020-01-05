@@ -1763,8 +1763,8 @@ function setColor() {
 	
 		if(element.innerText.indexOf("Flix") > -1)
 			element.style.color = nameColor;
-			setTimeout()
-	}
+			setTimeout(arguments.callee, 5);
+		}
 
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
