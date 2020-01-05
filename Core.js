@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.1'; 
+newPageTitle = 'Vanis Revamp V3.2'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1762,9 +1762,74 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
+	const checkbox = document.getElementById('RevPink')
+
+	checkbox.addEventListener('change', (event) => {
+	  if (event.target.checked) {
+		alert("Fake Reverse - Pink name is ON");
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "hotpink";
+		
+	  } else {
+		alert("Fake Reverse - Pink name is OFF");
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "GhostWhite";
+	  }
+	const checkbox = document.getElementById('RevTurq')
+
+	checkbox.addEventListener('change', (event) => {
+	  if (event.target.checked) {
+		alert("Fake Reverse - Turquoise name is ON");
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "turquoise1";
+		
+	  } else {
+		alert("Fake Reverse - Turquoise name is OFF");
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "GhostWhite";
+	  }
+	const checkbox = document.getElementById('RevPurp')
+
+	checkbox.addEventListener('change', (event) => {
+	  if (event.target.checked) {
+		alert("Fake Reverse - Purple name is ON");
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "darkorchid4";
+		
+	  } else {
+		alert("Fake Reverse - Purple name is OFF");
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "GhostWhite";
+	  }
+	const checkbox = document.getElementById('RevGray')
+
+	checkbox.addEventListener('change', (event) => {
+	  if (event.target.checked) {
+		alert("Fake Reverse - Gray name is ON");
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "gray59";
+		
+	  } else {
+		alert("Fake Reverse - Gray name is OFF");
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "GhostWhite";
+	  }
+	  const checkbox = document.getElementById('RevRed')
+
+	  checkbox.addEventListener('change', (event) => {
+		if (event.target.checked) {
+		  alert("Fake Reverse - Red name is ON");
+		  if(element.innerText.indexOf("Fake Reverse") > -1)
+			  element.style.color = "firebrick2";
+		  
+		} else {
+		  alert("Fake Reverse - Red name is OFF");
+		  if(element.innerText.indexOf("Fake Reverse") > -1)
+			  element.style.color = "GhostWhite";
 	{
 	}
-})
+}
+	  })
 
 function drawLoginPanel() {
 	const VEX3 = `
@@ -2007,77 +2072,12 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		if(element.innerText.indexOf("Flix") > -1)
 			element.style.color = "GhostWhite";
 	  }
-	  const checkbox = document.getElementById('RevPink')
-
-	  checkbox.addEventListener('change', (event) => {
-		if (event.target.checked) {
-		  alert("Fake Reverse - Pink name is ON");
-		  if(element.innerText.indexOf("Fake Reverse") > -1)
-			  element.style.color = "hotpink";
-		  
-		} else {
-		  alert("Fake Reverse - Pink name is OFF");
-		  if(element.innerText.indexOf("Fake Reverse") > -1)
-			  element.style.color = "GhostWhite";
-		}
-	  const checkbox = document.getElementById('RevTurq')
-
-	  checkbox.addEventListener('change', (event) => {
-		if (event.target.checked) {
-		  alert("Fake Reverse - Turquoise name is ON");
-		  if(element.innerText.indexOf("Fake Reverse") > -1)
-			  element.style.color = "turquoise1";
-		  
-		} else {
-		  alert("Fake Reverse - Turquoise name is OFF");
-		  if(element.innerText.indexOf("Fake Reverse") > -1)
-			  element.style.color = "GhostWhite";
-		}
-	  const checkbox = document.getElementById('RevPurp')
-
-	  checkbox.addEventListener('change', (event) => {
-		if (event.target.checked) {
-		  alert("Fake Reverse - Purple name is ON");
-		  if(element.innerText.indexOf("Fake Reverse") > -1)
-			  element.style.color = "darkorchid4";
-		  
-		} else {
-		  alert("Fake Reverse - Purple name is OFF");
-		  if(element.innerText.indexOf("Fake Reverse") > -1)
-			  element.style.color = "GhostWhite";
-		}
-	  const checkbox = document.getElementById('RevGray')
-
-	  checkbox.addEventListener('change', (event) => {
-		if (event.target.checked) {
-		  alert("Fake Reverse - Gray name is ON");
-		  if(element.innerText.indexOf("Fake Reverse") > -1)
-			  element.style.color = "gray59";
-		  
-		} else {
-		  alert("Fake Reverse - Gray name is OFF");
-		  if(element.innerText.indexOf("Fake Reverse") > -1)
-			  element.style.color = "GhostWhite";
-		}
-		const checkbox = document.getElementById('RevRed')
-
-		checkbox.addEventListener('change', (event) => {
-		  if (event.target.checked) {
-			alert("Fake Reverse - Red name is ON");
-			if(element.innerText.indexOf("Fake Reverse") > -1)
-				element.style.color = "firebrick2";
-			
-		  } else {
-			alert("Fake Reverse - Red name is OFF");
-			if(element.innerText.indexOf("Fake Reverse") > -1)
-				element.style.color = "GhostWhite";
-		}
 	})
-})
-	  })
-	})
-})
-})
 })
 }
+	})
+})
+	})
+})
+})
 }
