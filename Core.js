@@ -900,7 +900,7 @@ const init = _ => {
 
 
 				if(element.innerText.indexOf("Flix") > -1)
-					element.style.color = "hotpink";
+					element.style.color = colorResult;
 			}
 	}, 1000 / 25);
 
@@ -2002,7 +2002,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	const VEX_HUD_COLOR_FUNC = () => {
 
-		setFlixColor();
+		var colorResult = document.getElementById("vex-hc").value;
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
