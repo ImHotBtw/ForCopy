@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'h'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -898,9 +898,8 @@ const init = _ => {
 
 				element.style.color = "#ffffff";
 
-
 				if(element.innerText.indexOf("Flix") > -1)
-					element.style.color = colorResult;
+					element.style.color = (body);
 			}
 	}, 1000 / 25);
 
@@ -1727,7 +1726,8 @@ function reversePanel() {
 	<div class="VEX4-extras">
 	<div class="VEX4-extras-item">
 	<p>Name: Reverse - Color Changer</p>
-	<input id="vex-hc" type="text" placeholder="hex/rgb ex. HEX - #ffffff RGB - (255, 0, 0)">
+	<input id="color" type="text" placeholder="HEX - #FFFFFF"/>
+	<input id="submitColor" value="Submit" type="button" />
 </div>
 </div>
 `;
@@ -1752,6 +1752,13 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
     const nodes = document.querySelectorAll(selector);
 
 	return nodes.length == 1 ? nodes[0] : nodes;
+}
+document.getElementById("submitColor").addEventListener("click", changeBackground, false);
+
+function changeBackground() {
+	var nameColor = document.getElementById("color").value;
+}
+{
 }
 
 function drawLoginPanel() {
@@ -2002,7 +2009,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	const VEX_HUD_COLOR_FUNC = () => {
 
-		var colorResult = document.getElementById("vex-hc").value;
+		for(const element of _$(".fade"))
+		  element.style.background = VEX_HUD_COLOR;
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
