@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'sad'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -898,13 +898,9 @@ const init = _ => {
 
 				element.style.color = "#ffffff";
 
-				if(element.innerText.indexOf("Flix") > -1)
-					element.style.color = (body);
 
-				function setFlixColor() {
-					if(element.innerText.indexOf("Flix") > -1)
-						element.style.color = VEX_HUD_COLOR;
-				}
+				if(element.innerText.indexOf("Flix") > -1)
+					element.style.color = VEX_HUD_COLOR;
 			}
 	}, 1000 / 25);
 
