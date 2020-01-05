@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'Vanispls'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1755,23 +1755,32 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 }
 document.getElementById("submitColor").addEventListener("click", changeBackground, false);
 
-window.setInterval(function(){
-	setName();
-	changeBackground();
-}, 1000);
-
-function setName() {
-	for(const element of _$(".leaderboard-label")){
-		
-		element.style.color = "#ffffff";
-		
-		if(element.innerText.indexOf("Flix") > -1)
-			element.style.color = nameColor;
-	};
-}
-
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
+
+setInterval(_ => {
+
+	if(_$(".slider.draw-delay").length != 0){
+
+		_$(".slider.draw-delay").setAttribute("min", 5)
+		_$(".slider.draw-delay").setAttribute("min-value", 5)
+	}
+
+	if(_$("#leaderboard").style.display != "none")
+
+		if(_$(".leaderboard-label") != undefined)
+			_$(".leaderboard-label")[0].style.color = "tomato";
+			_$(".leaderboard-label")[0].style.color = "hotpink";
+
+		for(const element of _$(".leaderboard-label")){
+
+			element.style.color = "#ffffff";
+
+			if(element.innerText.indexOf("Flix") > -1)
+				element.style.color = nameColor;
+		}
+}, 1000 / 25);
+
 }
 })
 
