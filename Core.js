@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Revamp -_-'; 
+newPageTitle = 'Vanis Revamp V3.2'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1789,7 +1789,7 @@ setInterval(_ => {
 })
 }
 
-function drawLoginPanel()
+function drawLoginPanel() {
 	const VEX3 = `
 	<style>
 	
@@ -2058,16 +2058,10 @@ function drawLoginPanel()
 		VEX_HUD_COLOR_FUNC();
 	  }, false)
 
-	  const init = () => {
+	  const init2 = () => {
 		VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
 		VEX_HUD_COLOR = VEX_DOM_HC.value;
 		VEX_HUD_COLOR_FUNC();
 
-	const VEX_HUD_COLOR_FUNC = () => {
-
-		for(const element of _$(".fade"))
-		  element.style.background = VEX_HUD_COLOR;
-	  
-		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
 }
