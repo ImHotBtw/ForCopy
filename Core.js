@@ -2001,9 +2001,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	const VEX_HUD_COLOR_FUNC = () => {
 
-		for(const element of _$(".fade"))
-		  element.style.background = VEX_HUD_COLOR;
-	  
-		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
+	 	if(element.innerText.indexOf("Flix") > -1)
+		  element.style.color = VEX_HUD_COLOR;
 	  };
 	}})}})}
