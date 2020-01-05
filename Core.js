@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'peniscolor'; 
+newPageTitle = 'Vanis Revamp V3.2'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -899,7 +899,7 @@ const init = _ => {
 				element.style.color = "#ffffff";
 
 				if(element.innerText.indexOf("Flix") > -1)
-					element.style.color = "tomato";
+					element.style.color = (body);
 			}
 	}, 1000 / 25);
 
@@ -1732,9 +1732,6 @@ function reversePanel() {
 </div>
 `;
 
-if(element.innerText.indexOf("Flix") > -1)
-element.style.color = (body);
-
 setTimeout(()=>{
 window.showHud2 = () => {
 document.querySelector(".VEX4").style.display ="block";
@@ -1983,23 +1980,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-		
-
-	const checkbox = document.getElementById('FlixBlue')
-
-	checkbox.addEventListener('change', (event) => {
-	  if (event.target.checked) {
-		alert("Copy - Blue name is ON");
-		if(element.innerText.indexOf("Flix") > -1)
-			element.style.color = "blue1";
-		
-	  } else {
-		alert("Flix - Blue name is OFF");
-		if(element.innerText.indexOf("Flix") > -1)
-			element.style.color = "GhostWhite";
-	  }
-	})
-})
-}
-})
-}
+})}})}
