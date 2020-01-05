@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'bls'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1759,20 +1759,14 @@ document.getElementById("submitColor").addEventListener("click", changeBackgroun
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
 	setColor();
+}
 
-function setColor() 
-	{
-		x = 5;  // 5 Seconds
-		for(const element of _$(".leaderboard-label")){
+for(const element of _$(".leaderboard-label")){
 		
-			element.style.color = "#ffffff";
-			
-			if(element.innerText.indexOf("Flix") > -1)
-				element.style.color = nameColor;
-				setTimeout(setColor, x*1000)
-		}
-
-setColor();
+	element.style.color = "#ffffff";
+	
+	if(element.innerText.indexOf("Flix") > -1)
+		element.style.color = nameColor;
 	
 }
 {
@@ -2031,4 +2025,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}})}}})}
+}})}})}
