@@ -902,6 +902,8 @@ const init = _ => {
 					element.style.color = "hotpink";//|| ConfigModel.getHudColor();
 				if(element.innerText.indexOf("Flix") > -1)
 					element.style.color = "tomato";
+				if(element.innerText.indexOf("Reverse") > -1)
+					element.style.color = "hotpink";
 			}
 	}, 1000 / 25);
 
