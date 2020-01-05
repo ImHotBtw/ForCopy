@@ -2021,4 +2021,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}})}})}
+}})}}})}
