@@ -1760,17 +1760,12 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-	const checkbox = document.getElementById('RevPink')
 
-	checkbox.addEventListener('change', (event) => {
-	  if (event.target.checked) {
-		alert("Fake Reverse - Pink name is ON");
-			useRevPink();
-		
-	  } else {
-		alert("Fake Reverse - Pink name is OFF");
-			removeRevPink();
-
+	document.getElementById('RevPink').addEventListener('click') 
+		alert("you clicked me!")    
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "hotpink";
+})
 function removeRevPink() {
 	if(element.innerText.indexOf("Fake Reverse") > -1)
 		element.style.color = "ghostwhite";
@@ -2087,6 +2082,3 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	})
 })
 	})
-})
-})
-}
