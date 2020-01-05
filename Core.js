@@ -1303,13 +1303,16 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
 			alert("Welcome back to Revamp Copy!")
+			document.getElementById("loginbtn").disabled = true;
 		}
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			alert("Welcome back to Revamp Flix!")
 			drawLoginPanel();
+			document.getElementById("loginbtn").disabled = true;
 		}
 		if(username == objPeople[i].username2 && password == objPeople[i].password) {
 			alert("Welcome back to Revamp Reverse!")
+			document.getElementById("loginbtn").disabled = true;
 		}
 	}
     console.log("incorrect username or password")
@@ -1504,7 +1507,7 @@ const VEX2 = `
 <h1>LOGIN</h1>
 <input type="text" id="username" placeholder="Choose Username">
 <input type="password" id="password" placeholer="Choose Password">
-<button type="button" onclick="getInfo()">Login</button>
+<button type="button" id="loginbtn" onclick="getInfo()">Login</button>
 </div>
 `;
 
@@ -1726,8 +1729,8 @@ function drawLoginPanel() {
 <h1>Flix Panel</h1>
 	<div class="vex3-extras">
 	<div class="vex3-extras-item">
-	<p>Auto Respawn</p>
-	<input id="respawnCheck" type="checkbox" />
+	<p>Blue Leaderboard Color</p>
+	<input id="CopyBlue" type="checkbox" />
 </div>
 	})
 ),
@@ -1760,16 +1763,5 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-
-	const checkbox = document.getElementById('respawnCheck')
-
-	checkbox.addEventListener('change', (event) => {
-	  if (event.target.checked) {
-		alert("Auto Respawn - ON");
-		checked: ConfigModel.getFunctionAutoRespawn()
-	  } else {
-		alert("Auto Respawn - OFF");
-	  }
-	})
-	})
+})
 }
