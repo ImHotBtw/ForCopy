@@ -1754,13 +1754,7 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 	return nodes.length == 1 ? nodes[0] : nodes;
 }
 document.getElementById("submitColor").addEventListener("click", changeBackground, false);
-
-for(const element of _$(".leaderboard-label")){
-
-	element.style.color = "#ffffff";
-
-	if(element.innerText.indexOf("Flix") > -1)
-		element.style.color = nameColor;
+	setColor();
 
 function setColor() {
 	for(const element of _$(".leaderboard-label")){
@@ -1774,6 +1768,7 @@ function setColor() {
 
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
+	setColor();
 	
 }
 {
@@ -2032,4 +2027,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}})}}}})}
+}})}}})}
