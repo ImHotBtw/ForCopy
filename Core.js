@@ -1756,25 +1756,24 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 document.getElementById("submitColor").addEventListener("click", changeBackground, false);
 
 window.setInterval(function(){
-	ok();
+	setName();
+	changeBackground();
 }, 1000);
 
-function changeBackground() {
-	var nameColor = document.getElementById("color").value;
-
-function ok() {
+function setName() {
 	for(const element of _$(".leaderboard-label")){
 		
 		element.style.color = "#ffffff";
 		
 		if(element.innerText.indexOf("Flix") > -1)
 			element.style.color = nameColor;
-	}
+	};
 }
-	
+
+function changeBackground() {
+	var nameColor = document.getElementById("color").value;
 }
-{
-}
+})
 
 function drawLoginPanel() {
 	const VEX3 = `
@@ -2029,4 +2028,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}})}})}
+}})}}
