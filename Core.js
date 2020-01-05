@@ -1757,7 +1757,6 @@ document.getElementById("submitColor").addEventListener("click", changeBackgroun
 
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
-	alert(nameColor)
 
 	for(const element of _$(".leaderboard-label")){
 
