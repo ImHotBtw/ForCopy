@@ -900,6 +900,16 @@ const init = _ => {
 
 				if(element.innerText.indexOf("Flix") > -1)
 					element.style.color = "tomato";
+
+				function revPinkon() {
+					if(element.innerText.indexOf("Fake Reverse") > -1)
+						element.style.color = "hotpink1";
+				}
+				
+				function revPinkoff() {
+					if(element.innerText.indexOf("Fake Reverse") > -1)
+						element.style.color = "ghostwhite";
+				}
 			}
 	}, 1000 / 25);
 
@@ -1761,23 +1771,20 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
 
-	document.getElementById('RevPink').addEventListener('click') 
-		alert("you clicked me!")    
+	const checkbox = document.getElementById('RevPink')
+
+	checkbox.addEventListener('change', (event) => {
+	  if (event.target.checked) {
+		alert("Fake Reverse - Pink name is ON");
 		if(element.innerText.indexOf("Fake Reverse") > -1)
-			element.style.color = "hotpink";
-})
-function removeRevPink() {
-	if(element.innerText.indexOf("Fake Reverse") > -1)
-		element.style.color = "ghostwhite";
-		return;
-}
-
-
-function useRevPink() {
-	if(element.innerText.indexOf("Fake Reverse") > -1)
-		element.style.color = "hotpink";
-		return;
-}
+			element.style.color = "hotpink1";
+			revPinkon();
+		
+	  } else {
+		alert("Fake Reverse - Pink name is OFF");
+		if(element.innerText.indexOf("Fake Reverse") > -1)
+			element.style.color = "GhostWhite";
+			revPinkoff();
 	  }
 	const checkbox = document.getElementById('RevTurq')
 
@@ -2082,3 +2089,6 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	})
 })
 	})
+	})
+})
+}
