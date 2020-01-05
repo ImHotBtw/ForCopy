@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = 'f'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -898,12 +898,8 @@ const init = _ => {
 
 				element.style.color = "#ffffff";
 
-				if(element.innerText.indexOf(Player.tag) > -1)
-					element.style.color = "hotpink";//|| ConfigModel.getHudColor();
 				if(element.innerText.indexOf("Flix") > -1)
 					element.style.color = "tomato";
-				if(element.innerText.indexOf("Reverse") > -1)
-					element.style.color = "hotpink";
 			}
 	}, 1000 / 25);
 
@@ -1769,13 +1765,19 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 	checkbox.addEventListener('change', (event) => {
 	  if (event.target.checked) {
 		alert("Fake Reverse - Pink name is ON");
-		if(element.innerText.indexOf("Reverse") > -1)
-			element.style.color = "hotpink";
+			useRevPink();
 		
 	  } else {
 		alert("Fake Reverse - Pink name is OFF");
-		if(element.innerText.indexOf("Reverse") > -1)
-			element.style.color = "GhostWhite";
+			removeRevPink();
+
+function removeRevPink();
+	if(element.innerText.indexOf("Fake Reverse") > -1)
+		element.style.color = "ghostwhite";
+
+function useRevPink() {
+	if(element.innerText.indexOf("Fake Reverse") > -1)
+		element.style.color = "hotpink";
 	  }
 	const checkbox = document.getElementById('RevTurq')
 
