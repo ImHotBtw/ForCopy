@@ -1727,7 +1727,7 @@ function reversePanel() {
 <h1>Flix Panel</h1>
 	<div class="VEX4-extras">
 	<div class="VEX4-extras-item">
-	<p>Name: Fake Reverse - Color: Pink</p>
+	<p>Name: Reverse - Color: Pink</p>
 	<input id="RevPink" type="checkbox" />
 	<p>Name: Fake Reverse - Color: Turqoise</p>
 	<input id="RevTurq" type="checkbox" />
@@ -1767,12 +1767,12 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 	checkbox.addEventListener('change', (event) => {
 	  if (event.target.checked) {
 		alert("Fake Reverse - Pink name is ON");
-		if(element.innerText.indexOf("Fake Reverse") > -1)
+		if(element.innerText.indexOf("Reverse") > -1)
 			element.style.color = "hotpink";
 		
 	  } else {
 		alert("Fake Reverse - Pink name is OFF");
-		if(element.innerText.indexOf("Fake Reverse") > -1)
+		if(element.innerText.indexOf("Reverse") > -1)
 			element.style.color = "GhostWhite";
 	  }
 	const checkbox = document.getElementById('RevTurq')
