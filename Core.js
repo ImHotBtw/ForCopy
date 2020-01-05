@@ -1990,13 +1990,13 @@ function drawLoginPanel() {
 	setTimeout(()=>{
 		window.showHud3 = () => {
 		document.querySelector(".VEX3").style.display ="block";
-		document.querySelector("#toggleHud3").setAttribute("onclick", "hideHud2()");
+		document.querySelector("#toggleHud3").setAttribute("onclick", "hideHud3()");
 		
 		}
 		
 		window.hideHud3 = () => {
 		document.querySelector(".VEX3").style.display ="none";
-		document.querySelector("#toggleHud3").setAttribute("onclick", "showHud2()");
+		document.querySelector("#toggleHud3").setAttribute("onclick", "showHud3()");
 		}
 		
 		  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX4;
@@ -2008,7 +2008,7 @@ function drawLoginPanel() {
 		
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
-		document.getElementById("submitColor2").addEventListener("click", changeBackground, false);
+		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
