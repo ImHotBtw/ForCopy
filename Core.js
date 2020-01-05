@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Vanis Revamp V3.2'; 
+newPageTitle = '💯Revamp💯'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1727,8 +1727,9 @@ function reversePanel() {
 	<div class="VEX4-extras-item">
 	<p>Name: Reverse - Color Changer</p>
 	<p>Secondary: Fake Reverse - Color Changer</p>
-	<input id="color" type="text" />
+	<input id="color" type="text" placeholder="HEX - #FFFFFF" />
 	<input id="submitColor" value="Submit" type="button" />
+	<p href="https://htmlcolorcodes.com/color-picker/">HEX Codes</p>
 </div>
 </div>
 `;
@@ -1982,8 +1983,9 @@ const VEX3 = `
 		<div class="VEX3-extras-item">
 		<p>Name: Fake Flix - Color Changer</p>
 		<p>Secondary: FkE Flix - Color Changer</p>
-		<input id="color2" type="text" />
+		<input id="color2" type="text" placeholder="HEX - #FFFFFF" />
 		<input id="submitColor2" value="Submit" type="button" />
+		<p href="https://htmlcolorcodes.com/color-picker/">HEX Codes</p>
 	</div>
 	</div>
 	`;
