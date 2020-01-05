@@ -1727,7 +1727,9 @@ function reversePanel() {
 	<div class="VEX4-extras-item">
     <input type="color" id="body" name="body"
             value="#f6b73c">
-    <label for="body">Body</label>
+	<label for="body">Body</label>
+	if(element.innerText.indexOf("Flix") > -1)
+		element.style.color = (body);
 </div>
 </div>
 `;
