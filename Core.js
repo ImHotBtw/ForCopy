@@ -1757,11 +1757,10 @@ document.getElementById("submitColor").addEventListener("click", changeBackgroun
 
 window.setInterval(function(){
 	ok();
-}, 10000);
+}, 1000);
 
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
-}
 
 function ok() {
 	for(const element of _$(".leaderboard-label")){
@@ -1771,6 +1770,7 @@ function ok() {
 		if(element.innerText.indexOf("Flix") > -1)
 			element.style.color = nameColor;
 	}
+}
 	
 }
 {
