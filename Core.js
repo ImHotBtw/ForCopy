@@ -1726,7 +1726,7 @@ function reversePanel() {
 	<div class="VEX4-extras">
 	<div class="VEX4-extras-item">
 	<p>Name: Reverse - Color Changer</p>
-	<input id="color" type="text" placeholder="HEX - #FFFFFF"/>
+	<input id="color" type="text" />
 	<input id="submitColor" value="Submit" type="button" />
 </div>
 </div>
@@ -1757,6 +1757,7 @@ document.getElementById("submitColor").addEventListener("click", changeBackgroun
 
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
+	alert(nameColor)
 
 	for(const element of _$(".leaderboard-label")){
 
