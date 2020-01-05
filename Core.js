@@ -1983,10 +1983,16 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 })}})}
 
 <html>
+<script>
+function setColor()
+{
+    var newColor = document.getElementById('color_pick').value;
+    d3.select("circle").attr("fill", newColor);
+}
+</script>
 <div class="picker">
-    Select a color: <span class="color-choice" value="red" style="color: red;">Red</span> | <span class="color-choice" value="green" style="color: green;">Green</span> | <span class="color-choice" value="blue" style="color: blue;">Blue</span>
-</div>
-
+    Select a color: 
+    <input type="color" name="favcolor" value="#cccccc" id="color_pick" onchange="setColor();"/></div>
 <div id="shapeArea">
 </div>
 </html>
@@ -2008,19 +2014,3 @@ var circle = svg.selectAll("circle")
     .attr('fill',function(d){
         return d;
     });
-
-d3.selectAll('.color-choice').on('click', function(e){    
-  var newColor = d3.select(this).attr('value');
-  d3.select("circle").attr("fill", newColor);
-});
-
-const picker_css = `
-.picker {
-	font-family: helvetica, sans-serif;
-	font-weight: bold;
-  }
-  
-  .color-choice {
-	  cursor: pointer;
-  }
-  `;
