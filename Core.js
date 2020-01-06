@@ -13,6 +13,7 @@ function myFunction() {
   var l = document.createTextNode(mass);
   document.body.appendChild(x);
   x.appendChild(t);
+  x.appendChild(l)
   document.body.appendChild(x);
   document.querySelector("#hud > div.stats > div:nth-child(1)")
 
