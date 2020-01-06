@@ -36,7 +36,7 @@ setInterval(_ => {
 setTimeout(()=>{
     window.showHud2 = () => {
     document.querySelector(".VEX4").style.display ="block";
-    document.querySelector("#toggleHud2").setAttribute("onclick", "alertme()");
+    document.querySelector("#toggleHud2").setAttribute("onclick", "hideHud2()");
     
     }
     
@@ -47,7 +47,7 @@ setTimeout(()=>{
 
     var lmo = document.getElementById("massCount")
       document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX4;
-      document.querySelector(".social-container").innerHTML += '<a id="toggleHud2" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="alert(lmo)">Reverse Panel</a>';
+      document.querySelector(".social-container").innerHTML += '<a id="toggleHud2" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud2()">Reverse Panel</a>';
     
         window._$ = selector => {
     
