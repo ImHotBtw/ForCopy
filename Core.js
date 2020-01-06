@@ -205,6 +205,14 @@ const VEX4 = `
   </div>
 `;
 
+setInterval(_ => {
+    document.querySelector("#hud > div.stats > div:nth-child(1)")
+
+    var mass = document.querySelector("#hud > div.stats > div:nth-child(3)")
+    mass.id = "massCount"
+
+}, 1 / 25);
+
 setTimeout(()=>{
     window.showHud2 = () => {
     document.querySelector(".VEX4").style.display ="block";
@@ -226,12 +234,4 @@ setTimeout(()=>{
     
         return nodes.length == 1 ? nodes[0] : nodes;
         }
-
-        setInterval(_ => {
-            document.querySelector("#hud > div.stats > div:nth-child(1)")
-        
-            var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
-            select.id = "massCount"
-        
-        }, 1 / 25);
     })
