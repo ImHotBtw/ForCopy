@@ -2015,17 +2015,14 @@ const VEX3 = `
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
 
-		var priceEls = document.getElementsByClassName("stats");
-		for (var i = 0; i < priceEls.length; i++) {
-		var price = priceEls[i].innerText;
-		alert("Price: " + price);
-		}
+		var x = element.innerText.indexOf("Fake Reverse").document.getElementsByClassName("stats");
+		var p = x[i].innerText;
 
 		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
-			alert("If youre changing colors, restart vanis :)" + price)
+			alert(p)
 		
 		setInterval(_ => {
 		
