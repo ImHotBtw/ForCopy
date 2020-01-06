@@ -40,7 +40,7 @@ body {
 	background: #141414;
 }
 
-.REV {
+.vex {
 	width: 350px;
 	height: 98vh;
 	position: fixed;
@@ -53,15 +53,15 @@ body {
 	color: #ffffff;
 }
 
-.REV p {
+.vex p {
 	text-align: center;
 }
 
-.REV p p {
+.vex p p {
 	font-size: 9px;
 }
 
-.REV > .REV-menu {
+.vex > .vex-menu {
 	width: 96%;
 	display: flex;
 	flex-wrap: wrap;
@@ -69,13 +69,13 @@ body {
 	margin-left: 2%;
 }
 
-.REV > .REV-menu .item-group {
+.vex > .vex-menu .item-group {
 	width: 96%;
 	display: inline-flex;
 	justify-content: space-between;
 }
 
-.REV > .REV-menu .menu-item {
+.vex > .vex-menu .menu-item {
 	width: 96%;
 	display: flex;
 	flex-wrap: wrap;
@@ -84,16 +84,16 @@ body {
 	background: rgba(20, 20, 20, 0.5);
 }
 
-.REV > .REV-menu .menu-item p {
+.vex > .vex-menu .menu-item p {
 	width: 100%;
 	font-size : 12px;
 }
 
-.REV > .REV-menu .menu-item button {
+.vex > .vex-menu .menu-item button {
 	width: 100%;
 }
 
-.REV > .REV-menu .menu-item input {
+.vex > .vex-menu .menu-item input {
 	width: 96%;
 	height: 25px;
 	border: none;
@@ -103,25 +103,25 @@ body {
 	color: #ffffff;
 }
 
-.REV > .REV-menu .menu-item.slim {
+.vex > .vex-menu .menu-item.slim {
 	width: 30%;
 }
 
-.REV > .REV-menu .menu-item.slim input {
+.vex > .vex-menu .menu-item.slim input {
 	width: 90% !important;
 }
 
-.REV.hide {
+.vex.hide {
 	left: -325px;
 }
 
-#REV-hc-picker {
+#vex-hc-picker {
 	width: 90%;
 	height: 20px !important;
 	border: 1px solid #ffffff;
 }
 
-#REV-mc-picker {
+#vex-mc-picker {
 	width: 90%;
 	height: 20px !important;
 	border: 1px solid #ffffff;
@@ -195,7 +195,7 @@ switch(window.location.hash){
 
 	case '#vreset':
 
-		localStorage.removeItem("REV_config")
+		localStorage.removeItem("vex_config")
 		window.location.href = "/";
 	break;
 };
@@ -212,7 +212,7 @@ const init = _ => {
 
 	const ConfigModel = {
 
-		db_prefix: 'REV_',
+		db_prefix: 'vex_',
 		db_name: 'config',
 
 		model: {
@@ -379,7 +379,7 @@ const init = _ => {
 
 			HudController._DOM_.elements = [
 
-				_$(".REV")
+				_$(".vex")
 			];
 
 			if(!_$("#overlay").length == 0)
@@ -600,7 +600,7 @@ const init = _ => {
 
 		view: _ => {
 
-			return m(".REV-menu",
+			return m(".vex-menu",
 
 				m(".menu-item",
 					m(".item-group",
@@ -608,7 +608,7 @@ const init = _ => {
 						m(".menu-item.slim", { style: 'height: 50px' },
 
 							m("p", "HUD COLOR"),
-							m("#REV-hc-picker", { oninit: vnode => {
+							m("#vex-hc-picker", { oninit: vnode => {
 
 								setTimeout(_ => {
 
@@ -640,7 +640,7 @@ const init = _ => {
 						m(".menu-item.slim", { style: 'height: 100px' },
 
 							m("p", "MAP COLOR"),
-							m("#REV-mc-picker", { oninit: vnode => {
+							m("#vex-mc-picker", { oninit: vnode => {
 
 								setTimeout(_ => {
 
@@ -788,16 +788,16 @@ const init = _ => {
 		}
 	};
 
-	const REVView = {
+	const VexView = {
 
 		view: _ => {
 
-			return m(".REV", {
+			return m(".vex", {
 
-					class: `${REVController.visible ? '' : 'hide'}`,
+					class: `${VexController.visible ? '' : 'hide'}`,
 					onclick: event => {
 
-						REVController.toggle(event)
+						VexController.toggle(event)
 						_$("canvas#canvas").click()
 					}
 				},
@@ -809,37 +809,37 @@ const init = _ => {
 		}
 	};
 
-	const REVController = {
+	const VexController = {
 
 		visible: true,
 
 		toggle: event => {
 
-			if(event.target.classList[0] != 'REV')
+			if(event.target.classList[0] != 'vex')
 				return;
 
-			if(REVController.visible){
+			if(VexController.visible){
 
-				REVController.visible = false;
+				VexController.visible = false;
 
 				return;
 			}
 
-			REVController.visible = true;
+			VexController.visible = true;
 		},
 
 		hide: _ => {
 
-			_$(".REV").style.display = "none";
+			_$(".vex").style.display = "none";
 		},
 
 		show: _ => {
 
-			_$(".REV").style.display = "initial";
+			_$(".vex").style.display = "initial";
 		}
 	};
 
-	m.mount(root, REVView);
+	m.mount(root, VexView);
 
 	setInterval(_ => {
 
@@ -874,11 +874,11 @@ const init = _ => {
 		if(ConfigModel.getHudLeaderboardHide() == false)
 			HudController.showLeaderboard();
 
-		if(ConfigModel.getHudIngamemenu() == false && (!_$(".REV").style.display != "none") && _$("#overlay").style.display == "none")
-			REVController.hide();
+		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "none")
+			VexController.hide();
 
-		if(ConfigModel.getHudIngamemenu() == false && (!_$(".REV").style.display != "none") && _$("#overlay").style.display == "")
-			REVController.show();
+		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "")
+			VexController.show();
 
 		//
 
@@ -1205,11 +1205,11 @@ function drawIt() {
 				for(let i=0; i<4; i++)
 					Player.splitMax();
 
-				_$(".REV input")[5].style.background = "tomato";
+				_$(".vex input")[5].style.background = "tomato";
 
 				setTimeout(_ => {
 
-					_$(".REV input")[5].style.background = "";
+					_$(".vex input")[5].style.background = "";
 				}, 100)
 			break;
 
@@ -1218,11 +1218,11 @@ function drawIt() {
 				for(let i=0; i<5; i++)
 					Player.eject();
 
-				_$(".REV input")[6].style.background = "tomato";
+				_$(".vex input")[6].style.background = "tomato";
 
 				setTimeout(_ => {
 
-					_$(".REV input")[6].style.background = "";
+					_$(".vex input")[6].style.background = "";
 				}, 100)
 			break;
 
@@ -1232,29 +1232,29 @@ function drawIt() {
 
 				if(Player.freeze){
 
-					_$(".REV input")[7].style.background = "tomato"
+					_$(".vex input")[7].style.background = "tomato"
 					return;
 				}
 
-				_$(".REV input")[7].style.background = ""
+				_$(".vex input")[7].style.background = ""
 			break;
 
 			case ConfigModel.getBind("vtoggle"):
 
-				REVController.toggle();
+				VexController.toggle();
 			break;
 		};
 	}, false);
 
-	window.REV = {
+	window.vex = {
 
 		ConfigModel: ConfigModel,
 		HudController: HudController,
 		SkinchangerView: SkinchangerView,
 		SkinchangerController: SkinchangerController,
 		MenuView: MenuView,
-		REVView: REVView,
-		REVController: REVController,
+		VexView: VexView,
+		VexController: VexController,
 		Player: Player,
 		Functions: Functions
 		
@@ -1314,10 +1314,10 @@ function getInfo() {
     console.log("incorrect username or password")
 }
 
-const REV2 = `
+const VEX2 = `
 <style>
 
-.REV2 {
+.VEX2 {
 
   width : 350px;
   height: 300px;
@@ -1337,7 +1337,7 @@ const REV2 = `
   z-index: 9999;
 }
 
-.REV2 > .REV2-hud {
+.VEX2 > .VEX2-hud {
 
   width: 90%;
 
@@ -1346,14 +1346,14 @@ const REV2 = `
   justify-content: center;
 }
 
-.REV2 > .REV2-hud > p {
+.VEX2 > .VEX2-hud > p {
 
   width: 100%;
   text-align: center;
 
   color : white;
 }
-.REV2 > .REV2-hud > input {
+.VEX2 > .VEX2-hud > input {
 
   width: 100%;
 
@@ -1367,7 +1367,7 @@ const REV2 = `
   box-shadow: none;
 }
 
-.REV2 > .REV2-skins {
+.VEX2 > .VEX2-skins {
 
   width: 90%;
 
@@ -1376,11 +1376,11 @@ const REV2 = `
   justify-content: center;
 }
 
-.REV2 > .REV2-skins > .REV2-skins-item {
+.VEX2 > .VEX2-skins > .VEX2-skins-item {
 
   width: 100%;
 }
-.REV2 > .REV2-skins > .REV2-skins-item > p {
+.VEX2 > .VEX2-skins > .VEX2-skins-item > p {
 
   width: 100%;
   text-align: center;
@@ -1388,7 +1388,7 @@ const REV2 = `
   color : white;
 }
 
-.REV2 > .REV2-skins > .REV2-skins-item > input {
+.VEX2 > .VEX2-skins > .VEX2-skins-item > input {
 
   width: 100%;
 
@@ -1402,7 +1402,7 @@ const REV2 = `
   box-shadow: none;
 }
 
-.REV2 > .REV2-controls {
+.VEX2 > .VEX2-controls {
 
   width: 90%;
 
@@ -1411,7 +1411,7 @@ const REV2 = `
   justify-content: center;
 }
 
-.REV2 > .REV2-controls > p {
+.VEX2 > .VEX2-controls > p {
 
   width: 100%;
   text-align: center;
@@ -1419,7 +1419,7 @@ const REV2 = `
   color : white;
 }
 
-.REV2 > .REV2-controls > button {
+.VEX2 > .VEX2-controls > button {
 
   width: 50%;
 
@@ -1433,27 +1433,27 @@ const REV2 = `
   box-shadow: none;
 }
 
-#REV2-r-start {}
-#REV2-r-start.active {
+#VEX2-r-start {}
+#VEX2-r-start.active {
 
   color: lime;
 }
-#REV2-r-start:hover {
+#VEX2-r-start:hover {
 
   color: lime;
 }
 
-#REV2-r-stop {}
-#REV2-r-stop.active {
+#VEX2-r-stop {}
+#VEX2-r-stop.active {
 
   color: aquamarine1;
 }
-#REV2-r-stop:hover {
+#VEX2-r-stop:hover {
 
   color: aquamarine1;
 }
 
-.REV2 > .REV2-extras {
+.VEX2 > .VEX2-extras {
 
   width: 90%;
 
@@ -1462,19 +1462,19 @@ const REV2 = `
   justify-content: center;
 }
 
-.REV2 > .REV2-extras {
+.VEX2 > .VEX2-extras {
 
   width: 90%;
 
   text-align: center;
   color: white;
 }
-.REV2 > .REV2-extras > .REV2-extras-item {
+.VEX2 > .VEX2-extras > .VEX2-extras-item {
 
   width: 100%;
   display: inline-flex;
 }
-.REV2 > .REV2-extras > .REV2-extras-item > p {
+.VEX2 > .VEX2-extras > .VEX2-extras-item > p {
 
   width: 80%;
   text-align: center;
@@ -1482,7 +1482,7 @@ const REV2 = `
   color : white;
 }
 
-.REV2 > .REV2-extras > .REV2-extras-item > input {
+.VEX2 > .VEX2-extras > .VEX2-extras-item > input {
 
   margin-left: 10px;
 
@@ -1498,8 +1498,8 @@ const REV2 = `
 
 </style>
 
-<div class="REV2">
-  <div class="REV2-hud">
+<div class="VEX2">
+  <div class="VEX2-hud">
 <h1>LOGIN</h1>
 <input type="text" id="username" placeholder="Choose Username">
 <input type="password" id="password" placeholer="Choose Password">
@@ -1511,17 +1511,17 @@ const REV2 = `
 
 setTimeout(()=>{
 window.showHud = () => {
-document.querySelector(".REV2").style.display ="block";
+document.querySelector(".VEX2").style.display ="block";
 document.querySelector("#toggleHud").setAttribute("onclick", "hideHud()");
 
 }
 
 window.hideHud = () => {
-document.querySelector(".REV2").style.display ="none";
+document.querySelector(".VEX2").style.display ="none";
 document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 }
 
-  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += REV2;
+  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX2;
   document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Login</a>';
 
     window._$ = selector => {
@@ -1535,10 +1535,10 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 })
 
 function reversePanel() {
-	const REV4 = `
+	const VEX4 = `
 <style>
 
-.REV4 {
+.VEX4 {
 
   width : 350px;
   height: 300px;
@@ -1559,7 +1559,7 @@ function reversePanel() {
   z-index: 9999;
 }
 
-.REV4 > .REV4-hud {
+.VEX4 > .VEX4-hud {
 
   width: 90%;
 
@@ -1568,14 +1568,14 @@ function reversePanel() {
   justify-content: center;
 }
 
-.REV4 > .REV4-hud > p {
+.VEX4 > .VEX4-hud > p {
 
   width: 100%;
   text-align: center;
 
   color : white;
 }
-.REV4 > .REV4-hud > input {
+.VEX4 > .VEX4-hud > input {
 
   width: 100%;
 
@@ -1589,7 +1589,7 @@ function reversePanel() {
   box-shadow: none;
 }
 
-.REV4 > .REV4-skins {
+.VEX4 > .VEX4-skins {
 
   width: 90%;
 
@@ -1598,11 +1598,11 @@ function reversePanel() {
   justify-content: center;
 }
 
-.REV4 > .REV4-skins > .REV4-skins-item {
+.VEX4 > .VEX4-skins > .VEX4-skins-item {
 
   width: 100%;
 }
-.REV4 > .REV4-skins > .REV4-skins-item > p {
+.VEX4 > .VEX4-skins > .VEX4-skins-item > p {
 
   width: 100%;
   text-align: center;
@@ -1610,7 +1610,7 @@ function reversePanel() {
   color : white;
 }
 
-.REV4 > .REV4-skins > .REV4-skins-item > input {
+.VEX4 > .VEX4-skins > .VEX4-skins-item > input {
 
   width: 100%;
 
@@ -1624,7 +1624,7 @@ function reversePanel() {
   box-shadow: none;
 }
 
-.REV4 > .REV4-controls {
+.VEX4 > .VEX4-controls {
 
   width: 90%;
 
@@ -1633,7 +1633,7 @@ function reversePanel() {
   justify-content: center;
 }
 
-.REV4 > .REV4-controls > p {
+.VEX4 > .VEX4-controls > p {
 
   width: 100%;
   text-align: center;
@@ -1641,7 +1641,7 @@ function reversePanel() {
   color : white;
 }
 
-.REV4 > .REV4-controls > button {
+.VEX4 > .VEX4-controls > button {
 
   width: 50%;
 
@@ -1655,27 +1655,27 @@ function reversePanel() {
   box-shadow: none;
 }
 
-#REV4-r-start {}
-#REV4-r-start.active {
+#VEX4-r-start {}
+#VEX4-r-start.active {
 
   color: lime;
 }
-#REV4-r-start:hover {
+#VEX4-r-start:hover {
 
   color: lime;
 }
 
-#REV4-r-stop {}
-#REV4-r-stop.active {
+#VEX4-r-stop {}
+#VEX4-r-stop.active {
 
   color: aquamarine1;
 }
-#REV4-r-stop:hover {
+#VEX4-r-stop:hover {
 
   color: aquamarine1;
 }
 
-.REV4 > .REV4-extras {
+.VEX4 > .VEX4-extras {
 
   width: 90%;
 
@@ -1684,19 +1684,19 @@ function reversePanel() {
   justify-content: center;
 }
 
-.REV4 > .REV4-extras {
+.VEX4 > .VEX4-extras {
 
   width: 90%;
 
   text-align: center;
   color: white;
 }
-.REV4 > .REV4-extras > .REV4-extras-item {
+.VEX4 > .VEX4-extras > .VEX4-extras-item {
 
   width: 100%;
   display: inline-flex;
 }
-.REV4 > .REV4-extras > .REV4-extras-item > p {
+.VEX4 > .VEX4-extras > .VEX4-extras-item > p {
 
   width: 80%;
   text-align: center;
@@ -1704,7 +1704,7 @@ function reversePanel() {
   color : white;
 }
 
-.REV4 > .REV4-extras > .REV4-extras-item > input {
+.VEX4 > .VEX4-extras > .VEX4-extras-item > input {
 
   margin-left: 10px;
 
@@ -1720,11 +1720,11 @@ function reversePanel() {
 
 </style>
 
-<div class="REV4">
-  <div class="REV4-hud">
+<div class="VEX4">
+  <div class="VEX4-hud">
 <h1>Reverse Panel</h1>
-	<div class="REV4-extras">
-	<div class="REV4-extras-item">
+	<div class="VEX4-extras">
+	<div class="VEX4-extras-item">
 	<p>Name: Reverse - Color Changer</p>
 	<p>Secondary: Fake Reverse - Color Changer</p>
 	<input id="color" type="text" placeholder="HEX - #FFFFFF" />
@@ -1736,17 +1736,17 @@ function reversePanel() {
 
 setTimeout(()=>{
 window.showHud2 = () => {
-document.querySelector(".REV4").style.display ="block";
+document.querySelector(".VEX4").style.display ="block";
 document.querySelector("#toggleHud2").setAttribute("onclick", "hideHud2()");
 
 }
 
 window.hideHud2 = () => {
-document.querySelector(".REV4").style.display ="none";
+document.querySelector(".VEX4").style.display ="none";
 document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 }
 
-  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += REV4;
+  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX4;
   document.querySelector(".social-container").innerHTML += '<a id="toggleHud2" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud2()">Reverse Panel</a>';
 
     window._$ = selector => {
@@ -1791,10 +1791,10 @@ setInterval(_ => {
 }
 
 function drawLoginPanel() {
-const REV3 = `
+const VEX3 = `
 	<style>
 	
-	.REV3 {
+	.VEX3 {
 	
 	  width : 350px;
 	  height: 300px;
@@ -1815,7 +1815,7 @@ const REV3 = `
 	  z-index: 9999;
 	}
 	
-	.REV3 > .REV3-hud {
+	.VEX3 > .VEX3-hud {
 	
 	  width: 90%;
 	
@@ -1824,14 +1824,14 @@ const REV3 = `
 	  justify-content: center;
 	}
 	
-	.REV3 > .REV3-hud > p {
+	.VEX3 > .VEX3-hud > p {
 	
 	  width: 100%;
 	  text-align: center;
 	
 	  color : white;
 	}
-	.REV3 > .REV3-hud > input {
+	.VEX3 > .VEX3-hud > input {
 	
 	  width: 100%;
 	
@@ -1845,7 +1845,7 @@ const REV3 = `
 	  box-shadow: none;
 	}
 	
-	.REV3 > .REV3-skins {
+	.VEX3 > .VEX3-skins {
 	
 	  width: 90%;
 	
@@ -1854,11 +1854,11 @@ const REV3 = `
 	  justify-content: center;
 	}
 	
-	.REV3 > .REV3-skins > .REV3-skins-item {
+	.VEX3 > .VEX3-skins > .VEX3-skins-item {
 	
 	  width: 100%;
 	}
-	.REV3 > .REV3-skins > .REV3-skins-item > p {
+	.VEX3 > .VEX3-skins > .VEX3-skins-item > p {
 	
 	  width: 100%;
 	  text-align: center;
@@ -1866,7 +1866,7 @@ const REV3 = `
 	  color : white;
 	}
 	
-	.REV3 > .REV3-skins > .REV3-skins-item > input {
+	.VEX3 > .VEX3-skins > .VEX3-skins-item > input {
 	
 	  width: 100%;
 	
@@ -1880,7 +1880,7 @@ const REV3 = `
 	  box-shadow: none;
 	}
 	
-	.REV3 > .REV3-controls {
+	.VEX3 > .VEX3-controls {
 	
 	  width: 90%;
 	
@@ -1889,7 +1889,7 @@ const REV3 = `
 	  justify-content: center;
 	}
 	
-	.REV3 > .REV3-controls > p {
+	.VEX3 > .VEX3-controls > p {
 	
 	  width: 100%;
 	  text-align: center;
@@ -1897,7 +1897,7 @@ const REV3 = `
 	  color : white;
 	}
 	
-	.REV3 > .REV3-controls > button {
+	.VEX3 > .VEX3-controls > button {
 	
 	  width: 50%;
 	
@@ -1911,27 +1911,27 @@ const REV3 = `
 	  box-shadow: none;
 	}
 	
-	#REV3-r-start {}
-	#REV3-r-start.active {
+	#VEX3-r-start {}
+	#VEX3-r-start.active {
 	
 	  color: lime;
 	}
-	#REV3-r-start:hover {
+	#VEX3-r-start:hover {
 	
 	  color: lime;
 	}
 	
-	#REV3-r-stop {}
-	#REV3-r-stop.active {
+	#VEX3-r-stop {}
+	#VEX3-r-stop.active {
 	
 	  color: aquamarine1;
 	}
-	#REV3-r-stop:hover {
+	#VEX3-r-stop:hover {
 	
 	  color: aquamarine1;
 	}
 	
-	.REV3 > .REV3-extras {
+	.VEX3 > .VEX3-extras {
 	
 	  width: 90%;
 	
@@ -1940,19 +1940,19 @@ const REV3 = `
 	  justify-content: center;
 	}
 	
-	.REV3 > .REV3-extras {
+	.VEX3 > .VEX3-extras {
 	
 	  width: 90%;
 	
 	  text-align: center;
 	  color: white;
 	}
-	.REV3 > .REV3-extras > .REV3-extras-item {
+	.VEX3 > .VEX3-extras > .VEX3-extras-item {
 	
 	  width: 100%;
 	  display: inline-flex;
 	}
-	.REV3 > .REV3-extras > .REV3-extras-item > p {
+	.VEX3 > .VEX3-extras > .VEX3-extras-item > p {
 	
 	  width: 80%;
 	  text-align: center;
@@ -1960,7 +1960,7 @@ const REV3 = `
 	  color : white;
 	}
 	
-	.REV3 > .REV3-extras > .REV3-extras-item > input {
+	.VEX3 > .VEX3-extras > .VEX3-extras-item > input {
 	
 	  margin-left: 10px;
 	
@@ -1976,11 +1976,11 @@ const REV3 = `
 	
 	</style>
 	
-	<div class="REV3">
-	  <div class="REV3-hud">
+	<div class="VEX3">
+	  <div class="VEX3-hud">
 	<h1>Reverse Panel</h1>
-		<div class="REV3-extras">
-		<div class="REV3-extras-item">
+		<div class="VEX3-extras">
+		<div class="VEX3-extras-item">
 		<p>Name: Fake Flix - Color Changer</p>
 		<p>Secondary: FkE Flix - Color Changer</p>
 		<input id="color2" type="text" placeholder="HEX - #FFFFFF" />
@@ -1992,17 +1992,17 @@ const REV3 = `
 
 	setTimeout(()=>{
 		window.showHud3 = () => {
-		document.querySelector(".REV3").style.display ="block";
+		document.querySelector(".VEX3").style.display ="block";
 		document.querySelector("#toggleHud3").setAttribute("onclick", "hideHud3()");
 		
 		}
 		
 		window.hideHud3 = () => {
-		document.querySelector(".REV3").style.display ="none";
+		document.querySelector(".VEX3").style.display ="none";
 		document.querySelector("#toggleHud3").setAttribute("onclick", "showHud3()");
 		}
 		
-		  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += REV3;
+		  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX3;
 		  document.querySelector(".social-container").innerHTML += '<a id="toggleHud3" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud3()">Flix Panel</a>';
 		
 			window._$ = selector => {
@@ -2012,14 +2012,16 @@ const REV3 = `
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
 
-		if(element.innerText.indexOf("Fake Reverse") > -1)
+		var priceEls = document.getElementById("cellSize");
+		for (var i = 0; i < priceEls.length; i++) {
+		var price = priceEls[i].innerText;
+		alert("Price: " + price);
+		}
 
 		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
-			var priceEls = document.getElementById("cellSize")
-			var price = priceEls[i].innerText;
 			alert("If youre changing colors, restart vanis :)" + price)
 		
 		setInterval(_ => {
@@ -2050,31 +2052,31 @@ const REV3 = `
 		}
 		})
 
-	const REV_DOM_HC = _$("#REV-hc");
-	let REV_HUD_COLOR = "";
+	const VEX_DOM_HC = _$("#vex-hc");
+	let VEX_HUD_COLOR = "";
 
-	REV_DOM_HC.addEventListener("change", event => {
+	VEX_DOM_HC.addEventListener("change", event => {
 
-		if(event.target.value == localStorage.getItem("REV-hc"))
+		if(event.target.value == localStorage.getItem("vex-hc"))
 		  return;
 	  
-		localStorage.setItem("REV-hc", event.target.value);
+		localStorage.setItem("vex-hc", event.target.value);
 	  
-		REV_HUD_COLOR = localStorage.getItem("REV-hc");
+		VEX_HUD_COLOR = localStorage.getItem("vex-hc");
 	  
-		REV_HUD_COLOR_FUNC();
+		VEX_HUD_COLOR_FUNC();
 	  }, false)
 
 	  const init = () => {
-		REV_DOM_HC.value = localStorage.getItem("REV-hc") || "";
-		REV_HUD_COLOR = REV_DOM_HC.value;
-		REV_HUD_COLOR_FUNC();
+		VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
+		VEX_HUD_COLOR = VEX_DOM_HC.value;
+		VEX_HUD_COLOR_FUNC();
 
-	const REV_HUD_COLOR_FUNC = () => {
+	const VEX_HUD_COLOR_FUNC = () => {
 
 		for(const element of _$(".fade"))
-		  element.style.background = REV_HUD_COLOR;
+		  element.style.background = VEX_HUD_COLOR;
 	  
-		_$("#overlay").style.background = "radial-gradient("+REV_HUD_COLOR+" 300px,"+REV_HUD_COLOR+")";
+		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
 }}
