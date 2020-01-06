@@ -216,6 +216,7 @@ setInterval(_ => {
 function alertme() {
     var mes = document.getElementById("massCount")
     alert(mes)
+}
 
 setTimeout(()=>{
     window.showHud2 = () => {
@@ -238,4 +239,4 @@ setTimeout(()=>{
     
         return nodes.length == 1 ? nodes[0] : nodes;
         }
-    })}
+    })
