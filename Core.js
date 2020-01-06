@@ -2012,11 +2012,8 @@ const REV3 = `
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
 
-		var priceEls = document.getElementsByClassName("stats");
-		for (var i = 0; i < priceEls.length; i++) {
+		var priceEls = document.getElementsById("cellSize");
 		var price = priceEls[i].innerText;
-		alert("Price: " + price);
-		}
 
 		if(element.innerText.indexOf("Fake Reverse") > -1)
 
