@@ -215,7 +215,7 @@ setInterval(_ => {
 
 function alertme() {
     var mes = document.getElementById("massCount")
-    alert(mes)
+    alert(mes);
 }
 
 setTimeout(()=>{
