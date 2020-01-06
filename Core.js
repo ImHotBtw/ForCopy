@@ -194,7 +194,6 @@ const VEX4 = `
 	document.querySelector("#hud > div.stats > div:nth-child(1)")
 	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
 	select.id = "massCount"
-      document.getElementsByTagName('div')[0].innerHTML = ball;
   </script>
 	<p></p>
 	<p>Your mass: </p>
@@ -226,5 +225,13 @@ setTimeout(()=>{
         const nodes = document.querySelectorAll(selector);
     
         return nodes.length == 1 ? nodes[0] : nodes;
-    }
-})
+        }
+
+        setInterval(_ => {
+            document.querySelector("#hud > div.stats > div:nth-child(1)")
+        
+            var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
+            select.id = "massCount"
+        
+        }, 1 / 25);
+    })
