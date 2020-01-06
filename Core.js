@@ -9,7 +9,7 @@ const VEX4 = `
 <script>
 function myFunction() {
   var x = document.createElement("VAR");
-  var t = document.createTextNode(massCount);
+  var t = document.createTextNode("massCount");
   var l = document.createTextNode(mass);
   document.body.appendChild(x);
   x.appendChild(t);
