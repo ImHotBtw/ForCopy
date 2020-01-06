@@ -190,7 +190,7 @@ const VEX4 = `
 	<div class="VEX4-extras">
 	<div class="VEX4-extras-item">
   <script type="text/javascript">
-  <p>"Your mass:" + mass</p>
+  <p>"Your mass:" + massCount</p>
 	document.querySelector("#hud > div.stats > div:nth-child(1)")
 	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
 	select.id = "massCount"
