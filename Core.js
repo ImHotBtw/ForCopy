@@ -1759,7 +1759,7 @@ document.getElementById("submitColor").addEventListener("click", changeBackgroun
 
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
-	alert("If youre changing colors, restart vanis :)" + xin)
+	alert("If youre changing colors, restart vanis :)")
 
 setInterval(_ => {
 
