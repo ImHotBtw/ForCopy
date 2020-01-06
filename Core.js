@@ -2020,7 +2020,7 @@ const VEX3 = `
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
-			alert("If youre changing colors, restart vanis" + xin)
+			alert("If youre changing colors, restart vanis")
 		
 		setInterval(_ => {
 		
