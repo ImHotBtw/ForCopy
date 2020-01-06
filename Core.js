@@ -1986,6 +1986,9 @@ const VEX3 = `
 		<input id="color2" type="text" placeholder="HEX - #FFFFFF" />
 		<input id="submitColor2" value="Submit" type="button" />
 		<p href="https://htmlcolorcodes.com/color-picker/">HEX Codes</p>
+		<script>
+			alert("price" + price);
+		</script>
 	</div>
 	</div>
 	`;
@@ -2011,11 +2014,18 @@ const VEX3 = `
 		
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
+
+		var priceEls = document.getElementsByClassName("stats");
+		for (var i = 0; i < priceEls.length; i++) {
+		var price = priceEls[i].innerText;
+		alert("Price: " + price);
+		}
+
 		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
-			alert("If youre changing colors, restart vanis :)")
+			alert("If youre changing colors, restart vanis :)" + price)
 		
 		setInterval(_ => {
 		
