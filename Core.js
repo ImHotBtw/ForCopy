@@ -1757,9 +1757,12 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 }
 document.getElementById("submitColor").addEventListener("click", changeBackground, false);
 
+var xl = document.querySelector("#hud > div.stats > div:nth-child(1)")
+var xin = xl[i].innerText;
+
 function changeBackground() {
 	var nameColor = document.getElementById("color").value;
-	alert("If youre changing colors, restart vanis :)")
+	alert("If youre changing colors, restart vanis :)" + xin)
 
 setInterval(_ => {
 
@@ -2011,9 +2014,6 @@ const VEX3 = `
 		
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
-
-		var xl = document.querySelector("#hud > div.stats > div:nth-child(1)")
-		var xin = xl[i].innerText;
 		
 
 		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
