@@ -23,6 +23,16 @@ function myFunction() {
 </html>
 `;
 
+function myFunction() {
+    var x = document.createElement("VAR");
+    var t = document.createTextNode("massCount");
+    document.body.appendChild(x);
+    x.appendChild(t);
+    document.querySelector("#hud > div.stats > div:nth-child(1)")
+  
+    var mass = document.querySelector("#hud > div.stats > div:nth-child(3)")
+    mass.id = "massCount"
+
 setInterval(_ => {
     document.querySelector("#hud > div.stats > div:nth-child(1)")
 
