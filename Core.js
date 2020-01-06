@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = '💯Revamp💯'; 
+newPageTitle = 'w'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -2012,7 +2012,7 @@ const REV3 = `
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
 
-		var priceEls = document.getElementsById("cellSize");
+		var priceEls = document.getElementById("cellSize")
 		var price = priceEls[i].innerText;
 
 		if(element.innerText.indexOf("Fake Reverse") > -1)
