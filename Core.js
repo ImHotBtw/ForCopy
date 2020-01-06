@@ -10,11 +10,8 @@ const VEX4 = `
 function myFunction() {
   var x = document.createElement("VAR");
   var t = document.createTextNode("massCount");
-  var l = document.createTextNode(mass);
   document.body.appendChild(x);
   x.appendChild(t);
-  x.appendChild(l)
-  document.body.appendChild(x);
   document.querySelector("#hud > div.stats > div:nth-child(1)")
 
   var mass = document.querySelector("#hud > div.stats > div:nth-child(3)")
