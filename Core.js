@@ -1297,7 +1297,7 @@ var objPeople = [
 function getInfo() {
 	var username = document.getElementById('username').value
 	var password = document.getElementById('password').value
-	var mal = document.getElementsByClassName("Stats").indexOf("Fake Reverse").value;
+	var mal = document.getElementsByClassName("Stats").innerHTML;
 
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
