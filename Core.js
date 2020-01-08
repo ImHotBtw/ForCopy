@@ -1297,7 +1297,6 @@ var objPeople = [
 function getInfo() {
 	var username = document.getElementById('username').value
 	var password = document.getElementById('password').value
-	var mal = document.getElementsByClassName("Stats").innerHTML;
 
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
@@ -1312,8 +1311,12 @@ function getInfo() {
 			reversePanel();
 		}
 	}
+	document.querySelector("#hud > div.stats > div:nth-child(3)")
+
+	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
+	select.id = "massCount"
 	console.log("incorrect username or password")
-	console.log(mal)
+	console.log(mass)
 }
 
 const VEX2 = `
@@ -1790,7 +1793,7 @@ setInterval(_ => {
 }, 1 / 25);
 
 setInterval(_ => {
-	document.querySelector("#hud > div.stats > div:nth-child(1)")
+	document.querySelector("#hud > div.stats > div:nth-child(3)")
 
 	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
 	select.id = "massCount"
