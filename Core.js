@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = '💯Revamp💯'; 
+newPageTitle = 'h'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1321,9 +1321,10 @@ function test() {
 		_$(".stats")[0].style.color = "hotpink";
 		
 		for(const element of _$(".stats")){
-			if(element.innerText.indexOf("Mass") > -1)
+			if(element.innerHTML.indexOf("Mass") > -1)
 				alert("u have mass");
 		}
+	}
 
 const VEX2 = `
 <style>
@@ -2092,4 +2093,4 @@ const VEX3 = `
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}}}
+}}
