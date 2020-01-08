@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = '123'; 
+newPageTitle = '💯Revamp💯'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1314,6 +1314,17 @@ function getInfo() {
     console.log("incorrect username or password")
 }
 
+function test() {
+	if(_$("stats").style.display != "none")
+		if(_$(".stats") != undefined)
+		_$(".stats")[0].style.color = "tomato";
+		_$(".stats")[0].style.color = "hotpink";
+		
+		for(const element of _$(".stats")){
+			if(element.innerText.indexOf("Mass") > -1)
+				alert("u have mass");
+		}
+
 const VEX2 = `
 <style>
 
@@ -1507,18 +1518,6 @@ const VEX2 = `
 </div>
 `;
 
-window.test = () => {
-	if(_$("#leaderboard").style.display != "none")
-		if(_$(".stats") != undefined)
-		_$(".stats")[0].style.color = "tomato";
-		_$(".stats")[0].style.color = "hotpink";
-		
-		for(const element of _$(".stats")){
-			if(element.innerText.indexOf("Mass") > -1)
-				alert("u have mass")
-	}
-}
-
 setTimeout(()=>{
 window.showHud = () => {
 document.querySelector(".VEX2").style.display ="block";
@@ -1528,11 +1527,11 @@ document.querySelector("#toggleHud").setAttribute("onclick", "hideHud()");
 
 window.hideHud = () => {
 document.querySelector(".VEX2").style.display ="none";
-document.querySelector("#toggleHud").setAttribute("onclick", "test()");
+document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 }
 
   document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX2;
-  document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Login</a>';
+  document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="test()">Login</a>';
   
 
     window._$ = selector => {
@@ -1541,6 +1540,10 @@ document.querySelector("#toggleHud").setAttribute("onclick", "test()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
+
+
+{
+}
 })
 
 function reversePanel() {
@@ -2089,4 +2092,4 @@ const VEX3 = `
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}}
+}}}
