@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = '💯Revamp💯'; 
+newPageTitle = '123'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1507,13 +1507,6 @@ const VEX2 = `
 </div>
 `;
 
-setTimeout(()=>{
-window.showHud = () => {
-document.querySelector(".VEX2").style.display ="block";
-document.querySelector("#toggleHud").setAttribute("onclick", "hideHud()");
-
-}
-
 window.test = () => {
 	if(_$("#leaderboard").style.display != "none")
 		if(_$(".stats") != undefined)
@@ -1524,6 +1517,14 @@ window.test = () => {
 			if(element.innerText.indexOf("Mass") > -1)
 				alert("u have mass")
 	}
+}
+
+setTimeout(()=>{
+window.showHud = () => {
+document.querySelector(".VEX2").style.display ="block";
+document.querySelector("#toggleHud").setAttribute("onclick", "hideHud()");
+
+}
 
 window.hideHud = () => {
 document.querySelector(".VEX2").style.display ="none";
@@ -1540,11 +1541,6 @@ document.querySelector("#toggleHud").setAttribute("onclick", "test()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-}
-
-
-{
-}
 })
 
 function reversePanel() {
