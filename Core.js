@@ -1313,12 +1313,93 @@ function getInfo() {
 	}
 	document.querySelector("#hud > div.stats > div:nth-child(3)")
 
-	tag != localStorage.getItem("teamtag") ? (tag = localStorage.getItem("teamtag")) : tag = tag;
-	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)").innerText.indexOf(tag);
+	Player.tag != localStorage.getItem("teamtag") ? (Player.tag = localStorage.getItem("teamtag")) : Player.tag = Player.tag;
+	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)").innerText.indexOf(Player.nick);
 	mass.id = "massCount"
 	console.log("incorrect username or password")
 	console.log(mass)
 }
+
+const Player = {
+
+	nick: '',
+
+	x: 0,
+	y: 0,
+
+	tx: null,
+	ty: null,
+
+	freeze: false,
+
+	_socket: null,
+
+	getServerUrl: _ => {
+
+		if(Player._socket)
+			return Player._socket.url;
+	},
+
+	getCoords: _ => ({x: Player.x,y: Player.y}),
+	getX: _ => Player.x,
+	getY: _ => Player.y,
+
+	setCoords: (x, y) => (Player.x = x | 0) && (Player.x = y | 0),
+	setX: value => Player.x = value | 0,
+	setY: value => Player.y = value | 0,
+
+	getTarget: _ => ({x: Player.tx, y: Player.ty}),
+	getTargetX: _ => Player.tx,
+	getTargetY: _ => Player.ty,
+
+	setTarget: (x, y) => (Player.tx = x | 0) && (Player.ty = y | 0),
+	setTargetX: value => Player.tx = value | 0,
+	setTargetY: value => Player.ty = value | 0,
+
+	moveTo: (x, y) => {
+
+		const packet = new DataView(new ArrayBuffer(9));
+		packet.setUint8(0, 16);
+		packet.setInt32(1, x);
+		packet.setInt32(5, y);
+
+		if(Player._socket)
+			Player._socket._send(packet);
+	},
+
+	spawn: _ => {
+
+		if(Player._socket)
+			Player._socket._send(Player._pspawn);
+	},
+
+	eject : _ => {
+
+		const packet = new DataView(new ArrayBuffer(1));
+		packet.setUint8(0, 21);
+		// packet.setUint8(1, 0);
+
+		if(Player._socket)
+			Player._socket._send(packet);
+	},
+
+	splitMax: _ => {
+
+		const packet = new DataView(new ArrayBuffer(2));
+		packet.setUint8(0, 17);
+		packet.setUint8(1, Player.getX());
+
+		if(Player._socket)
+			Player._socket._send(packet);
+	},
+
+	_pinit: new Uint8Array([]),
+	_pspawn: new Uint8Array([]),
+};
+
+const Bot = {};
+
+Object.assign(Bot, Player)
 
 const VEX2 = `
 <style>
