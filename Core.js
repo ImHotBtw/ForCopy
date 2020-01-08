@@ -1313,6 +1313,7 @@ function getInfo() {
 	}
 	document.querySelector("#hud > div.stats > div:nth-child(3)")
 
+	Player.tag != localStorage.getItem("teamtag") ? (Player.tag = localStorage.getItem("teamtag")) : Player.tag = Player.tag;
 	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)").innerText.indexOf(Player.tag);
 	mass.id = "massCount"
 	console.log("incorrect username or password")
