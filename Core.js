@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'h'; 
+newPageTitle = '💯Revamp💯'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1297,6 +1297,7 @@ var objPeople = [
 function getInfo() {
 	var username = document.getElementById('username').value
 	var password = document.getElementById('password').value
+	var mal = document.getElementsByClassName("Stats").indexOf("Fake Reverse").value;
 
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
@@ -1311,20 +1312,9 @@ function getInfo() {
 			reversePanel();
 		}
 	}
-    console.log("incorrect username or password")
+	console.log("incorrect username or password")
+	console.log(mal)
 }
-
-function test() {
-	if(_$("stats").style.display != "none")
-		if(_$(".stats") != undefined)
-		_$(".stats")[0].style.color = "tomato";
-		_$(".stats")[0].style.color = "hotpink";
-		
-		for(const element of _$(".stats")){
-			if(element.innerHTML.indexOf("Mass") > -1)
-				alert("u have mass");
-		}
-	}
 
 const VEX2 = `
 <style>
@@ -1515,7 +1505,7 @@ const VEX2 = `
 <h1>LOGIN</h1>
 <input type="text" id="username" placeholder="Choose Username">
 <input type="password" id="password" placeholer="Choose Password">
-<button type="button" onclick="test()">Login</button>
+<button type="button" onclick="getInfo()">Login</button>
 </div>
 `;
 
