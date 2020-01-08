@@ -1313,7 +1313,7 @@ function getInfo() {
 	}
 	document.querySelector("#hud > div.stats > div:nth-child(3)")
 
-	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
+	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)").innerText;
 	mass.id = "massCount"
 	console.log("incorrect username or password")
 	console.log(mass)
