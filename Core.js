@@ -1503,10 +1503,20 @@ const VEX2 = `
 <h1>LOGIN</h1>
 <input type="text" id="username" placeholder="Choose Username">
 <input type="password" id="password" placeholer="Choose Password">
-<button type="button" onclick="getInfo()">Login</button>
+<button type="button" onclick="test()">Login</button>
 </div>
 `;
 
+
+function test() {
+	if(_$(".stats") != undefined)
+	_$(".stats")[0].style.color = "tomato";
+	_$(".stats")[0].style.color = "hotpink";
+	
+	for(const element of _$(".stats")){
+		if(element.innerText.indexOf("Mass") > -1)
+			alert("u have mass");
+	}
 
 
 setTimeout(()=>{
@@ -1528,7 +1538,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
     const nodes = document.querySelectorAll(selector);
 
-    return nodes.length == 1 ? nodes[0] : nodes;
+	return nodes.length == 1 ? nodes[0] : nodes;
+	
     }
 {
 }
@@ -2081,3 +2092,4 @@ const VEX3 = `
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
 }}
+}
