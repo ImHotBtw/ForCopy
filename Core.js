@@ -2075,12 +2075,12 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1>Reverse Panel</h1>
+	<h1>Flix Panel</h1>
 		<div class="VEX3-extras">
 		<div class="VEX3-extras-item">
 		<p>Name: Fake Flix - Color Changer</p>
-		<p>Secondary: FkE Flix - Color Changer</p>
-		<input id="color2" type="text" placeholder="HEX - #FFFFFF" />
+		<p>Secondary: ᴮᵏ Flix - Color Changer</p>
+		<input type="color" id="color2">
 		<input id="submitColor2" value="Submit" type="button" />
 		<p href="https://htmlcolorcodes.com/color-picker/">HEX Codes</p>
 	</div>
