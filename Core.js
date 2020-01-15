@@ -1895,8 +1895,8 @@ const VEX3 = `
 	
 	  width : 300px;
 	  height: 146px;
-	  bottom: -55%;
-	  right: -50%;
+	  bottom: -70%;
+	  right: -80%;
 	  position: absolute;
 	  top: calc(50% - 400px);
 	
@@ -2080,7 +2080,8 @@ const VEX3 = `
 		<div class="VEX3-extras-item">
 		<p>Name: Fake Flix - Color Changer</p>
 		<p>Secondary: ᴮᵏ Flix - Color Changer</p>
-		<input type="color" id="color2">
+    <input type="color" id="color2">
+    <input id="submitColor2" value="Choose" type="button" />
 	</div>
 	</div>
 	`;
