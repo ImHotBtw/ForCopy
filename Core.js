@@ -1898,7 +1898,7 @@ const VEX3 = `
 	  bottom: 0%;
 	  right: 14%;
 	  position: fixed;
-	  top: calc(50% - 400px);
+	  top: calc(45% - 350px);
 	
 	  display: none;
 	  flex-wrap : wrap;
