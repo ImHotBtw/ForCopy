@@ -2078,9 +2078,7 @@ const VEX3 = `
 	<h1>Flix Panel</h1>
 		<div class="VEX3-extras">
 		<div class="VEX3-extras-item">
-		<p>Name: Fake Flix - Color Changer</p>
-		<p>Secondary: ᴮᵏ Flix - Color Changer</p>
-    <input type="color" id="color2">
+	  >input type="color" id="color2"> <p>Name: Fake Flix - Color Changer</p>
     <input id="submitColor2" value="Choose" type="button" />
 	</div>
 	</div>
