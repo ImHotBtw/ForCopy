@@ -1289,7 +1289,7 @@ var objPeople = [
 	},
 	{ // Object @ 2 index
 		username: "Flix",
-		password: ""
+		password: "123"
 	}
 
 ]
@@ -1418,7 +1418,7 @@ const VEX2 = `
   justify-content: center;
 
   background: rgba(30, 30, 30, .75);
-  border: 1px solid red;
+  border: 1px solid aqua;
 
   font-family : Monospace;
 
@@ -1641,7 +1641,7 @@ function reversePanel() {
   justify-content: center;
 
   background: rgba(30, 30, 30, .75);
-  border: 1px solid red;
+  border: 1px solid aqua;
 
   font-family : Monospace;
 
@@ -1896,7 +1896,7 @@ const VEX3 = `
 	  width : 350px;
 	  height: 300px;
 	  bottom: 0%;
-	  right: 2%;
+	  right: 3%;
 	  position: fixed;
 	  top: calc(50% - 400px);
 	
@@ -1905,7 +1905,7 @@ const VEX3 = `
 	  justify-content: center;
 	
 	  background: rgba(30, 30, 30, .75);
-	  border: 1px solid red;
+    border: 1px solid aqua;
 	
 	  font-family : Monospace;
 	
@@ -2081,8 +2081,6 @@ const VEX3 = `
 		<p>Name: Fake Flix - Color Changer</p>
 		<p>Secondary: ᴮᵏ Flix - Color Changer</p>
 		<input type="color" id="color2">
-		<input id="submitColor2" value="Submit" type="button" />
-		<p href="https://htmlcolorcodes.com/color-picker/">HEX Codes</p>
 	</div>
 	</div>
 	`;
