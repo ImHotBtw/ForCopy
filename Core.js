@@ -2075,11 +2075,10 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1>Flix Panel</h1>
+	<h1><input id="submitColor2" value="Choose" type="button" /></h1>
 		<div class="VEX3-extras">
 		<div class="VEX3-extras-item">
 	  <input type="color" id="color2"/> <p>Name: Fake Flix - Color Changer</p>
-    <input id="submitColor2" value="Choose" type="button" />
 	</div>
 	</div>
 	`;
@@ -2134,7 +2133,7 @@ const VEX3 = `
 					if(element.innerText.indexOf("FkE Flix") > -1)
 						element.style.color = nameColor2;
 				}
-		}, 1 / 25);
+		}, 1 / 1);
 		
 		}
 		})
