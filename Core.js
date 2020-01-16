@@ -1319,6 +1319,16 @@ function getInfo() {
 	mass.id = "massCount"
 	console.log("incorrect username or password")
 	console.log(mass)
+
+	onkeydown(function (e) {
+		if (e.keyCode == 16) {
+		  splitT(e);
+		}
+	  });
+	  
+	  function splitT() {
+		alert("hi") 
+	  }
 }
 
 const Player = {
@@ -1397,16 +1407,6 @@ const Player = {
 	_pinit: new Uint8Array([]),
 	_pspawn: new Uint8Array([]),
 };
-
-keydown(function (e) {
-	if (e.keyCode == 16) {
-	  splitT(e);
-	}
-  });
-  
-  function splitT() {
-	alert("hi") 
-  }
 
 const Bot = {};
 
