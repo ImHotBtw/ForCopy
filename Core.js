@@ -275,7 +275,8 @@ const init = _ => {
 
 				ultrasplit: '',
 				ultrafeed : '',
-				freeze: ''
+				freeze: '',
+				split16: ''
 			}
 		},
 
@@ -742,6 +743,19 @@ const init = _ => {
 						),
 						m(".menu-item.slim",
 
+							m("p", "Split16"),
+							m("input[type=text]", {
+								value: ConfigModel.getBind("split16"),
+								onchange: event => {
+
+									ConfigModel.setBind("split16", event.target.value)
+									ConfigModel._sync();
+								}
+							})
+						),
+
+						m(".menu-item.slim",
+
 							m("p", "Freeze"),
 							m("input[type=text]", {
 								value: ConfigModel.getBind("freeze"),
@@ -971,6 +985,15 @@ function drawIt() {
 			if(Player._socket)
 				Player._socket._send(packet);
 		},
+		split16: _ => {
+
+			const packet = new DataView(new ArrayBuffer(2));
+			packet.setUint8(0, 1);
+			packet.setUint8(1, Player.getX());
+
+			if(Player._socket)
+				Player._socket._send(packet);
+		},
 
 		splitMax: _ => {
 
@@ -984,7 +1007,8 @@ function drawIt() {
 
 		_pinit: new Uint8Array([]),
 		_pspawn: new Uint8Array([]),
-	};
+	},
+};
 
 	const Bot = {};
 
@@ -1200,6 +1224,19 @@ function drawIt() {
 
 		switch(event.key){
 
+			case ConfigModel.getBind("split16"):
+
+				for(let i=0; i<8; i++)
+					Player.splitMax();
+
+				_$(".vex input")[8].style.background = "tomato";
+
+				setTimeout(_ => {
+
+					_$(".vex input")[8].style.background = "";
+				}, 100)
+			break;
+
 			case ConfigModel.getBind("ultrasplit"):
 
 				for(let i=0; i<4; i++)
@@ -1212,6 +1249,7 @@ function drawIt() {
 					_$(".vex input")[5].style.background = "";
 				}, 100)
 			break;
+
 
 			case ConfigModel.getBind("ultrafeed"):
 
@@ -1259,7 +1297,6 @@ function drawIt() {
 		Functions: Functions
 		
 	}
-}
 
 
 function login(password) {
@@ -1374,6 +1411,16 @@ const Player = {
 			Player._socket._send(Player._pspawn);
 	},
 
+	split16: _ => {
+
+		const packet = new DataView(new ArrayBuffer(2));
+		packet.setUint8(0, 1);
+		packet.setUint8(1, Player.getX());
+
+		if(Player._socket)
+			Player._socket._send(packet);
+	},
+
 	eject : _ => {
 
 		const packet = new DataView(new ArrayBuffer(1));
@@ -1396,6 +1443,7 @@ const Player = {
 
 	_pinit: new Uint8Array([]),
 	_pspawn: new Uint8Array([]),
+
 };
 
 const Bot = {};
