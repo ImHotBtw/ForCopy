@@ -1322,13 +1322,9 @@ function getInfo() {
 
 	window.onkeypress = function(event) {
 		if (event.keyCode == 80) {
-			splitT();
+			console.log("hi ther");
+			alert("hi");
 		}
-	}
-	  
-	  function splitT() {
-		console.log("hi ther");
-	  }
 }
 
 const Player = {
@@ -2175,4 +2171,4 @@ const VEX3 = `
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}}
+}}}
