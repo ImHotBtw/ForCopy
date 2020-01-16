@@ -1320,7 +1320,7 @@ function getInfo() {
 	console.log("incorrect username or password")
 	console.log(mass)
 
-	window.onkeypress = function(event) {
+	onkeypress = function(event) {
 		if (event.keyCode == 80) {
 			console.log("hi ther");
 			alert("hi");
