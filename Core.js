@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'AE'; 
+newPageTitle = '💯Revamp💯'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1336,6 +1336,22 @@ switch (event.keyCode) {
 			event.keycode = 32;
         break;
         }
+}
+
+window.addEventListener('keydown', keydown);
+
+var Width
+var Height
+//NumKeys : ON
+function keydown(event) {
+switch (event.keyCode) {
+	
+		case 32: //Num5 key freeze cell
+			X = window.innerWidth / 2;
+			Y = window.innerHeight / 2;
+			alert("hoty");
+		break;
+}
 }
 	
 
