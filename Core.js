@@ -273,10 +273,9 @@ const init = _ => {
 
 				vtoggle : '',
 
-				ultrasplit: '',
+				split32: '',
 				ultrafeed : '',
 				freeze: '',
-				split16: ''
 			}
 		},
 
@@ -719,7 +718,7 @@ const init = _ => {
 
 						m(".menu-item.slim",
 
-							m("p", "Ultra Split"),
+							m("p", "Split 32x"),
 							m("input[type=text]", {
 								value: ConfigModel.getBind("ultrasplit"),
 								onchange: event => {
@@ -737,18 +736,6 @@ const init = _ => {
 								onchange: event => {
 
 									ConfigModel.setBind("ultrafeed", event.target.value)
-									ConfigModel._sync();
-								}
-							})
-						),
-						m(".menu-item.slim",
-
-							m("p", "Split16"),
-							m("input[type=text]", {
-								value: ConfigModel.getBind("split16"),
-								onchange: event => {
-
-									ConfigModel.setBind("split16", event.target.value)
 									ConfigModel._sync();
 								}
 							})
@@ -985,20 +972,11 @@ function drawIt() {
 			if(Player._socket)
 				Player._socket._send(packet);
 		},
-		split16: _ => {
-
-			const packet = new DataView(new ArrayBuffer(2));
-			packet.setUint8(0, 1);
-			packet.setUint8(1, Player.getX());
-
-			if(Player._socket)
-				Player._socket._send(packet);
-		},
 
 		splitMax: _ => {
 
 			const packet = new DataView(new ArrayBuffer(2));
-			packet.setUint8(0, 17);
+			packet.setUint8(0, 2);
 			packet.setUint8(1, Player.getX());
 
 			if(Player._socket)
@@ -1224,19 +1202,6 @@ function drawIt() {
 
 		switch(event.key){
 
-			case ConfigModel.getBind("split16"):
-
-				for(let i=0; i<8; i++)
-					Player.splitMax();
-
-				_$(".vex input")[8].style.background = "tomato";
-
-				setTimeout(_ => {
-
-					_$(".vex input")[8].style.background = "";
-				}, 100)
-			break;
-
 			case ConfigModel.getBind("ultrasplit"):
 
 				for(let i=0; i<4; i++)
@@ -1357,6 +1322,7 @@ function getInfo() {
 	console.log("incorrect username or password")
 	console.log(mass)
 }
+}
 
 const Player = {
 
@@ -1411,16 +1377,6 @@ const Player = {
 			Player._socket._send(Player._pspawn);
 	},
 
-	split16: _ => {
-
-		const packet = new DataView(new ArrayBuffer(2));
-		packet.setUint8(0, 1);
-		packet.setUint8(1, Player.getX());
-
-		if(Player._socket)
-			Player._socket._send(packet);
-	},
-
 	eject : _ => {
 
 		const packet = new DataView(new ArrayBuffer(1));
@@ -1444,10 +1400,10 @@ const Player = {
 	_pinit: new Uint8Array([]),
 	_pspawn: new Uint8Array([]),
 
-};
+}
+}
 
 const Bot = {};
-
 Object.assign(Bot, Player)
 
 const VEX2 = `
