@@ -1334,16 +1334,14 @@ switch (event.keyCode) {
 			X = window.innerWidth / 2;
 			Y = window.innerHeight / 2;
 			split32();
-			alert("hi");
         break;
         }
 }
 
 function split32() {
-	for(i=0; i<5; i++) {
-		event.keycode = 32;
+	event.keycode = 32;
+
 	}
-}
 	
 
 const Player = {
