@@ -1398,14 +1398,14 @@ const Player = {
 	_pspawn: new Uint8Array([]),
 };
 
-$('input').keydown(function (e) {
+keydown(function (e) {
 	if (e.keyCode == 16) {
 	  splitT(e);
 	}
   });
   
   function splitT() {
-	alert('Look, Ma! Code reuse!'); 
+	alert("hi") 
   }
 
 const Bot = {};
