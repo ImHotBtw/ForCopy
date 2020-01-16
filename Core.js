@@ -1320,12 +1320,27 @@ function getInfo() {
 	console.log("incorrect username or password")
 	console.log(mass)
 
-	onkeypress = function(event) {
-		if (event.keyCode == 80) {
-			console.log("hi ther");
-			alert("hi");
-		}
 }
+
+window.addEventListener('keydown', keydown);
+
+var Width
+var Height
+//NumKeys : ON
+function keydown(event) {
+switch (event.keyCode) {
+        case 80: //Num5 key freeze cell
+            split32();
+        break;
+        }
+}
+
+function split32() {
+	for(i=0; i<5; i++) {
+		event.keycode = 32;
+	}
+}
+	
 
 const Player = {
 
@@ -2171,4 +2186,4 @@ const VEX3 = `
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}}}
+}}
