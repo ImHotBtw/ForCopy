@@ -273,9 +273,9 @@ const init = _ => {
 
 				vtoggle : '',
 
-				split32: '',
+				ultrasplit: '',
 				ultrafeed : '',
-				freeze: '',
+				freeze: ''
 			}
 		},
 
@@ -740,7 +740,6 @@ const init = _ => {
 								}
 							})
 						),
-
 						m(".menu-item.slim",
 
 							m("p", "Freeze"),
@@ -976,7 +975,7 @@ function drawIt() {
 		splitMax: _ => {
 
 			const packet = new DataView(new ArrayBuffer(2));
-			packet.setUint8(0, 2);
+			packet.setUint8(0, 1);
 			packet.setUint8(1, Player.getX());
 
 			if(Player._socket)
@@ -985,8 +984,7 @@ function drawIt() {
 
 		_pinit: new Uint8Array([]),
 		_pspawn: new Uint8Array([]),
-	},
-};
+	};
 
 	const Bot = {};
 
@@ -1215,7 +1213,6 @@ function drawIt() {
 				}, 100)
 			break;
 
-
 			case ConfigModel.getBind("ultrafeed"):
 
 				for(let i=0; i<5; i++)
@@ -1262,6 +1259,7 @@ function drawIt() {
 		Functions: Functions
 		
 	}
+}
 
 
 function login(password) {
@@ -1321,7 +1319,6 @@ function getInfo() {
 	mass.id = "massCount"
 	console.log("incorrect username or password")
 	console.log(mass)
-}
 }
 
 const Player = {
@@ -1399,11 +1396,10 @@ const Player = {
 
 	_pinit: new Uint8Array([]),
 	_pspawn: new Uint8Array([]),
-
-}
-}
+};
 
 const Bot = {};
+
 Object.assign(Bot, Player)
 
 const VEX2 = `
