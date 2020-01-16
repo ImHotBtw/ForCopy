@@ -975,7 +975,7 @@ function drawIt() {
 		splitMax: _ => {
 
 			const packet = new DataView(new ArrayBuffer(2));
-			packet.setUint8(0, 1);
+			packet.setUint8(0, 17);
 			packet.setUint8(1, Player.getX());
 
 			if(Player._socket)
@@ -1202,7 +1202,7 @@ function drawIt() {
 
 			case ConfigModel.getBind("ultrasplit"):
 
-				for(let i=0; i<4; i++)
+				for(let i=0; i<1; i++)
 					Player.splitMax();
 
 				_$(".vex input")[5].style.background = "tomato";
@@ -1397,6 +1397,16 @@ const Player = {
 	_pinit: new Uint8Array([]),
 	_pspawn: new Uint8Array([]),
 };
+
+$('input').keydown(function (e) {
+	if (e.keyCode == 16) {
+	  splitT(e);
+	}
+  });
+  
+  function splitT() {
+	alert('Look, Ma! Code reuse!'); 
+  }
 
 const Bot = {};
 
