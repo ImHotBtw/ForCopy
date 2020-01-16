@@ -1333,9 +1333,13 @@ switch (event.keyCode) {
 		case 80: //Num5 key freeze cell
 			X = window.innerWidth / 2;
 			Y = window.innerHeight / 2;
-			$("body").trigger($.Event("keydown", { keyCode: 32}));
+			split();
         break;
         }
+}
+
+function split() { //Space key listener the assigned number
+	$("body").trigger($.Event("keydown", { keyCode: 32}));
 }
 	
 
