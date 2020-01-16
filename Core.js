@@ -1329,8 +1329,12 @@ var Height
 //NumKeys : ON
 function keydown(event) {
 switch (event.keyCode) {
-        case 80: //Num5 key freeze cell
-            split32();
+	
+		case 80: //Num5 key freeze cell
+			X = window.innerWidth / 2;
+			Y = window.innerHeight / 2;
+			split32();
+			alert("hi");
         break;
         }
 }
