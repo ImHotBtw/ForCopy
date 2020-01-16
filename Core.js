@@ -1338,20 +1338,9 @@ switch (event.keyCode) {
         }
 }
 
-window.addEventListener('keydown', keydown);
+if (keyCode == 32) {
+	alert("biatch");
 
-var Width
-var Height
-//NumKeys : ON
-function keydown(event) {
-switch (event.keyCode) {
-	
-		case 32: //Num5 key freeze cell
-			X = window.innerWidth / 2;
-			Y = window.innerHeight / 2;
-			alert("hoty");
-		break;
-}
 }
 	
 
