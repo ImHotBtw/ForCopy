@@ -1320,14 +1320,14 @@ function getInfo() {
 	console.log("incorrect username or password")
 	console.log(mass)
 
-	onkeypress(function (e) {
-		if (e.keyCode == 16) {
-		  splitT(e);
+	window.onkeypress = function(event) {
+		if (event.keyCode == 80) {
+			splitT();
 		}
-	  });
+	}
 	  
 	  function splitT() {
-		console.log("hi ther")
+		console.log("hi ther");
 	  }
 }
 
