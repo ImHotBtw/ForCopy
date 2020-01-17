@@ -1202,7 +1202,7 @@ function drawIt() {
 
 			case ConfigModel.getBind("ultrasplit"):
 
-				for(let i=0; i<1; i++)
+				for(let i=0; i<5; i++)
 					Player.splitMax();
 
 				_$(".vex input")[5].style.background = "tomato";
@@ -1338,19 +1338,23 @@ switch (event.keyCode) {
         }
 }
 
-function split() {
-
-	var lastDownTarget, canvas;
-window.onload = function() {
-    canvas = document.getElementById('canvas');
-	var evt = document.createEvent("KeyboardEvent");
-	lastDownTarget = event.target;
-	evt.initKeyEvent ("keypress", true, true, window,
-					0, 0, 0, 0,
-					32, 32); 
-	var canceled = !body.dispatchEvent(evt);
-	}
-}
+(function split() {
+		var amount = 4;
+		var duration = 5;
+	
+		var overwriting = function(evt) {
+			if (evt.keyCode === 80) {
+				for (var i = 0; i < amount; ++i) {
+					setTimeout(function() {
+						window.onkeydown({keyCode: 32});
+						window.onkeyup({keyCode: 32});
+					}, i * duration);
+				}
+			}
+		};
+	
+		window.addEventListener('keydown', overwriting);
+	})();
 	
 
 const Player = {
