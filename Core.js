@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'rev'; 
+newPageTitle = '💯Revamp💯'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1338,15 +1338,19 @@ switch (event.keyCode) {
         }
 }
 
-function split() { //Space key listener the assigned number
+function split() {
 
-	canvas = document.getElementById('canvas');
+	var lastDownTarget, canvas;
+window.onload = function() {
+    canvas = document.getElementById('canvas');
 	var evt = document.createEvent("KeyboardEvent");
-	canvas.evt.initKeyEvent ("keypress", true, true, window,
+	lastDownTarget = event.target;
+	evt.initKeyEvent ("keypress", true, true, window,
 					0, 0, 0, 0,
 					32, 32); 
 	var canceled = !body.dispatchEvent(evt);
 	}
+}
 	
 
 const Player = {
