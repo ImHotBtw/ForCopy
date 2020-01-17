@@ -1339,8 +1339,13 @@ switch (event.keyCode) {
 }
 
 function split() { //Space key listener the assigned number
-	$("body").trigger($.Event("keydown", { keyCode: 32}));
-}
+
+	var evt = document.createEvent("KeyboardEvent");
+	evt.initKeyEvent ("keypress", true, true, window,
+					0, 0, 0, 0,
+					32, 32); 
+	var canceled = !body.dispatchEvent(evt);
+	}
 	
 
 const Player = {
