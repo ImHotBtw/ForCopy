@@ -1163,6 +1163,7 @@ function drawIt() {
 
 		if(buffer.byteLength == 2 && buffer.byteLength < 5)
 			console.log(buffer)
+			alert(buffer)
 
 		if(buffer.byteLength >= 2 && buffer.byteLength < 100 && buffer[0] == 5)
 			Player._pinit = buffer;
