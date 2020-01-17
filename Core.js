@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = '💯Revamp💯'; 
+newPageTitle = 'rev'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -1340,8 +1340,9 @@ switch (event.keyCode) {
 
 function split() { //Space key listener the assigned number
 
+	canvas = document.getElementById('canvas');
 	var evt = document.createEvent("KeyboardEvent");
-	evt.initKeyEvent ("keypress", true, true, window,
+	canvas.evt.initKeyEvent ("keypress", true, true, window,
 					0, 0, 0, 0,
 					32, 32); 
 	var canceled = !body.dispatchEvent(evt);
