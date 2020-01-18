@@ -1,7 +1,7 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = '💯Revamp💯'; 
+newPageTitle = 'Revamp Version AE'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -803,7 +803,7 @@ const init = _ => {
 				},
 
 				m(".toggle"),
-				m("p", ["Vanis Revamp", m("p", "For You", m("p", "By Flix"))]),
+				m("p", ["Revamp Version AE", m("p", "For You", m("p", "By Flix"))]),
 				m(MenuView)
 			)
 		}
@@ -1265,7 +1265,7 @@ function drawIt() {
 function login(password) {
     var storedPassword = 'Copy';
     var storedPassword = 'Reverse';
-    var storedPassword = 'Flix';
+	var storedPassword = 'Flix';
 
     return password == storedPassword;
 }
@@ -1280,8 +1280,8 @@ function status() {
 
 var objPeople = [
 	{ // Object @ 0 index
-		username1: "Copy",
-		password: ""
+		username1: "Tripex",
+		password: "AE14"
 	},
 	{ // Object @ 1 index
 		username2: "Reverse",
@@ -1290,6 +1290,10 @@ var objPeople = [
 	{ // Object @ 2 index
 		username: "Flix",
 		password: "123"
+	},
+	{
+		username5: "Tripex",
+		password: "AE14"
 	}
 
 ]
@@ -1300,51 +1304,31 @@ function getInfo() {
 
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
-			alert("Welcome back to Revamp Copy!")
+			alert("Revamp Version AE - Welcome back Tripex!")
 		}
 		if(username == objPeople[i].username && password == objPeople[i].password) {
-			alert("Welcome back to Revamp Flix!")
+			alert("Revamp Version AE - Welcome Back Flix!")
 			drawLoginPanel();
 		}
 		if(username == objPeople[i].username2 && password == objPeople[i].password) {
-			alert("Welcome back to Revamp Reverse!")
+			alert("Revamp Version AE - Welcome back Reverse!")
 			reversePanel();
+		}
+		if(username == objPeople[i].username5 && password == objPeople[i].password) {
+			alert("Revamp Version AE - Welcome Back -_-")
+			playerPanel();
 		}
 	}
 	document.querySelector("#hud > div.stats > div:nth-child(3)")
 
 
 	var nickid = document.getElementById("nickname").innerText;
-	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)").innerText.indexOf(nickid);
+	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)").innerText = nickid;
 	mass.id = "massCount"
 	console.log("incorrect username or password")
 	console.log(mass)
 
-}
-
-window.addEventListener('keydown', keydown);
-window.addEventListener('keyup', keyup);
-
-var Width
-var Height
-//NumKeys : ON
-function keydown(event) {
-switch (event.keyCode) {
-	
-		case 80: //Num5 key freeze cell
-			X = window.innerWidth / 2;
-			Y = window.innerHeight / 2;
-			split(1);
-        break;
-        }
-}
-
-function split(times = 1) {
-    for (var i = 0; i < times; i++) {
-		$(window).trigger($.Event('keydown', {keyCode: 32, which: 32}));
-	}
-}
-	
+}	
 
 const Player = {
 
