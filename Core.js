@@ -1894,9 +1894,9 @@ const VEX3 = `
 	  width : 300px;
 	  height: 146px;
 	  bottom: -500%;
-	  right: -100%;
+	  right: -95%;
 	  position: absolute;
-	  top: -100%;
+	  top: -50%;
 	
 	  display: none;
 	  flex-wrap : wrap;
@@ -1904,8 +1904,6 @@ const VEX3 = `
 	
 	  background: rgba(30, 30, 30, .75);
 	  opacity: 0
-	  border-radius: 25px;
-	  border: 2px solid #73AD21;
 	
 	  font-family : Monospace;
 	
