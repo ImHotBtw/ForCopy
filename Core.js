@@ -1904,7 +1904,9 @@ const VEX3 = `
 	
 	  background: rgba(30, 30, 30, .75);
 	  background-opacity: 0;
-	  border-color: rgba(0, 0, 0, .0);
+	  padding: 10px;
+	  border: 3px solid black;
+	  border-radius: 15px;
 	
 	  font-family : Monospace;
 	
@@ -2106,6 +2108,60 @@ const VEX3 = `
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
+
+		document.getElementById("flixNames2").addEventListener("click", showHudF, false);
+
+			const flixNames = `
+			<head>
+			<style>
+			div {
+			width : 50px;
+			height: 20px;
+			bottom: -500%;
+			right: -86%;
+			position: absolute;
+			top: -40%;
+			  
+			display: none;
+			flex-wrap : wrap;
+			justify-content: center;
+			width: 320px;
+			padding: 10px;
+			border: 3px solid black;
+			border-radius: 15px;
+			margin: 0;
+			}
+			</style>
+			</head>
+			<body>
+
+			<div>Fake Flix\nㅤㅤㅤㅤFlix💛\nFlixᴬᴱ</div>
+
+			</body>
+			</html>
+			`;
+
+		setTimeout(()=>{
+			window.showHudF = () => {
+			document.querySelector(".flixNames").style.display ="block";
+			document.querySelector("#toggleHudF").setAttribute("onclick", "hideHudF()");
+			
+			}
+			
+			window.hideHudF = () => {
+			document.querySelector(".flixNames").style.display ="none";
+			document.querySelector("#toggleHudF").setAttribute("onclick", "showHudF()");
+			}
+			
+				window._$ = selector => {
+			
+				const nodes = document.querySelectorAll(selector);
+			
+				return nodes.length == 1 ? nodes[0] : nodes;
+				}
+			})
+
+
 		
 		setInterval(_ => {
 		
