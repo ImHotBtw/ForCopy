@@ -1600,6 +1600,7 @@ const VEX2 = `
 <p>Login is required</p>
 <p style="color:white;">This extension is privately made for members of AE Clan</p>
 <a style="color:blue;"<a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
+<p></p>
 <a style="color:blue;"<a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
 </div>
 `;
