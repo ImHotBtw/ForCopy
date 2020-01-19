@@ -2063,6 +2063,14 @@ const VEX3 = `
 	
 	  color : white;
 	}
+
+	.avatar {
+		vertical-align: middle;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+
+	}
 	
 	.VEX3 > .VEX3-extras > .VEX3-extras-item > input {
 	
@@ -2082,6 +2090,7 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
+	<img src="https://i.imgur.com/k9Hgs2Y.png" alt="Avatar" class="avatars">
 	<h1><input id="submitColor2" value="Choose" type="button"/></h1>
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
