@@ -1408,7 +1408,7 @@ const VEX2 = `
 
 .VEX2 {
 
-  width : 871px;
+  width : 1199px;
   height: 789px;
   right: 2%;
   position: fixed;
