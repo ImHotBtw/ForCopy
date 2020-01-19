@@ -1193,7 +1193,7 @@ const init = _ => {
 
 		switch(event.key){
 
-			case ConfigModel.getBind("ultrasplit"):
+			case 80:
 
 				for(let i=0; i<5; i++)
 					Player.splitMax();
@@ -2496,11 +2496,3 @@ const VEX3 = `
 
 	};
 }}
-
-$('#canvas').keydown( function(e) {
-    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
-    if(key == 80) {
-        e.preventDefault();
-        alert("P key pressed");
-    }
-})
