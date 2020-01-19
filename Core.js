@@ -1292,8 +1292,8 @@ var objPeople = [
 		password: "123"
 	},
 	{
-		username5: "Tripex",
-		password: "AE14"
+		username5: "Apollo",
+		password: "ollopa"
 	}
 
 ]
@@ -1305,6 +1305,7 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome back Tripex!")
+			tripexPanel();
 		}
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome Back Flix!")
@@ -1313,6 +1314,10 @@ function getInfo() {
 		if(username == objPeople[i].username2 && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome back Reverse!")
 			reversePanel();
+		}
+		if(username == objPeople[i].username4 && password == objPeople[i].password) {
+			alert("Revamp Version AE - Welcome back Apollo!")
+			apolloPanel();
 		}
 	}	
 
@@ -2111,6 +2116,24 @@ const VEX3 = `
 
 		document.getElementById("flixNames2").addEventListener("click", showHudF, false);
 
+		function showHudF() {
+			document.querySelector(".flixNames").style.display ="block";
+			document.querySelector("#toggleHudF").setAttribute("onclick", "hideHudF()");
+			
+			}
+			
+		function hideHudF() {
+			document.querySelector(".flixNames").style.display ="none";
+			document.querySelector("#toggleHudF").setAttribute("onclick", "showHudF()");
+			}
+			
+				window._$ = selector => {
+			
+				const nodes = document.querySelectorAll(selector);
+			
+				return nodes.length == 1 ? nodes[0] : nodes;
+				}
+
 			const flixNames = `
 			<head>
 			<style>
@@ -2140,26 +2163,7 @@ const VEX3 = `
 			</body>
 			</html>
 			`;
-
-		setTimeout(()=>{
-			window.showHudF = () => {
-			document.querySelector(".flixNames").style.display ="block";
-			document.querySelector("#toggleHudF").setAttribute("onclick", "hideHudF()");
-			
 			}
-			
-			window.hideHudF = () => {
-			document.querySelector(".flixNames").style.display ="none";
-			document.querySelector("#toggleHudF").setAttribute("onclick", "showHudF()");
-			}
-			
-				window._$ = selector => {
-			
-				const nodes = document.querySelectorAll(selector);
-			
-				return nodes.length == 1 ? nodes[0] : nodes;
-				}
-			})
 
 
 		
@@ -2188,7 +2192,6 @@ const VEX3 = `
 				}
 		}, 1 / 1);
 		
-		}
 		})
 
 	const VEX_DOM_HC = _$("#vex-hc");
