@@ -1592,7 +1592,7 @@ const VEX2 = `
 
 <div class="VEX2">
   <div class="VEX2-hud">
-<button style="background-color:rgba(30, 30, 30, .100);" onclick="IconPanel()"></button>
+<button style="background-color:rgba(30, 30, 30, .100); "border:none" onclick="IconPanel()"></button>
 <h1>LOGIN</h1>
 <input type="text" id="username" placeholder="Username">
 <input type="password" id="password" placeholer="Choose Password">
