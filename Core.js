@@ -1233,23 +1233,7 @@ const init = _ => {
 		Player: Player,
 		Functions: Functions
 		
-	}
-
-function login(password) {
-    var storedPassword = 'Copy';
-    var storedPassword = 'Reverse';
-	var storedPassword = 'Flix';
-
-    return password == storedPassword;
-}
-
-function status() {
-  if(loggedIn) {
-    console.log('You are in :)');
-  } else {
-    console.log('You are not in :(');
-  }
-}
+	};
 
 var objPeople = [
 	{ // Object @ 0 index
