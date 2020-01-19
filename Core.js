@@ -1,8 +1,6 @@
 if(document.body == undefined)
 	window.location.href = "/";
 
-window.onload=showHud();
-
 newPageTitle = 'Revamp Version AE'; 
 document.title = newPageTitle; 
 
