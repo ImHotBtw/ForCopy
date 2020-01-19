@@ -2090,7 +2090,7 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<img src="https://i.imgur.com/7QtKIcc.png" alt="Avatar" class="avatars">
+	<img src="https://i.imgur.com/vCmDjp5.png" alt="Avatar" class="avatars">
 	<h1><input id="submitColor2" value="Choose" type="button"/></h1>
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
