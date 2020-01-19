@@ -1415,7 +1415,7 @@ const VEX2 = `
   justify-content: center;
 
   background: rgba(30, 30, 30, .75);
-  border: 1px solid aqua;
+  opacity: 0
 
   font-family : Monospace;
 
