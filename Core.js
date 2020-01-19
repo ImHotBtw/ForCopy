@@ -2139,34 +2139,7 @@ const VEX3 = `
 						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
-
-		setInterval(_ => {
-		
-			if(_$(".slider.draw-delay").length != 0){
-		
-				_$(".slider.draw-delay").setAttribute("min", 5)
-				_$(".slider.draw-delay").setAttribute("min-value", 5)
-			}
-		
-			if(_$("#leaderboard").style.display != "none")
-		
-				if(_$(".message-from") != undefined)
-					_$(".message-from")[0].style.color = "tomato";
-					_$(".message-from")[0].style.color = "hotpink";
-		
-				for(const element of _$(".message-from")){
-		
-					element.style.color = "#ffffff";
-		
-					if(element.innerText.indexOf("Fake Flix") > -1)
-						element.style.color = nameColor2;
-					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-                        element.style.color = nameColor2;
-                    if(elemewnt.innerText.indexOf("Flixᴬᴱ") > -1)
-                        element.style.color = nameColor2;
-				}
-		}, 1 / 1);
-		
+	
 		}
 	}
 	)
@@ -2396,33 +2369,6 @@ const VEX3 = `
 				var nameColor6 = document.getElementById("color6").value;
 				alert("If youre changing colors, restart vanis")
 			
-			setInterval(_ => {
-			
-				if(_$(".slider.draw-delay").length != 0){
-			
-					_$(".slider.draw-delay").setAttribute("min", 5)
-					_$(".slider.draw-delay").setAttribute("min-value", 5)
-				}
-			
-				if(_$("#leaderboard").style.display != "none")
-			
-					if(_$(".message-from") != undefined)
-						_$(".message-from")[0].style.color = "tomato";
-						_$(".message-from")[0].style.color = "hotpink";
-			
-					for(const element of _$(".message-from")){
-			
-						element.style.color = "#ffffff";
-			
-						if(element.innerText.indexOf("Apollo") > -1)
-							element.style.color = nameColor6;
-						if(element.innerText.indexOf("AE Apollo") > -1)
-							element.style.color = nameColor6;
-						if(elemewnt.innerText.indexOf("Fake Apollo") > -1)
-							element.style.color = nameColor6;
-					}
-			}, 1 / 1);
-	
 			
 			setInterval(_ => {
 			
