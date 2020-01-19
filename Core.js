@@ -841,6 +841,8 @@ const init = _ => {
 
 	m.mount(root, VexView);
 
+}
+
 	setInterval(_ => {
 
 		Player.nick != localStorage.getItem("nickname") ? (Player.nick = localStorage.getItem("nickname")) : Player.nick = Player.nick;
@@ -1238,7 +1240,6 @@ function drawIt() {
 	}
 }
 	)
-}
 
 function login(password) {
     var storedPassword = 'Copy';
