@@ -1901,8 +1901,8 @@ const VEX3 = `
 	
 	  width : 300px;
 	  height: 146px;
-	  bottom: -500%;
-	  right: -95%;
+	  bottom: -530%;
+	  right: -100%;
 	  position: absolute;
 	  top: -40%;
 	
@@ -2159,11 +2159,7 @@ const VEX3 = `
 		
 					if(element.innerText.indexOf("Fake Flix") > -1)
 						element.style.color = nameColor2;
-						element.style.color = nameColor2;
-						element.style.color = nameColor2;
 					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-						element.style.color = nameColor2;
-						element.style.color = nameColor2;
 						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
@@ -2414,15 +2410,9 @@ const VEX3 = `
 				
 							if(element.innerText.indexOf("Apollo") > -1)
 								element.style.color = nameColor6;
-								element.style.color = nameColor6;
-								element.style.color = nameColor6;
 							if(element.innerText.indexOf("AE Apollo") > -1)
 								element.style.color = nameColor6;
-								element.style.color = nameColor6;
-								element.style.color = nameColor6;
 							if(element.innerText.indexOf("Fake Apollo") > -1)
-								element.style.color = nameColor6;
-								element.style.color = nameColor6;
 								element.style.color = nameColor6;
 						}
 				}, 1 / 1);
