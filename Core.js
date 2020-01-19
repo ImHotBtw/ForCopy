@@ -1,3 +1,5 @@
+window.onload=showHud;
+
 if(document.body == undefined)
 	window.location.href = "/";
 
@@ -1592,7 +1594,6 @@ const VEX2 = `
 
 <div class="VEX2">
   <div class="VEX2-hud">
-<button style="background-color:rgba(30, 30, 30, .100); "border:none; border-color:rgba(30, 30, 30, .100);" onclick="IconPanel()"></button>
 <h1>LOGIN</h1>
 <input type="text" id="username" placeholder="Username">
 <input type="password" id="password" placeholer="Choose Password">
@@ -1600,9 +1601,9 @@ const VEX2 = `
 <p></p>
 <p>Login is required</p>
 <p style="color:white;">This extension is privately made for members of AE Clan</p>
-<a style="color:yellow;"<a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
+<a style="color:rgba(22, 175, 199);"<a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
 <p></p>
-<a style="color:yellow;"<a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
+<a style="color:rgba(22, 175, 199);"<a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
 <p></p>
 <p></p>
 <p></p>
@@ -2144,7 +2145,7 @@ const VEX3 = `
 					_$(".slider.draw-delay").setAttribute("min-value", 1)
 				}
 			
-				if(_$("#leaderboard").style.display != "none")
+				if(_$("#message-list").style.display != "none")
 			
 					if(_$(".message-from") != undefined)
 						_$(".message-from")[0].style.color = "tomato";
@@ -2165,8 +2166,8 @@ const VEX3 = `
 		
 			if(_$(".slider.draw-delay").length != 0){
 		
-				_$(".slider.draw-delay").setAttribute("min", 0)
-				_$(".slider.draw-delay").setAttribute("min-value", 0)
+				_$(".slider.draw-delay").setAttribute("min", 1)
+				_$(".slider.draw-delay").setAttribute("min-value", 1)
 			}
 		
 			if(_$("#leaderboard").style.display != "none")
@@ -2181,7 +2182,11 @@ const VEX3 = `
 		
 					if(element.innerText.indexOf("Fake Flix") > -1)
 						element.style.color = nameColor2;
+						element.style.color = nameColor2;
+						element.style.color = nameColor2;
 					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+						element.style.color = nameColor2;
+						element.style.color = nameColor2;
 						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
@@ -2412,6 +2417,40 @@ const VEX3 = `
 			function changeBackground6() {
 				var nameColor6 = document.getElementById("color6").value;
 				alert("If youre changing colors, restart vanis")
+
+
+				setInterval(_ => {
+			
+					if(_$(".slider.draw-delay").length != 0){
+				
+						_$(".slider.draw-delay").setAttribute("min", 1)
+						_$(".slider.draw-delay").setAttribute("min-value", 1)
+					}
+				
+					if(_$("#message-list").style.display != "none")
+				
+						if(_$(".message-from") != undefined)
+							_$(".message-from")[0].style.color = "tomato";
+							_$(".message-from")[0].style.color = "hotpink";
+				
+						for(const element of _$(".message-from")){
+				
+							element.style.color = "#ffffff";
+				
+							if(element.innerText.indexOf("Apollo") > -1)
+								element.style.color = nameColor6;
+								element.style.color = nameColor6;
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("AE Apollo") > -1)
+								element.style.color = nameColor6;
+								element.style.color = nameColor6;
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("Fake Apollo") > -1)
+								element.style.color = nameColor6;
+								element.style.color = nameColor6;
+								element.style.color = nameColor6;
+						}
+				}, 1 / 1);
 			
 			
 			setInterval(_ => {
@@ -2434,9 +2473,15 @@ const VEX3 = `
 			
 						if(element.innerText.indexOf("Apollo") > -1)
 							element.style.color = nameColor6;
+							element.style.color = nameColor6;
+							element.style.color = nameColor6;
 						if(element.innerText.indexOf("AE Apollo") > -1)
 							element.style.color = nameColor6;
+							element.style.color = nameColor6;
+							element.style.color = nameColor6;
 						if(element.innerText.indexOf("Fake Apollo") > -1)
+							element.style.color = nameColor6;
+							element.style.color = nameColor6;
 							element.style.color = nameColor6;
 					}
 			}, 1 / 1);
