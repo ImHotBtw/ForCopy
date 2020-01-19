@@ -968,7 +968,7 @@ const init = _ => {
 		splitMax: _ => {
 
 			const packet = new DataView(new ArrayBuffer(2));
-			packet.setUint8(1, 1);
+			packet.setUint8(0, 17);
 			packet.setUint8(1, Player.getX());
 
 			if(Player._socket)
@@ -1195,7 +1195,7 @@ const init = _ => {
 
 			case ConfigModel.getBind("ultrasplit"):
 
-				for(let i=0; i<2; i++)
+				for(let i=0; i<1; i++)
 					Player.splitMax();
 
 				_$(".vex input")[5].style.background = "tomato";
@@ -1383,7 +1383,7 @@ const Player = {
 	splitMax: _ => {
 
 		const packet = new DataView(new ArrayBuffer(2));
-		packet.setUint8(1, 1);
+		packet.setUint8(0, 17);
 		packet.setUint8(1, Player.getX());
 
 		if(Player._socket)
