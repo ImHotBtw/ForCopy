@@ -2168,8 +2168,10 @@ const VEX3 = `
 				}
 		}, 1 / 1);
 		
-		})
+		}
+	)
 
+	function apolloPanel() {
 		const VEX6 = `
 		<style>
 		
@@ -2478,4 +2480,4 @@ const VEX3 = `
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}}
+}}}
