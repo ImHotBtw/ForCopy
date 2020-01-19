@@ -1,4 +1,8 @@
-window.onload=showHud;
+<html>
+<body onload="showHud()">
+</body>
+</html>
+
 
 if(document.body == undefined)
 	window.location.href = "/";
