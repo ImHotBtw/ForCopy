@@ -843,9 +843,6 @@ const init = _ => {
 
 	setInterval(_ => {
 
-		Player.nick != localStorage.getItem("nickname") ? (Player.nick = localStorage.getItem("nickname")) : Player.nick = Player.nick;
-		Player.tag != localStorage.getItem("teamtag") ? (Player.tag = localStorage.getItem("teamtag")) : Player.tag = Player.tag;
-
 		HudController.getDom();
 		HudController.setHudColor(ConfigModel.getHudColor());
 		HudController.setHudMapColor(ConfigModel.getHudMapColor())
@@ -2090,7 +2087,6 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<img src="https://i.imgur.com/vCmDjp5.png" alt="Avatar" class="avatars">
 	<h1><input id="submitColor2" value="Choose" type="button"/></h1>
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
