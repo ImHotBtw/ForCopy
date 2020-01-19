@@ -1893,10 +1893,10 @@ const VEX3 = `
 	
 	  width : 300px;
 	  height: 146px;
-	  bottom: -90%;
+	  bottom: -100%;
 	  right: -95%;
 	  position: absolute;
-	  top: calc(55% - 425px);
+	  top: calc(60% - 450px);
 	
 	  display: none;
 	  flex-wrap : wrap;
