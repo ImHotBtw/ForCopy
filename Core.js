@@ -1902,7 +1902,7 @@ const VEX3 = `
 	  flex-wrap : wrap;
 	  justify-content: center;
 	
-	  background-opacity: 0;
+	  background-opacity: 0.5;
 	  border-color: rgba(0,0,0,0.0);
 	  border-radius: 10px;
 	  padding: 5px;
