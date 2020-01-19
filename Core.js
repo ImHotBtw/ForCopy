@@ -2102,9 +2102,7 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button" /></h1>
-		<div class="VEX3-extras">
-		<div class="VEX3-extras-item">
+	<h1><input id="submitColor2" value="Choose" type="button"/></h1>
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
@@ -2131,11 +2129,13 @@ const VEX3 = `
 		
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
+
 		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
+		}
 
 		setInterval(_ => {
 		
@@ -2159,13 +2159,10 @@ const VEX3 = `
 						element.style.color = nameColor2;
 					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
 						element.style.color = nameColor2;
-					if(element.innerText.indexOf("Flixᴬᴱ") > -1)
-						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
 	
 		}
-	}
 	)
 }
 
