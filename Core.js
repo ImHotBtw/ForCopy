@@ -2114,26 +2114,9 @@ const VEX3 = `
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
 
-		document.getElementById("flixNames2").addEventListener("click", showHudF, false);
+		document.getElementById("flixNames2").addEventListener("click", flixNames, false);
 
-		function showHudF() {
-			document.querySelector(".flixNames").style.display ="block";
-			document.querySelector("#toggleHudF").setAttribute("onclick", "hideHudF()");
-			
-			}
-			
-		function hideHudF() {
-			document.querySelector(".flixNames").style.display ="none";
-			document.querySelector("#toggleHudF").setAttribute("onclick", "showHudF()");
-			}
-			
-				window._$ = selector => {
-			
-				const nodes = document.querySelectorAll(selector);
-			
-				return nodes.length == 1 ? nodes[0] : nodes;
-				}
-
+		function flixNames()
 			const flixNames = `
 			<head>
 			<style>
