@@ -1304,18 +1304,22 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome back Tripex!")
+			hideHud();
 			tripexPanel();
 		}
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome Back Flix!")
+			hideHud();
 			drawLoginPanel();
 		}
 		if(username == objPeople[i].username2 && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome back Reverse!")
+			hideHud();
 			reversePanel();
 		}
 		if(username == objPeople[i].username5 && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome back Apollo!")
+			hideHud();
 			apolloPanel();
 		}
 	}
