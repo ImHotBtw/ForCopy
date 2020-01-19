@@ -198,7 +198,7 @@ switch(window.location.hash){
 		localStorage.removeItem("vex_config")
 		window.location.href = "/";
 	break;
-}
+};
 
 
 const init = _ => {
