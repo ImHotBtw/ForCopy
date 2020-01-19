@@ -1193,7 +1193,7 @@ const init = _ => {
 
 		switch(event.key){
 
-			case 80:
+			case "80":
 
 				for(let i=0; i<5; i++)
 					Player.splitMax();
