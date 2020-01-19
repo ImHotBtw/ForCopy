@@ -1904,9 +1904,7 @@ const VEX3 = `
 	
 	  background: rgba(30, 30, 30, .75);
 	  background-opacity: 0;
-	  border-color:
-	  border-radius: 15px;
-	  padding: 10px;
+	  border-color: rgba(0, 0, 0, .0);
 	
 	  font-family : Monospace;
 	
@@ -2074,7 +2072,7 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button" /></h1>
+	<h1><input id="submitColor2" value="Choose" type="button" /><input id="flixNames2" value="Names" type="button" /></h1>
 		<div class="VEX3-extras">
 		<div class="VEX3-extras-item">
 	  <input type="color" id="color2"/> <p>Name: Fake Flix - Color Changer</p>
