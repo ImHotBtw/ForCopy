@@ -841,6 +841,8 @@ const init = _ => {
 
 	m.mount(root, VexView);
 
+};
+
 	setInterval(_ => {
 
 		Player.nick != localStorage.getItem("nickname") ? (Player.nick = localStorage.getItem("nickname")) : Player.nick = Player.nick;
@@ -2481,4 +2483,4 @@ const VEX3 = `
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}}}
+}}
