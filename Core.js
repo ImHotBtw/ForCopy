@@ -1903,7 +1903,7 @@ const VEX3 = `
 	  justify-content: center;
 	
 	  background: rgba(30, 30, 30, .75);
-    border: 1px solid aqua;
+	  opacity: 0
 	
 	  font-family : Monospace;
 	
@@ -1930,9 +1930,7 @@ const VEX3 = `
 	
 	  width: 100%;
 	
-	  color: rgba(0, 0, 0);
-	  background-color: rgba(30, 30, 30);
-	  opacity: 0
+	  background : rgba(30, 30, 30, .65);
 	
 	  text-align: center;
 	  color: #ffffff;
@@ -1998,7 +1996,6 @@ const VEX3 = `
 	  width: 50%;
 	
 	  background : rgba(30, 30, 30, .65);
-	  border: 1px solid rgba(30, 30, 30, 1);
 	
 	  text-align: center;
 	  color: #ffffff;
