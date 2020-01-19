@@ -1422,7 +1422,7 @@ const VEX2 = `
   flex-wrap : wrap;
   justify-content: center;
 
-  background: rgba(30, 30, 30, .1);
+  background: rgba(30, 30, 30);
 
   font-family : Monospace;
 
