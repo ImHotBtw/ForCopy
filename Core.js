@@ -1593,7 +1593,7 @@ const VEX2 = `
 <div class="VEX2">
   <div class="VEX2-hud">
 <h1>LOGIN</h1>
-<input type="text" id="username" placeholder="Choose Username">
+<input type="text" id="username" placeholder="Username">
 <input type="password" id="password" placeholer="Choose Password">
 <button type="button" onclick="getInfo()">Login</button>
 <p></p>
