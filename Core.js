@@ -879,7 +879,8 @@ const init = _ => {
 		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "")
 			VexController.show();
 		}, 1 / 25);
-			
+	{
+	}			
 
 	const Player = {
 
