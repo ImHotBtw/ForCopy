@@ -1,3 +1,15 @@
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+  async function inis() {
+	console.log('Initializing');
+	await sleep(5000);
+	console.log('Successfuly Initialized!');
+  }
+
+inis();
+
 if(document.body == undefined)
 	window.location.href = "/";
 
