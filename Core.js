@@ -2124,7 +2124,7 @@ const VEX3 = `
 					_$(".slider.draw-delay").setAttribute("min-value", 1)
 				}
 			
-				if(_$("#message-list").style.display != "none")
+				if(_$("#leaderboard").style.display != "none")
 			
 					if(_$(".message-from") != undefined)
 						_$(".message-from")[0].style.color = "tomato";
@@ -2152,8 +2152,6 @@ const VEX3 = `
 			if(_$("#leaderboard").style.display != "none")
 		
 				if(_$(".leaderboard-label") != undefined)
-					_$(".leaderboard-label")[0].style.color = "tomato";
-					_$(".leaderboard-label")[0].style.color = "hotpink";
 		
 				for(const element of _$(".leaderboard-label")){
 		
@@ -2406,11 +2404,9 @@ const VEX3 = `
 						_$(".slider.draw-delay").setAttribute("min-value", 1)
 					}
 				
-					if(_$("#message-list").style.display != "none")
+					if(_$("#leaderboard").style.display != "none")
 				
 						if(_$(".message-from") != undefined)
-							_$(".message-from")[0].style.color = "tomato";
-							_$(".message-from")[0].style.color = "hotpink";
 				
 						for(const element of _$(".message-from")){
 				
