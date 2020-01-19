@@ -1232,12 +1232,7 @@ const init = _ => {
 		VexController: VexController,
 		Player: Player,
 		Functions: Functions
-
 	}
-{
-};
-{
-}
 
 function login(password) {
     var storedPassword = 'Copy';
