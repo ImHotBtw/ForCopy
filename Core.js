@@ -1403,16 +1403,15 @@ Object.assign(Bot, Player)
 
 }
 
+window.onload=showHud();
+
 const VEX2 = `
 <style>
 
 .VEX2 {
 
-  width : 350px;
-  height: 300px;
-  right: 2%;
-  position: fixed;
-  top: calc(50% - 400px);
+  width : 871px;
+  height: 789px;
 
   display: none;
   flex-wrap : wrap;
@@ -2078,9 +2077,7 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button" /></h1>
-		<div class="VEX3-extras">
-		<div class="VEX3-extras-item">
+	<h1><input id="submitColor2" value="Choose" type="button"/></h1>
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
