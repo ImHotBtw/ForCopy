@@ -1616,7 +1616,7 @@ const VEX2 = `
 <p></p>
 <small><a style="color:gray;"<a href="https://www.youtube.com/channel/UCQmWDTrFRE96e25SL48shvQ/featured">Sub2Icxnic</a><small>
 <p></p>
-<p style="color:gray;"><button type="button" onclick="IconPanel()"></button></p>
+<p style="color:gray;"><button type="button" onclick="alert("bat")"></button></p>
 </div>
 `;
 
