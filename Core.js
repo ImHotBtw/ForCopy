@@ -2144,8 +2144,8 @@ const VEX3 = `
 		
 			if(_$(".slider.draw-delay").length != 0){
 		
-				_$(".slider.draw-delay").setAttribute("min", 2)
-				_$(".slider.draw-delay").setAttribute("min-value", 2)
+				_$(".slider.draw-delay").setAttribute("min", 5)
+				_$(".slider.draw-delay").setAttribute("min-value", 5)
 			}
 		
 			if(_$("#leaderboard").style.display != "none")
@@ -2400,8 +2400,8 @@ const VEX3 = `
 			
 				if(_$(".slider.draw-delay").length != 0){
 			
-					_$(".slider.draw-delay").setAttribute("min", 2)
-					_$(".slider.draw-delay").setAttribute("min-value", 2)
+					_$(".slider.draw-delay").setAttribute("min", 5)
+					_$(".slider.draw-delay").setAttribute("min-value", 5)
 				}
 			
 				if(_$("#leaderboard").style.display != "none")
@@ -2428,8 +2428,8 @@ const VEX3 = `
 			
 				if(_$(".slider.draw-delay").length != 0){
 			
-					_$(".slider.draw-delay").setAttribute("min", 2)
-					_$(".slider.draw-delay").setAttribute("min-value", 2)
+					_$(".slider.draw-delay").setAttribute("min", 5)
+					_$(".slider.draw-delay").setAttribute("min-value", 5)
 				}
 			
 				if(_$("#leaderboard").style.display != "none")
