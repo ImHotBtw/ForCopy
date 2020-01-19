@@ -4,8 +4,6 @@ if(document.body == undefined)
 newPageTitle = 'Revamp Version AE'; 
 document.title = newPageTitle; 
 
-document.getElementById("starfield").onload = showHud();
-
 window._$ = selector => {
 
 	const nodes = document.querySelectorAll(selector);
