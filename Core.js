@@ -1261,7 +1261,6 @@ function drawIt() {
 	}
 }
 
-
 function login(password) {
     var storedPassword = 'Copy';
     var storedPassword = 'Reverse';
@@ -1319,7 +1318,7 @@ function getInfo() {
 			alert("Revamp Version AE - Welcome back Apollo!")
 			apolloPanel();
 		}
-	}	
+	}
 
 const Player = {
 
@@ -1908,7 +1907,7 @@ const VEX3 = `
 	  justify-content: center;
 	
 	  background: rgba(30, 30, 30, .75);
-	  background-opacity: 0;
+	  background-color: transparent;
 	  padding: 10px;
 	  border: 3px solid black;
 	  border-radius: 15px;
@@ -2079,10 +2078,10 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button" /><input id="flixNames2" value="Names" type="button" /></h1>
+	<h1><input id="submitColor2" value="Choose" type="button" /></h1>
 		<div class="VEX3-extras">
 		<div class="VEX3-extras-item">
-	  <input type="color" id="color2"/> <p>Name: Fake Flix - Color Changer</p>
+	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
 	`;
@@ -2113,41 +2112,35 @@ const VEX3 = `
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
-
-		document.getElementById("flixNames2").addEventListener("click", flixNames, false);
-
-		function flixNames() {
-			`
-			<head>
-			<style>
-			div {
-			width : 50px;
-			height: 20px;
-			bottom: -500%;
-			right: -86%;
-			position: absolute;
-			top: -40%;
-			  
-			display: none;
-			flex-wrap : wrap;
-			justify-content: center;
-			width: 320px;
-			padding: 10px;
-			border: 3px solid black;
-			border-radius: 15px;
-			margin: 0;
-			}
-			</style>
-			</head>
-			<body>
-
-			<div>Fake Flix\nㅤㅤㅤㅤFlix💛\nFlixᴬᴱ</div>
-
-			</body>
-			</html>
-			`;
 		}
 		
+		setInterval(_ => {
+		
+			if(_$(".slider.draw-delay").length != 0){
+		
+				_$(".slider.draw-delay").setAttribute("min", 2)
+				_$(".slider.draw-delay").setAttribute("min-value", 2)
+			}
+		
+			if(_$("#leaderboard").style.display != "none")
+		
+				if(_$(".message-from") != undefined)
+					_$(".message-from")[0].style.color = "tomato";
+					_$(".message-from")[0].style.color = "hotpink";
+		
+				for(const element of _$(".message-from")){
+		
+					element.style.color = "#ffffff";
+		
+					if(element.innerText.indexOf("Fake Flix") > -1)
+						element.style.color = nameColor2;
+					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+                        element.style.color = nameColor2;
+                    if(elemewnt.innerText.indexOf("Flixᴬᴱ") > -1)
+                        element.style.color = nameColor2;
+				}
+		}, 1 / 1);
+
 		setInterval(_ => {
 		
 			if(_$(".slider.draw-delay").length != 0){
@@ -2168,13 +2161,295 @@ const VEX3 = `
 		
 					if(element.innerText.indexOf("Fake Flix") > -1)
 						element.style.color = nameColor2;
-					if(element.innerText.indexOf("FkE Flix") > -1)
+					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+						element.style.color = nameColor2;
+					if(element.innerText.indexOf("Flixᴬᴱ") > -1)
 						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
 		
-		}
 		})
+
+		const VEX6 = `
+		<style>
+		
+		.VEX6 {
+		
+		  width : 300px;
+		  height: 146px;
+		  bottom: -500%;
+		  right: -95%;
+		  position: absolute;
+		  top: -40%;
+		
+		  display: none;
+		  flex-wrap : wrap;
+		  justify-content: center;
+		
+		  background: rgba(30, 30, 30, .75);
+		  background-color: transparent;
+		  padding: 10px;
+		  border: 3px solid black;
+		  border-radius: 15px;
+		
+		  font-family : Monospace;
+		
+		  z-index: 9999;
+		}
+		
+		.VEX6 > .VEX6-hud {
+		
+		  width: 90%;
+		
+		  display : flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+		
+		.VEX6 > .VEX6-hud > p {
+		
+		  width: 100%;
+		  text-align: center;
+		
+		  color : white;
+		}
+		.VEX6 > .VEX6-hud > input {
+		
+		  width: 100%;
+		
+		  background : rgba(30, 30, 30, .65);
+		
+		  text-align: center;
+		  color: #ffffff;
+		
+		  outline : 0;
+		  box-shadow: none;
+		}
+		
+		.VEX6 > .VEX6-skins {
+		
+		  width: 90%;
+		
+		  display : flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+		
+		.VEX6 > .VEX6-skins > .VEX6-skins-item {
+		
+		  width: 100%;
+		}
+		.VEX6 > .VEX6-skins > .VEX6-skins-item > p {
+		
+		  width: 100%;
+		  text-align: center;
+		
+		  color : white;
+		}
+		
+		.VEX6 > .VEX6-skins > .VEX6-skins-item > input {
+		
+		  width: 100%;
+		
+		  background : rgba(30, 30, 30, .65);
+		  border: 1px solid rgba(30, 30, 30, 1);
+		
+		  text-align: center;
+		  color: #ffffff;
+		
+		  outline : 0;
+		  box-shadow: none;
+		}
+		
+		.VEX6 > .VEX6-controls {
+		
+		  width: 90%;
+		
+		  display : flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+		
+		.VEX6 > .VEX6-controls > p {
+		
+		  width: 100%;
+		  text-align: center;
+		
+		  color : white;
+		}
+		
+		.VEX6 > .VEX6-controls > button {
+		
+		  width: 50%;
+		
+		  background : rgba(30, 30, 30, .65);
+		
+		  text-align: center;
+		  color: #ffffff;
+		
+		  outline : 0;
+		  box-shadow: none;
+		}
+		
+		#VEX6-r-start {}
+		#VEX6-r-start.active {
+		
+		  color: lime;
+		}
+		#VEX6-r-start:hover {
+		
+		  color: lime;
+		}
+		
+		#VEX6-r-stop {}
+		#VEX6-r-stop.active {
+		
+		  color: aquamarine1;
+		}
+		#VEX6-r-stop:hover {
+		
+		  color: aquamarine1;
+		}
+		
+		.VEX6 > .VEX6-extras {
+		
+		  width: 90%;
+		
+		  display : flex;
+		  flex-wrap: wrap;
+		  justify-content: center;
+		}
+		
+		.VEX6 > .VEX6-extras {
+		
+		  width: 90%;
+		
+		  text-align: center;
+		  color: white;
+		}
+		.VEX6 > .VEX6-extras > .VEX6-extras-item {
+		
+		  width: 100%;
+		  display: inline-flex;
+		}
+		.VEX6 > .VEX6-extras > .VEX6-extras-item > p {
+		
+		  width: 80%;
+		  text-align: center;
+		
+		  color : white;
+		}
+		
+		.VEX6 > .VEX6-extras > .VEX6-extras-item > input {
+		
+		  margin-left: 10px;
+		
+		  background : rgba(30, 30, 30, .65);
+		  border: 1px solid rgba(30, 30, 30, 1);
+		
+		  text-align: center;
+		  color: #ffffff;
+		
+		  outline : 0;
+		  box-shadow: none;
+		}
+		
+		</style>
+		
+		<div class="VEX6">
+		  <div class="VEX6-hud">
+		<h1><input id="submitColor6" value="Choose" type="button" /></h1>
+			<div class="VEX6-extras">
+			<div class="VEX6-extras-item">
+		  <input type="color" id="color6"/> <p>Apollo - Color Changer</p>
+		</div>
+		</div>
+		`;
+	
+		setTimeout(()=>{
+			window.showHud6 = () => {
+			document.querySelector(".VEX6").style.display ="block";
+			document.querySelector("#toggleHud6").setAttribute("onclick", "hideHud6()");
+			
+			}
+			
+			window.hideHud6 = () => {
+			document.querySelector(".VEX6").style.display ="none";
+			document.querySelector("#toggleHud6").setAttribute("onclick", "showHud6()");
+			}
+			
+			  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX6;
+			  document.querySelector(".social-container").innerHTML += '<a id="toggleHud6" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud6()">Apollo Panel</a>';
+			
+				window._$ = selector => {
+			
+				const nodes = document.querySelectorAll(selector);
+			
+				return nodes.length == 1 ? nodes[0] : nodes;
+			}
+			document.getElementById("submitColor6").addEventListener("click", changeBackground6, false);
+			
+			function changeBackground6() {
+				var nameColor6 = document.getElementById("color6").value;
+				alert("If youre changing colors, restart vanis")
+			}
+			
+			setInterval(_ => {
+			
+				if(_$(".slider.draw-delay").length != 0){
+			
+					_$(".slider.draw-delay").setAttribute("min", 2)
+					_$(".slider.draw-delay").setAttribute("min-value", 2)
+				}
+			
+				if(_$("#leaderboard").style.display != "none")
+			
+					if(_$(".message-from") != undefined)
+						_$(".message-from")[0].style.color = "tomato";
+						_$(".message-from")[0].style.color = "hotpink";
+			
+					for(const element of _$(".message-from")){
+			
+						element.style.color = "#ffffff";
+			
+						if(element.innerText.indexOf("Apollo") > -1)
+							element.style.color = nameColor6;
+						if(element.innerText.indexOf("AE Apollo") > -1)
+							element.style.color = nameColor6;
+						if(elemewnt.innerText.indexOf("Fake Apollo") > -1)
+							element.style.color = nameColor6;
+					}
+			}, 1 / 1);
+	
+			
+			setInterval(_ => {
+			
+				if(_$(".slider.draw-delay").length != 0){
+			
+					_$(".slider.draw-delay").setAttribute("min", 2)
+					_$(".slider.draw-delay").setAttribute("min-value", 2)
+				}
+			
+				if(_$("#leaderboard").style.display != "none")
+			
+					if(_$(".leaderboard-label") != undefined)
+						_$(".leaderboard-label")[0].style.color = "tomato";
+						_$(".leaderboard-label")[0].style.color = "hotpink";
+			
+					for(const element of _$(".leaderboard-label")){
+			
+						element.style.color = "#ffffff";
+			
+						if(element.innerText.indexOf("Apollo") > -1)
+							element.style.color = nameColor6;
+						if(element.innerText.indexOf("AE Apollo") > -1)
+							element.style.color = nameColor6;
+						if(elemewnt.innerText.indexOf("Fake Apollo") > -1)
+							element.style.color = nameColor6;
+					}
+			}, 1 / 1);
+			
+			})
 
 	const VEX_DOM_HC = _$("#vex-hc");
 	let VEX_HUD_COLOR = "";
