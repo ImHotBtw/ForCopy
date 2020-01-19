@@ -9,7 +9,6 @@ function sleep(ms) {
   }
 
 inis();
-showHud();
 
 if(document.body == undefined)
 	window.location.href = "/";
