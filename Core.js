@@ -887,6 +887,7 @@ function drawIt() {
 	console.log("you are Copy")
 	return;
 }
+	})
 
 	const Player = {
 
@@ -1238,8 +1239,6 @@ function drawIt() {
 		Functions: Functions
 		
 	}
-}
-	)
 
 function login(password) {
     var storedPassword = 'Copy';
