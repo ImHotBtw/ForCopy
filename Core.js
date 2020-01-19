@@ -2116,7 +2116,7 @@ const VEX3 = `
 
 		document.getElementById("flixNames2").addEventListener("click", flixNames, false);
 
-		function flixNames()
+		function flixNames() {
 			const flixNames = `
 			<head>
 			<style>
@@ -2146,9 +2146,6 @@ const VEX3 = `
 			</body>
 			</html>
 			`;
-			}
-
-
 		
 		setInterval(_ => {
 		
@@ -2175,7 +2172,9 @@ const VEX3 = `
 				}
 		}, 1 / 1);
 		
-		})
+		}
+		}
+	})
 
 	const VEX_DOM_HC = _$("#vex-hc");
 	let VEX_HUD_COLOR = "";
