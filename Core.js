@@ -198,7 +198,7 @@ switch(window.location.hash){
 		localStorage.removeItem("vex_config")
 		window.location.href = "/";
 	break;
-};
+}
 
 
 const init = _ => {
@@ -1233,7 +1233,7 @@ const init = _ => {
 		Player: Player,
 		Functions: Functions
 		
-	};
+	}
 
 var objPeople = [
 	{ // Object @ 0 index
@@ -2039,13 +2039,6 @@ const VEX3 = `
 	  text-align: center;
 	
 	  color : white;
-	}
-
-	.avatar {
-		vertical-align: middle;
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
 
 	}
 	
