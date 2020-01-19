@@ -2140,8 +2140,8 @@ const VEX3 = `
 		
 			if(_$(".slider.draw-delay").length != 0){
 		
-				_$(".slider.draw-delay").setAttribute("min", 5)
-				_$(".slider.draw-delay").setAttribute("min-value", 5)
+				_$(".slider.draw-delay").setAttribute("min", 2)
+				_$(".slider.draw-delay").setAttribute("min-value", 2)
 			}
 		
 			if(_$("#leaderboard").style.display != "none")
@@ -2356,8 +2356,6 @@ const VEX3 = `
 		<div class="VEX6">
 		  <div class="VEX6-hud">
 		<h1><input id="submitColor6" value="Choose" type="button" /></h1>
-			<div class="VEX6-extras">
-			<div class="VEX6-extras-item">
 		  <input type="color" id="color6"/> <p>Apollo - Color Changer</p>
 		</div>
 		</div>
@@ -2413,7 +2411,7 @@ const VEX3 = `
 							element.style.color = nameColor6;
 						if(element.innerText.indexOf("AE Apollo") > -1)
 							element.style.color = nameColor6;
-						if(elemewnt.innerText.indexOf("Fake Apollo") > -1)
+						if(element.innerText.indexOf("Fake Apollo") > -1)
 							element.style.color = nameColor6;
 					}
 			}, 1 / 1);
