@@ -1314,21 +1314,7 @@ function getInfo() {
 			alert("Revamp Version AE - Welcome back Reverse!")
 			reversePanel();
 		}
-		if(username == objPeople[i].username5 && password == objPeople[i].password) {
-			alert("Revamp Version AE - Welcome Back -_-")
-			playerPanel();
-		}
-	}
-	document.querySelector("#hud > div.stats > div:nth-child(3)")
-
-
-	var nickid = document.getElementById("nickname").innerText;
-	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)").innerText = nickid;
-	mass.id = "massCount"
-	console.log("incorrect username or password")
-	console.log(mass)
-
-}	
+	}	
 
 const Player = {
 
@@ -1410,6 +1396,8 @@ const Player = {
 const Bot = {};
 
 Object.assign(Bot, Player)
+
+};
 
 const VEX2 = `
 <style>
