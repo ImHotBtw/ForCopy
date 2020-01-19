@@ -845,9 +845,6 @@ const init = _ => {
 
 	setInterval(_ => {
 
-		Player.nick != localStorage.getItem("nickname") ? (Player.nick = localStorage.getItem("nickname")) : Player.nick = Player.nick;
-		Player.tag != localStorage.getItem("teamtag") ? (Player.tag = localStorage.getItem("teamtag")) : Player.tag = Player.tag;
-
 		HudController.getDom();
 		HudController.setHudColor(ConfigModel.getHudColor());
 		HudController.setHudMapColor(ConfigModel.getHudMapColor())
@@ -881,6 +878,7 @@ const init = _ => {
 
 		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "")
 			VexController.show();
+		}, 1 / 25);
 			
 
 	const Player = {
@@ -1233,8 +1231,6 @@ const init = _ => {
 		Functions: Functions
 		
 	}
-}
-	)
 
 function login(password) {
     var storedPassword = 'Copy';
