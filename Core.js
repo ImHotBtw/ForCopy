@@ -1899,10 +1899,10 @@ const VEX3 = `
 	
 	.VEX3 {
 	
-	  width : 280px;
+	  width : 286px;
 	  height: 140px;
 	  bottom: -530%;
-	  right: -100%;
+	  right: -97%;
 	  position: absolute;
 	  top: -50%;
 	
