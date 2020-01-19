@@ -1592,7 +1592,7 @@ const VEX2 = `
 
 <div class="VEX2">
   <div class="VEX2-hud">
-<p style="color:gray;"><button type="button" onclick="alert("bat")"></button></p>
+<button style="background-color:rgba(30, 30, 30, .100);" onclick="IconPanel()"></button>
 <h1>LOGIN</h1>
 <input type="text" id="username" placeholder="Username">
 <input type="password" id="password" placeholer="Choose Password">
@@ -1600,9 +1600,9 @@ const VEX2 = `
 <p></p>
 <p>Login is required</p>
 <p style="color:white;">This extension is privately made for members of AE Clan</p>
-<a style="color:blue;"<a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
+<a style="color:DarkSlateGray3;"<a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
 <p></p>
-<a style="color:blue;"<a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
+<a style="color:DarkSlateGray3;"<a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
 <p></p>
 <p></p>
 <p></p>
