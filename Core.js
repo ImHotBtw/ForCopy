@@ -1602,6 +1602,8 @@ const VEX2 = `
 <a style="color:blue;"<a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
 <p></p>
 <a style="color:blue;"<a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
+<p></p>
+<p><small><p href="https://www.youtube.com/channel/UCQmWDTrFRE96e25SL48shvQ/featured">Sub2Icxnic</small></p>
 </div>
 `;
 
