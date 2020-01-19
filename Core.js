@@ -2451,7 +2451,8 @@ const VEX3 = `
 					}
 			}, 1 / 1);
 			
-			})
+			}
+		})
 
 	const VEX_DOM_HC = _$("#vex-hc");
 	let VEX_HUD_COLOR = "";
