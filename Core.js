@@ -882,27 +882,6 @@ const init = _ => {
 
 		//
 
-		if(_$(".slider.draw-delay").length != 0){
-
-			_$(".slider.draw-delay").setAttribute("min", 5)
-			_$(".slider.draw-delay").setAttribute("min-value", 5)
-		}
-
-		if(_$("#leaderboard").style.display != "none")
-
-			if(_$(".leaderboard-label") != undefined)
-				_$(".leaderboard-label")[0].style.color = "tomato";
-				_$(".leaderboard-label")[0].style.color = "hotpink";
-
-			for(const element of _$(".leaderboard-label")){
-
-				element.style.color = "#ffffff";
-
-				if(element.innerText.indexOf("Flix") > -1)
-					element.style.color = nameColor;
-			}
-	}, 1000 / 25);
-
 function drawIt() {
 	username.includes("Copy");
 	console.log("you are Copy")
@@ -1259,6 +1238,8 @@ function drawIt() {
 		Functions: Functions
 		
 	}
+}
+	)
 }
 
 function login(password) {
