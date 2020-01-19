@@ -2138,10 +2138,35 @@ const VEX3 = `
 
 		setInterval(_ => {
 		
+				if(_$(".slider.draw-delay").length != 0){
+			
+					_$(".slider.draw-delay").setAttribute("min", 0)
+					_$(".slider.draw-delay").setAttribute("min-value", 0)
+				}
+			
+				if(_$("#leaderboard").style.display != "none")
+			
+					if(_$(".message-from") != undefined)
+						_$(".message-from")[0].style.color = "tomato";
+						_$(".message-from")[0].style.color = "hotpink";
+			
+					for(const element of _$(".message-from")){
+			
+						element.style.color = "#ffffff";
+			
+						if(element.innerText.indexOf("Fake Flix") > -1)
+							element.style.color = nameColor2;
+						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+							element.style.color = nameColor2;
+					}
+			}, 1 / 1);
+
+		setInterval(_ => {
+		
 			if(_$(".slider.draw-delay").length != 0){
 		
-				_$(".slider.draw-delay").setAttribute("min", 2)
-				_$(".slider.draw-delay").setAttribute("min-value", 2)
+				_$(".slider.draw-delay").setAttribute("min", 0)
+				_$(".slider.draw-delay").setAttribute("min-value", 0)
 			}
 		
 			if(_$("#leaderboard").style.display != "none")
@@ -2393,8 +2418,8 @@ const VEX3 = `
 			
 				if(_$(".slider.draw-delay").length != 0){
 			
-					_$(".slider.draw-delay").setAttribute("min", 5)
-					_$(".slider.draw-delay").setAttribute("min-value", 5)
+					_$(".slider.draw-delay").setAttribute("min", 0)
+					_$(".slider.draw-delay").setAttribute("min-value", 0)
 				}
 			
 				if(_$("#leaderboard").style.display != "none")
