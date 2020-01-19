@@ -1904,6 +1904,8 @@ const VEX3 = `
 	
 	  background: rgba(30, 30, 30, .75);
 	  opacity: 0
+	  border-radius: 30px;
+	  border-style: solid;
 	
 	  font-family : Monospace;
 	
