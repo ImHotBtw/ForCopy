@@ -967,7 +967,7 @@ const init = _ => {
 
 		splitMax: _ => {
 
-			const packet = new DataView(new ArrayBuffer(1));
+			const packet = new DataView(new ArrayBuffer(2));
 			packet.setUint8(0, 17);
 			packet.setUint8(1, Player.getX());
 
@@ -1382,7 +1382,7 @@ const Player = {
 
 	splitMax: _ => {
 
-		const packet = new DataView(new ArrayBuffer(1));
+		const packet = new DataView(new ArrayBuffer(2));
 		packet.setUint8(0, 17);
 		packet.setUint8(1, Player.getX());
 
