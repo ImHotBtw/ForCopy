@@ -1234,8 +1234,6 @@ const init = _ => {
 		Functions: Functions
 		
 	}
-	{
-	}
 
 function login(password) {
     var storedPassword = 'Copy';
