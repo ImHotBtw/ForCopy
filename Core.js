@@ -1597,12 +1597,10 @@ const VEX2 = `
 <input type="password" id="password" placeholer="Choose Password">
 <button type="button" onclick="getInfo()">Login</button>
 <p></p>
-<p></p>
-<p></p>
 <p>Login is required</p>
-<p>This extension is privately made for members of AE Clan</p>
-<a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
-<a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
+<p style="color:white;">This extension is privately made for members of AE Clan</p>
+<a style="color:blue;">a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
+<a style="color:blue;">a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
 </div>
 `;
 
