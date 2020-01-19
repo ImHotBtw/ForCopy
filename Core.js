@@ -879,9 +879,7 @@ const init = _ => {
 
 		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "")
 			VexController.show();
-
-}
-	)
+	})
 }
 
 	const Player = {
@@ -1232,6 +1230,7 @@ const init = _ => {
 		VexController: VexController,
 		Player: Player,
 		Functions: Functions
+		
 	}
 
 function login(password) {
