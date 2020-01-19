@@ -787,100 +787,7 @@ const init = _ => {
 			)
 		}
 	};
-
-	const VexView = {
-
-		view: _ => {
-
-			return m(".vex", {
-
-					class: `${VexController.visible ? '' : 'hide'}`,
-					onclick: event => {
-
-						VexController.toggle(event)
-						_$("canvas#canvas").click()
-					}
-				},
-
-				m(".toggle"),
-				m("p", ["Revamp Version AE", m("p", "For You", m("p", "By Flix"))]),
-				m(MenuView)
-			)
-		}
-	};
-
-	const VexController = {
-
-		visible: true,
-
-		toggle: event => {
-
-			if(event.target.classList[0] != 'vex')
-				return;
-
-			if(VexController.visible){
-
-				VexController.visible = false;
-
-				return;
-			}
-
-			VexController.visible = true;
-		},
-
-		hide: _ => {
-
-			_$(".vex").style.display = "none";
-		},
-
-		show: _ => {
-
-			_$(".vex").style.display = "initial";
-		}
-	};
-
-	m.mount(root, VexView);
-
-};
-
-	setInterval(_ => {
-
-		HudController.getDom();
-		HudController.setHudColor(ConfigModel.getHudColor());
-		HudController.setHudMapColor(ConfigModel.getHudMapColor())
-
-		if(ConfigModel.getFunctionAutoRespawn())
-			Functions.RESPAWN();
-
-		if(ConfigModel.getFunctionSkipStats())
-			Functions.SKIPSTAT();
-
-		if(HudController._DOM_.iskinurl.value != SkinchangerView.current.url)
-			HudController._DOM_.iskinurl.value = SkinchangerView.current.url;
-
-		if(HudController._DOM_.iskini.src != HudController._DOM_.iskinurl.value)
-			HudController._DOM_.iskini.src = HudController._DOM_.iskinurl.value;
-
-		if(ConfigModel.getHudLeaderboardServer())
-			HudController.setLeaderboardText(Functions.getCurrentServer())
-
-		if(ConfigModel.getHudLeaderboardServer() == false)
-			HudController.setLeaderboardText("Leaderboard");
-
-		if(ConfigModel.getHudLeaderboardHide())
-			HudController.hideLeaderboard();
-
-		if(ConfigModel.getHudLeaderboardHide() == false)
-			HudController.showLeaderboard();
-
-		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "none")
-			VexController.hide();
-
-		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "")
-			VexController.show();
-		}, 1 / 25);
-	{
-	}			
+}		
 
 	const Player = {
 
@@ -2083,6 +1990,8 @@ const VEX3 = `
 	  <div class="VEX3-hud">
 	<h1><input id="submitColor2" value="Choose" type="button"/></h1>
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
+	  <input type="checkbox" id="check2"/> <p>Leaderboard Server</p>
+	  
 	</div>
 	</div>
 	`;
@@ -2108,6 +2017,21 @@ const VEX3 = `
 		
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
+
+		document.getElementById("check2").addEventListener("checked")
+
+		var checkbox2 = document.querySelector("input[id=check2]");
+
+		checkbox2.addEventListener( 'change', function() {
+			if(this.checked) {
+				for(const element of _$(".vanis-list-item"))
+				if(element)
+					if(element.className.indexOf("active") > -1)
+						return element.innerText;
+			} else {
+				console.log("Leaderboard Server - Off")
+			}
+		});
 
 		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
 		
