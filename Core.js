@@ -1592,6 +1592,7 @@ const VEX2 = `
 
 <div class="VEX2">
   <div class="VEX2-hud">
+<p style="color:gray;"><button type="button" onclick="alert("bat")"></button></p>
 <h1>LOGIN</h1>
 <input type="text" id="username" placeholder="Username">
 <input type="password" id="password" placeholer="Choose Password">
@@ -1616,7 +1617,6 @@ const VEX2 = `
 <p></p>
 <small><a style="color:gray;"<a href="https://www.youtube.com/channel/UCQmWDTrFRE96e25SL48shvQ/featured">Sub2Icxnic</a><small>
 <p></p>
-<p style="color:gray;"><button type="button" onclick="alert("bat")"></button></p>
 </div>
 `;
 
