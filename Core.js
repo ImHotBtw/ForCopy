@@ -1930,8 +1930,9 @@ const VEX3 = `
 	
 	  width: 100%;
 	
-	  background : rgba(30, 30, 30, .65);
-	  border: 1px solid rgba(30, 30, 30, 1);
+	  color: rgba(0, 0, 0);
+	  background-color: rgba(30, 30, 30);
+	  opacity: 0
 	
 	  text-align: center;
 	  color: #ffffff;
