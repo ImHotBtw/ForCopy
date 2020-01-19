@@ -1600,9 +1600,9 @@ const VEX2 = `
 <p></p>
 <p>Login is required</p>
 <p style="color:white;">This extension is privately made for members of AE Clan</p>
-<a style="color:DarkSlateGray3;"<a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
+<a style="color:yellow;"<a href="https://discord.gg/FYzcRhf">Aesthetic Clan Discord</a>
 <p></p>
-<a style="color:DarkSlateGray3;"<a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
+<a style="color:yellow;"<a href="https://discord.gg/DHcc4Gm">Extension Discord</a>
 <p></p>
 <p></p>
 <p></p>
@@ -2135,7 +2135,6 @@ const VEX3 = `
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
-		}
 
 		setInterval(_ => {
 		
@@ -2163,6 +2162,7 @@ const VEX3 = `
 		}, 1 / 1);
 	
 		}
+	}
 	)
 }
 
