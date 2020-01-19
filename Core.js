@@ -1902,10 +1902,11 @@ const VEX3 = `
 	  flex-wrap : wrap;
 	  justify-content: center;
 	
-	  background-opacity: 0.5;
-	  border-color: rgba(0,0,0,0.0);
-	  border-radius: 10px;
-	  padding: 5px;
+	  background: rgba(30, 30, 30, .75);
+	  background-opacity: 0;
+	  border-color:
+	  border-radius: 15px;
+	  padding: 10px;
 	
 	  font-family : Monospace;
 	
