@@ -190,6 +190,12 @@ document.querySelector("head").appendChild(script);
 
 script = document.createElement("script");
 script.type = "text/javascript";
+script.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js";
+
+document.querySelector("head").appendChild(script);
+
+script = document.createElement("script");
+script.type = "text/javascript";
 script.src = "https://unpkg.com/vanilla-picker@2.10.1/dist/vanilla-picker.min.js";
 
 document.querySelector("head").appendChild(script);
@@ -2486,5 +2492,15 @@ const VEX3 = `
 		  element.style.background = VEX_HUD_COLOR;
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
-	  };
+
+
+	};
 }}
+
+$('#canvas').keydown( function(e) {
+    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+    if(key == 80) {
+        e.preventDefault();
+        alert("P key pressed");
+    }
+})
