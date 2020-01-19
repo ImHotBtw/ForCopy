@@ -1314,7 +1314,7 @@ function getInfo() {
 			alert("Revamp Version AE - Welcome back Reverse!")
 			reversePanel();
 		}
-		if(username == objPeople[i].username4 && password == objPeople[i].password) {
+		if(username == objPeople[i].username5 && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome back Apollo!")
 			apolloPanel();
 		}
@@ -2112,34 +2112,6 @@ const VEX3 = `
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
-		}
-		
-		setInterval(_ => {
-		
-			if(_$(".slider.draw-delay").length != 0){
-		
-				_$(".slider.draw-delay").setAttribute("min", 2)
-				_$(".slider.draw-delay").setAttribute("min-value", 2)
-			}
-		
-			if(_$("#leaderboard").style.display != "none")
-		
-				if(_$(".message-from") != undefined)
-					_$(".message-from")[0].style.color = "tomato";
-					_$(".message-from")[0].style.color = "hotpink";
-		
-				for(const element of _$(".message-from")){
-		
-					element.style.color = "#ffffff";
-		
-					if(element.innerText.indexOf("Fake Flix") > -1)
-						element.style.color = nameColor2;
-					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-                        element.style.color = nameColor2;
-                    if(elemewnt.innerText.indexOf("Flixᴬᴱ") > -1)
-                        element.style.color = nameColor2;
-				}
-		}, 1 / 1);
 
 		setInterval(_ => {
 		
@@ -2167,9 +2139,38 @@ const VEX3 = `
 						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
+
+		setInterval(_ => {
+		
+			if(_$(".slider.draw-delay").length != 0){
+		
+				_$(".slider.draw-delay").setAttribute("min", 2)
+				_$(".slider.draw-delay").setAttribute("min-value", 2)
+			}
+		
+			if(_$("#leaderboard").style.display != "none")
+		
+				if(_$(".message-from") != undefined)
+					_$(".message-from")[0].style.color = "tomato";
+					_$(".message-from")[0].style.color = "hotpink";
+		
+				for(const element of _$(".message-from")){
+		
+					element.style.color = "#ffffff";
+		
+					if(element.innerText.indexOf("Fake Flix") > -1)
+						element.style.color = nameColor2;
+					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+                        element.style.color = nameColor2;
+                    if(elemewnt.innerText.indexOf("Flixᴬᴱ") > -1)
+                        element.style.color = nameColor2;
+				}
+		}, 1 / 1);
 		
 		}
+	}
 	)
+}
 
 	function apolloPanel() {
 		const VEX6 = `
@@ -2394,7 +2395,6 @@ const VEX3 = `
 			function changeBackground6() {
 				var nameColor6 = document.getElementById("color6").value;
 				alert("If youre changing colors, restart vanis")
-			}
 			
 			setInterval(_ => {
 			
@@ -2480,4 +2480,4 @@ const VEX3 = `
 	  
 		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 	  };
-}}}
+}}
