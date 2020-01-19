@@ -1195,7 +1195,7 @@ const init = _ => {
 
 			case ConfigModel.getBind("ultrasplit"):
 
-				for(let i=0; i<1; i++)
+				for(let i=0; i<5; i++)
 					Player.splitMax();
 
 				_$(".vex input")[5].style.background = "tomato";
@@ -1382,7 +1382,7 @@ const Player = {
 
 	splitMax: _ => {
 
-		const packet = new DataView(new ArrayBuffer(2));
+		const packet = new DataView(new ArrayBuffer(5));
 		packet.setUint8(0, 17);
 		packet.setUint8(1, Player.getX());
 
