@@ -1412,7 +1412,7 @@ const VEX2 = `
 
 .VEX2 {
 
-  width : 1199px;
+  width : 1300px;
   height: 789px;
   right: 2%;
   position: fixed;
