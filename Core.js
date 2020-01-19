@@ -1412,7 +1412,7 @@ const VEX2 = `
 
 .VEX2 {
 
-  width : 1300px;
+  width : 1500px;
   height: 789px;
   right: 2%;
   position: fixed;
@@ -1423,7 +1423,7 @@ const VEX2 = `
   justify-content: center;
 
   background: rgba(30, 30, 30, .75);
-  opacity: 0
+  background-opacity: 100%;
 
   font-family : Monospace;
 
