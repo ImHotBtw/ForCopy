@@ -689,6 +689,7 @@ const init = _ => {
 								}, 50)
 							}}, '')
 						),
+					),
 					m(".menu-item.slim",
 
 						m("p", "Auto Respawn"),
@@ -697,7 +698,6 @@ const init = _ => {
 							onchange: event => ConfigModel.setFunctionAutoRespawn()
 						})
 					)
-				),
 				),
 
 				m(SkinchangerView),
