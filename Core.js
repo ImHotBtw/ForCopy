@@ -689,19 +689,15 @@ const init = _ => {
 								}, 50)
 							}}, '')
 						),
-					),
-				),
-
-				m(".item-group",
-
 					m(".menu-item.slim",
 
-						m("p", "Auto respawn"),
+						m("p", "Auto Respawn"),
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getFunctionAutoRespawn(),
 							onchange: event => ConfigModel.setFunctionAutoRespawn()
 						})
 					)
+				),
 				),
 
 				m(SkinchangerView),
