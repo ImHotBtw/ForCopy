@@ -2123,6 +2123,12 @@ const VEX3 = `
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
 
+			var checkbox2 = document.getElementById('respawnCheck2');
+			if (checkbox2.checked != true)
+			{
+			  alert("you need to be fluent in English to apply for the job");
+			}
+
 		setInterval(_ => {
 		
 			if (document.getElementById('respawnCheck2').checked)			
