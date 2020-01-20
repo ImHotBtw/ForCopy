@@ -2127,9 +2127,10 @@ const VEX3 = `
 		
 			if (document.getElementById('respawnCheck2').checked)			
 			{
-			ConfigModel.getFunctionAutoRespawn()
+			Functions.RESPAWN();
+			alert("ok");
 			} else {
-				ConfigModel.getFunctionAutoRespawn()
+				Functions.RESPAWN();
 			}
 			}, 1 / 1);
 
