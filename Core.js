@@ -2144,7 +2144,7 @@ const VEX3 = `
 						if(element.innerText.indexOf("Fake Flix") > -1)
 							element.style.color = nameColor2;
 						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-							element.innerHTML="Developer - Flix";
+							element.textContent="Developer - Flix";
 							element.style.color = "blue";
 					}
 			}, 1 / 1);
@@ -2166,7 +2166,7 @@ const VEX3 = `
 					element.style.color = "#ffffff";
 		
 					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-						element.innerHTML="Developer - Flix";
+						element.textContent="Developer - Flix";
 						element.style.color = "blue";
 					if(element.innerText.indexOf("Fake Flix") > -1)
 						element.style.color = nameColor2;
@@ -2420,7 +2420,7 @@ const VEX3 = `
 							element.style.color = "#ffffff";
 				
 							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-								element.innerHTML="Developer - Flix";
+								element.textContent="Developer - Flix";
 								element.style.color = "blue";
 							if(element.innerText.indexOf("Apollo") > -1)
 								element.style.color = nameColor6;
@@ -2446,7 +2446,7 @@ const VEX3 = `
 						element.style.color = "#ffffff";
 
 						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-							element.innerHTML="Developer - Flix";
+							element.textContent="Developer - Flix";
 							element.style.color = "blue";			
 						if(element.innerText.indexOf("Apollo") > -1)
 							element.style.color = nameColor6;
