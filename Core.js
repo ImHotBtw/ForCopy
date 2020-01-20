@@ -2089,11 +2089,12 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button"/></h1><small><input id="respawnCheck2" value="Auto Respawn" type="checkbox" onclick="autoRespawn1();/></small>
+	<h1><input id="submitColor2" value="Choose" type="button"/></h1><small><input id="respawnCheck2" value="Auto Respawn" type="checkbox" checked="ConfigModel.getFunctionAutoRespawn()" onchange="ConfigModel.setFunctionAutoRespawn()"/></small> 
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
 	`;
+
 
 	setTimeout(()=>{
 		window.showHud3 = () => {
@@ -2122,23 +2123,6 @@ const VEX3 = `
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
-
-			var checkbox2 = document.getElementById('respawnCheck2');
-			if (checkbox2.checked != true)
-			{
-			  alert("you need to be fluent in English to apply for the job");
-			}
-
-		setInterval(_ => {
-		
-			if (document.getElementById('respawnCheck2').checked)			
-			{
-			Functions.RESPAWN();
-			alert("ok");
-			} else {
-				Functions.RESPAWN();
-			}
-			}, 1 / 1);
 
 
 		setInterval(_ => {
