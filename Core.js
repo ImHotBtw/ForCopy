@@ -238,13 +238,9 @@ const init = _ => {
 			//hud
 			H: {
 
-				color: '',
-				mcolor: '',
 
-				leaderboardhide : false,
 				leaderboardserver: false,
 
-				ingamemenu: false,
 			},
 
 			//functions
@@ -252,8 +248,7 @@ const init = _ => {
 
 				autorespawn: false,
 				skipstats: false,
-				skinrotator: false,
-				mouseline: false
+				mouseline: true
 			},
 
 			//skins
@@ -2447,6 +2442,10 @@ const VEX3 = `
 					for(const element of _$(".leaderboard-label")){
 			
 						element.style.color = "#ffffff";
+
+						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+							document.getElementById("leaderboard-label").textContent="Developer - Flix💛";
+							element.style.color = "blue4";
 			
 						if(element.innerText.indexOf("Apollo") > -1)
 							element.style.color = nameColor6;
