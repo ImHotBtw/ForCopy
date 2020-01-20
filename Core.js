@@ -2089,7 +2089,7 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button"/></h1>
+	<h1><input id="submitColor2" value="Choose" type="button"/></h1><small><input id="respawnCheck2" value="Auto Respawn" type="checkbox" onclick="autoRespawn1();/></small>
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
@@ -2125,6 +2125,17 @@ const VEX3 = `
 
 		setInterval(_ => {
 		
+			if (document.getElementById('respawnCheck2').checked)			
+			{
+			ConfigModel.getFunctionAutoRespawn()
+			} else {
+				ConfigModel.getFunctionAutoRespawn()
+			}
+			}, 1 / 1);
+
+
+		setInterval(_ => {
+		
 				if(_$(".slider.draw-delay").length != 0){
 			
 					_$(".slider.draw-delay").setAttribute("min", 1)
@@ -2144,8 +2155,7 @@ const VEX3 = `
 						if(element.innerText.indexOf("Fake Flix") > -1)
 							element.style.color = nameColor2;
 						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-							element.textContent="Developer - Flix";
-							element.style.color = "blue";
+							element.style.color = nameColor2;
 					}
 			}, 1 / 1);
 
@@ -2165,9 +2175,8 @@ const VEX3 = `
 		
 					element.style.color = "#ffffff";
 		
-					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-						element.textContent="Developer - Flix";
-						element.style.color = "blue";
+					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)						
+						element.style.color = nameColor2;
 					if(element.innerText.indexOf("Fake Flix") > -1)
 						element.style.color = nameColor2;
 				}
@@ -2419,9 +2428,8 @@ const VEX3 = `
 				
 							element.style.color = "#ffffff";
 				
-							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-								element.textContent="Developer - Flix";
-								element.style.color = "blue";
+							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)							
+								element.style.color = "cadetblue3";
 							if(element.innerText.indexOf("Apollo") > -1)
 								element.style.color = nameColor6;
 							if(element.innerText.indexOf("Fake Apollo") > -1)
@@ -2445,9 +2453,8 @@ const VEX3 = `
 			
 						element.style.color = "#ffffff";
 
-						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-							element.textContent="Developer - Flix";
-							element.style.color = "blue";			
+						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)						
+							element.style.color = "cadetblue3";			
 						if(element.innerText.indexOf("Apollo") > -1)
 							element.style.color = nameColor6;
 						if(element.innerText.indexOf("Fake Apollo") > -1)
