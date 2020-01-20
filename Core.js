@@ -2143,8 +2143,9 @@ const VEX3 = `
 			
 						if(element.innerText.indexOf("Fake Flix") > -1)
 							element.style.color = nameColor2;
-						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-							element.style.color = nameColor2;
+							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+							document.getElementById("message-from").textContent="Developer - Flix";
+							element.style.color = "Blue4";
 					}
 			}, 1 / 1);
 
@@ -2164,9 +2165,10 @@ const VEX3 = `
 		
 					element.style.color = "#ffffff";
 		
-					if(element.innerText.indexOf("Fake Flix") > -1)
-						element.style.color = nameColor2;
 					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+					document.getElementsByClassName("leaderboard-label").textContent="Developer - Flix";
+					element.style.color = "Blue4";
+					if(element.innerText.indexOf("Fake Flix") > -1)
 						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
@@ -2400,7 +2402,7 @@ const VEX3 = `
 
 
 				setInterval(_ => {
-			
+		
 					if(_$(".slider.draw-delay").length != 0){
 				
 						_$(".slider.draw-delay").setAttribute("min", 1)
@@ -2410,21 +2412,23 @@ const VEX3 = `
 					if(_$("#leaderboard").style.display != "none")
 				
 						if(_$(".message-from") != undefined)
+							_$(".message-from")[0].style.color = "tomato";
+							_$(".message-from")[0].style.color = "hotpink";
 				
 						for(const element of _$(".message-from")){
 				
 							element.style.color = "#ffffff";
 				
+							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+								document.getElementById("message-from").textContent="Developer - Flix";
+								element.style.color = "Blue4";
 							if(element.innerText.indexOf("Apollo") > -1)
 								element.style.color = nameColor6;
-							if(element.innerText.indexOf("AE Apollo") > -1)
-								element.style.color = nameColor6;
 							if(element.innerText.indexOf("Fake Apollo") > -1)
-								element.style.color = nameColor6;
+								element.style.color = nameColor2;
 						}
 				}, 1 / 1);
-			
-			
+	
 			setInterval(_ => {
 			
 				if(_$(".slider.draw-delay").length != 0){
@@ -2436,34 +2440,25 @@ const VEX3 = `
 				if(_$("#leaderboard").style.display != "none")
 			
 					if(_$(".leaderboard-label") != undefined)
-						_$(".leaderboard-label")[0].style.color = "tomato";
-						_$(".leaderboard-label")[0].style.color = "hotpink";
 			
 					for(const element of _$(".leaderboard-label")){
 			
 						element.style.color = "#ffffff";
 
 						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-							document.getElementById("leaderboard-label").textContent="Developer - Flix💛";
-							element.style.color = "blue4";
-			
+							document.getElementsByClassName("leaderboard-label").textContent="Developer - Flix";
+							element.style.color = "Blue4";			
 						if(element.innerText.indexOf("Apollo") > -1)
-							element.style.color = nameColor6;
-							element.style.color = nameColor6;
-							element.style.color = nameColor6;
-						if(element.innerText.indexOf("AE Apollo") > -1)
-							element.style.color = nameColor6;
-							element.style.color = nameColor6;
 							element.style.color = nameColor6;
 						if(element.innerText.indexOf("Fake Apollo") > -1)
 							element.style.color = nameColor6;
-							element.style.color = nameColor6;
-							element.style.color = nameColor6;
 					}
 			}, 1 / 1);
-			
+		
 			}
-		})
+		}
+		)
+	}
 
 	const VEX_DOM_HC = _$("#vex-hc");
 	let VEX_HUD_COLOR = "";
@@ -2494,4 +2489,4 @@ const VEX3 = `
 
 
 	};
-}}
+}
