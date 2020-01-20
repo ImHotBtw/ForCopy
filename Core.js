@@ -2143,7 +2143,7 @@ const VEX3 = `
 			
 						if(element.innerText.indexOf("Fake Flix") > -1)
 							element.style.color = nameColor2;
-							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
 							document.getElementById("message-from").textContent="Developer - Flix";
 							element.style.color = "Blue4";
 					}
@@ -2456,9 +2456,7 @@ const VEX3 = `
 			}, 1 / 1);
 		
 			}
-		}
-		)
-	}
+		})
 
 	const VEX_DOM_HC = _$("#vex-hc");
 	let VEX_HUD_COLOR = "";
@@ -2489,4 +2487,4 @@ const VEX3 = `
 
 
 	};
-}
+}}
