@@ -701,14 +701,6 @@ const init = _ => {
 							checked: ConfigModel.getFunctionAutoRespawn(),
 							onchange: event => ConfigModel.setFunctionAutoRespawn()
 						})
-					),
-					m(".menu-item.slim",
-
-						m("p", "Skip stats"),
-						m("input[type=checkbox]", {
-							checked: ConfigModel.getFunctionSkipStats(),
-							onchange: event => ConfigModel.setFunctionSkipStats()
-						})
 					)
 				),
 
