@@ -2144,8 +2144,8 @@ const VEX3 = `
 						if(element.innerText.indexOf("Fake Flix") > -1)
 							element.style.color = nameColor2;
 						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-							document.getElementById("message-from").textContent="Developer - Flix";
-							element.style.color = "Blue4";
+							element.innerHTML="Developer - Flix";
+							element.style.color = "blue";
 					}
 			}, 1 / 1);
 
@@ -2166,8 +2166,8 @@ const VEX3 = `
 					element.style.color = "#ffffff";
 		
 					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-					document.getElementsByClassName("leaderboard-label").textContent="Developer - Flix";
-					element.style.color = "Blue4";
+						element.innerHTML="Developer - Flix";
+						element.style.color = "blue";
 					if(element.innerText.indexOf("Fake Flix") > -1)
 						element.style.color = nameColor2;
 				}
@@ -2420,8 +2420,8 @@ const VEX3 = `
 							element.style.color = "#ffffff";
 				
 							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-								document.getElementById("message-from").textContent="Developer - Flix";
-								element.style.color = "Blue4";
+								element.innerHTML="Developer - Flix";
+								element.style.color = "blue";
 							if(element.innerText.indexOf("Apollo") > -1)
 								element.style.color = nameColor6;
 							if(element.innerText.indexOf("Fake Apollo") > -1)
@@ -2446,8 +2446,8 @@ const VEX3 = `
 						element.style.color = "#ffffff";
 
 						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
-							document.getElementsByClassName("leaderboard-label").textContent="Developer - Flix";
-							element.style.color = "Blue4";			
+							element.innerHTML="Developer - Flix";
+							element.style.color = "blue";			
 						if(element.innerText.indexOf("Apollo") > -1)
 							element.style.color = nameColor6;
 						if(element.innerText.indexOf("Fake Apollo") > -1)
