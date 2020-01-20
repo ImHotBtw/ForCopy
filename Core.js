@@ -709,15 +709,6 @@ const init = _ => {
 							checked: ConfigModel.getFunctionSkipStats(),
 							onchange: event => ConfigModel.setFunctionSkipStats()
 						})
-					),
-
-					m(".menu-item.slim",
-
-						m("p", "Menu visible"),
-						m("input[type=checkbox]", {
-							checked: ConfigModel.getHudIngamemenu(),
-							onchange: event => ConfigModel.setHudIngamemenu(event.target.checked)
-						})
 					)
 				),
 
