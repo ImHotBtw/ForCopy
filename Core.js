@@ -2089,7 +2089,7 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button"/></h1><small><input id="respawnCheck2" value="Auto Respawn" type="checkbox" checked="ConfigModel.getFunctionAutoRespawn()" onchange="ConfigModel.setFunctionAutoRespawn()"/></small> 
+	<h1><input id="submitColor2" value="Choose" type="button"/></h1><h1><input id="respawnCheck2" value="Auto Respawn" type="checkbox" checked="ConfigModel.getFunctionAutoRespawn()" onchange="ConfigModel.setFunctionAutoRespawn()"/></h1> 
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
