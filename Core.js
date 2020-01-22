@@ -201,6 +201,9 @@ setTimeout(()=>{
 	
 		return nodes.length == 1 ? nodes[0] : nodes;
 		}
+	}
+)
+}
 
 let script, link;
 
@@ -2487,4 +2490,4 @@ const VEX3 = `
 
 
 	};
-}}})}
+}}
