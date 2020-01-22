@@ -814,7 +814,6 @@ const init = _ => {
 
 			return m(".vex", {
 
-					class: `${VexController.visible ? '' : 'hide'}`,
 					onclick: event => {
 
 						VexController.toggle(event)
