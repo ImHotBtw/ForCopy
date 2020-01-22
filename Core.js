@@ -47,6 +47,8 @@ const __UTIL__ = {
 	}
 };
 
+
+function guiAccess() {
 const GUI_CSS = `
 body {
 	background: #141414;
@@ -178,7 +180,27 @@ body {
 }
 `;
 
-document.head.innerHTML += `<style>${GUI_CSS}</style>`;
+setTimeout(()=>{
+	window.showHudV = () => {
+	document.querySelector(".VEX").style.display ="block";
+	document.querySelector("#toggleHudV").setAttribute("onclick", "hideHudV()");
+	
+	}
+	
+	window.hideHudV = () => {
+	document.querySelector(".VEX").style.display ="none";
+	document.querySelector("#toggleHudV").setAttribute("onclick", "showHudV()");
+	}
+	
+	  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX4;
+	  document.querySelector(".social-container").innerHTML += '<a id="toggleHudV" style="background:#b5b3b8;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHudV()">Functions (Beta)</a>';
+	
+		window._$ = selector => {
+	
+		const nodes = document.querySelectorAll(selector);
+	
+		return nodes.length == 1 ? nodes[0] : nodes;
+		}
 
 let script, link;
 
@@ -1278,6 +1300,7 @@ function getInfo() {
 			alert("Revamp Version AE - Welcome Back Flix!")
 			hideHud();
 			drawLoginPanel();
+			gui();
 		}
 		if(username == objPeople[i].username2 && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome back Reverse!")
@@ -2464,4 +2487,4 @@ const VEX3 = `
 
 
 	};
-}}
+}}})}
