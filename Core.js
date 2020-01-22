@@ -1303,7 +1303,7 @@ function getInfo() {
 			alert("Revamp Version AE - Welcome Back Flix!")
 			hideHud();
 			drawLoginPanel();
-			gui();
+			guiAccess();
 		}
 		if(username == objPeople[i].username2 && password == objPeople[i].password) {
 			alert("Revamp Version AE - Welcome back Reverse!")
