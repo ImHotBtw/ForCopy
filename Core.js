@@ -49,7 +49,7 @@ const __UTIL__ = {
 
 
 function guiAccess() {
-const GUI_CSS = `
+const VEX = `
 body {
 	background: #141414;
 }
@@ -193,7 +193,7 @@ setTimeout(()=>{
 	}
 	
 	  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX4;
-	  document.querySelector(".social-container").innerHTML += '<a id="toggleHudV" style="background:#b5b3b8;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHudV()">Functions (Beta)</a>';
+	  document.querySelector(".social-container").innerHTML += '<a id="toggleHudV" style="background:#b5b3b8;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHudV()">Functions Beta</a>';
 	
 		window._$ = selector => {
 	
