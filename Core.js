@@ -50,6 +50,7 @@ const __UTIL__ = {
 
 function guiAccess() {
 const VEX = `
+<style>
 body {
 	background: #141414;
 }
@@ -178,6 +179,8 @@ body {
 	color: #ffffff;
 	margin: 5px;
 }
+
+</style>
 `;
 
 setTimeout(()=>{
