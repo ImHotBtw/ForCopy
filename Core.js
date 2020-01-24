@@ -1263,7 +1263,7 @@ function getInfo() {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			alert("Operation AE - Welcome Back Admin!")
 			hideHud();
-			AdminPanel();
+			AEPanel();
 			guiAccess();
 			adminAccess();
 		}
@@ -1596,7 +1596,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 }
 
   document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX2;
-  document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Login</a>';
+  document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:rgba(0,255,0);cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Login</a>';
   
 
     window._$ = selector => {
@@ -1605,9 +1605,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-}
-)
-
+})
 
 	function AEPanel() {
 		const VEX6 = `
@@ -1799,7 +1797,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		<div class="VEX6">
 		  <div class="VEX6-hud">
 		<h1><input id="submitColor6" value="Choose" type="button" /></h1>
-		  <input type="color" id="color6"/> <p>Apollo - Color Changer</p>
+		  <input type="color" id="color6"/> <p>AE - Color Changer</p>
 		</div>
 		</div>
 		`;
@@ -1817,7 +1815,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			}
 			
 			  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX6;
-			  document.querySelector(".social-container").innerHTML += '<a id="toggleHud6" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud6()">Apollo Panel</a>';
+			  document.querySelector(".social-container").innerHTML += '<a id="toggleHud6" style="background:rgba(0,255,0);cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud6()">AE Panel</a>';
 			
 				window._$ = selector => {
 			
