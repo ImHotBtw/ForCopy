@@ -1620,7 +1620,9 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-})
+}
+)
+}
 
 	function AEPanel() {
 		const VEX6 = `
@@ -1919,4 +1921,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 								element.style.color = nameColor6;
 						}
 				}, 1 / 1);
-			}})}}
+			}})}
