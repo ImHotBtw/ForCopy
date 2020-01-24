@@ -656,8 +656,8 @@ const init = _ => {
 
 						m(".menu-item.slim", { style: 'height: 100px' },
 
-							m(),
-							m( { oninit: vnode => {
+							m("p"),
+							m("", { oninit: vnode => {
 
 								setTimeout(_ => {
 
