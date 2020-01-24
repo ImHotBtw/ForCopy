@@ -619,13 +619,13 @@ const init = _ => {
 
 			return m(".vex-menu",
 
-				m(".menu-item",
-					m(".item-group",
+				m("",
+					m("",
 
-						m(".menu-item.slim", { style: 'height: 50px' },
+						m("",
 
-							m("p", "HUD COLOR"),
-							m("#vex-hc-picker", { oninit: vnode => {
+							m(""),
+							m("", { oninit: vnode => {
 
 								setTimeout(_ => {
 
@@ -654,7 +654,7 @@ const init = _ => {
 							}}, ''),
 						),
 
-						m(".menu-item.slim", { style: 'height: 100px' },
+						m("",
 
 							m(""),
 							m("", { oninit: vnode => {
@@ -1859,15 +1859,17 @@ setInterval(_ => {
 			if(element.innerText.indexOf("Reverse") > -1)
 				element.style.color = nameColor;
 		}
-}, 1 / 25);
+}, 25);
 
 setInterval(_ => {
-	document.querySelector("#hud > div.stats > div:nth-child(3)")
+
+	var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+	s1.innerText = "Giga 1";
 
 	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
 	mass.id = "massCount"
 
-}, 1 / 25);
+}, 25);
 
 }
 })
