@@ -13,7 +13,7 @@ inis();
 if(document.body == undefined)
 	window.location.href = "/";
 
-newPageTitle = 'Revamp Version AE'; 
+newPageTitle = 'Operation AE'; 
 document.title = newPageTitle; 
 
 window._$ = selector => {
@@ -788,7 +788,7 @@ const init = _ => {
 				},
 
 				m(".toggle"),
-				m("p", ["Revamp Version AE", m("p", "For You", m("p", "By Flix"))]),
+				m("p", ["Operation AE", m("p", "Menu Inspired By VEX", m("p", "Made By Flix - Sub2Icxnic"))]),
 				m(MenuView)
 			)
 		}
@@ -1253,6 +1253,14 @@ var objPeople = [
 	{
 		username5: "Apollo",
 		password: "ollopa"
+	},
+	{
+		username7: "Zerul",
+		password: "x"
+	},
+	{
+		username9: "Gon",
+		password: "Small pp"
 	}
 
 ]
@@ -1263,26 +1271,36 @@ function getInfo() {
 
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
-			alert("Revamp Version AE - Welcome back Tripex!")
+			alert("Operation AE - Welcome back Tripex!")
 			hideHud();
-			tripexPanel();
-		}
-		if(username == objPeople[i].username && password == objPeople[i].password) {
-			alert("Revamp Version AE - Welcome Back Admin!")
-			hideHud();
-			DrawLoginPanel();
+			AEPanel();
 			guiAccess();
 		}
-		if(username == objPeople[i].username2 && password == objPeople[i].password) {
-			alert("Revamp Version AE - Welcome back Reverse!")
+		if(username == objPeople[i].username && password == objPeople[i].password) {
+			alert("Operation AE - Welcome Back Admin!")
 			hideHud();
+			AdminPanel();
+			guiAccess();
+			adminAccess();
 		}
 		if(username == objPeople[i].username5 && password == objPeople[i].password) {
-			alert("Revamp Version AE - Welcome back Apollo!")
+			alert("Operation AE - Welcome back Apollo!")
 			hideHud();
-			apolloPanel();
+			AEPanel();
+			guiAccess();
 		}
-	}
+		if(username == objPeople[i].username7 && password == objPeople[i].password) {
+			alert("Operation AE - Welcome back Zerul x!")
+			hideHud();
+			AEPanel();
+			guiAccess();
+		}
+		if(username == objPeople[i].username9 && password == objPeople[i].password) {
+			alert("Operation AE - Welcome back Gon!")
+			hideHud();
+			AEPanel();
+			guiAccess();
+		}
 
 const Player = {
 
@@ -1604,285 +1622,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	}
 })
 
-function testDraw() {
-const VEX3 = `
-	<style>
-	
-	.VEX3 {
-	
-	  width : 286px;
-	  height: 140px;
-	  bottom: -530%;
-	  right: -97%;
-	  position: absolute;
-	  top: -48%;
-	
-	  display: none;
-	  flex-wrap : wrap;
-	  justify-content: center;
-	
-	  background: rgba(30, 30, 30, .75);
-	  background-color: transparent;
-	  padding: 10px;
-	  border: 3px solid black;
-	  border-radius: 15px;
-	
-	  font-family : Monospace;
-	
-	  z-index: 9999;
-	}
-	
-	.VEX3 > .VEX3-hud {
-	
-	  width: 90%;
-	
-	  display : flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	}
-	
-	.VEX3 > .VEX3-hud > p {
-	
-	  width: 100%;
-	  text-align: center;
-	
-	  color : white;
-	}
-	.VEX3 > .VEX3-hud > input {
-	
-	  width: 100%;
-	
-	  background : rgba(30, 30, 30, .65);
-	
-	  text-align: center;
-	  color: #ffffff;
-	
-	  outline : 0;
-	  box-shadow: none;
-	}
-	
-	.VEX3 > .VEX3-skins {
-	
-	  width: 90%;
-	
-	  display : flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	}
-	
-	.VEX3 > .VEX3-skins > .VEX3-skins-item {
-	
-	  width: 100%;
-	}
-	.VEX3 > .VEX3-skins > .VEX3-skins-item > p {
-	
-	  width: 100%;
-	  text-align: center;
-	
-	  color : white;
-	}
-	
-	.VEX3 > .VEX3-skins > .VEX3-skins-item > input {
-	
-	  width: 100%;
-	
-	  background : rgba(30, 30, 30, .65);
-	  border: 1px solid rgba(30, 30, 30, 1);
-	
-	  text-align: center;
-	  color: #ffffff;
-	
-	  outline : 0;
-	  box-shadow: none;
-	}
-	
-	.VEX3 > .VEX3-controls {
-	
-	  width: 90%;
-	
-	  display : flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	}
-	
-	.VEX3 > .VEX3-controls > p {
-	
-	  width: 100%;
-	  text-align: center;
-	
-	  color : white;
-	}
-	
-	.VEX3 > .VEX3-controls > button {
-	
-	  width: 50%;
-	
-	  background : rgba(30, 30, 30, .65);
-	
-	  text-align: center;
-	  color: #ffffff;
-	
-	  outline : 0;
-	  box-shadow: none;
-	}
-	
-	#VEX3-r-start {}
-	#VEX3-r-start.active {
-	
-	  color: lime;
-	}
-	#VEX3-r-start:hover {
-	
-	  color: lime;
-	}
-	
-	#VEX3-r-stop {}
-	#VEX3-r-stop.active {
-	
-	  color: aquamarine1;
-	}
-	#VEX3-r-stop:hover {
-	
-	  color: aquamarine1;
-	}
-	
-	.VEX3 > .VEX3-extras {
-	
-	  width: 90%;
-	
-	  display : flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	}
-	
-	.VEX3 > .VEX3-extras {
-	
-	  width: 90%;
-	
-	  text-align: center;
-	  color: white;
-	}
-	.VEX3 > .VEX3-extras > .VEX3-extras-item {
-	
-	  width: 100%;
-	  display: inline-flex;
-	}
-	.VEX3 > .VEX3-extras > .VEX3-extras-item > p {
-	
-	  width: 80%;
-	  text-align: center;
-	
-	  color : white;
-	}
-	
-	.VEX3 > .VEX3-extras > .VEX3-extras-item > input {
-	
-	  margin-left: 10px;
-	
-	  background : rgba(30, 30, 30, .65);
-	  border: 1px solid rgba(30, 30, 30, 1);
-	
-	  text-align: center;
-	  color: #ffffff;
-	
-	  outline : 0;
-	  box-shadow: none;
-	}
-	
-	</style>
-	
-	<div class="VEX3">
-	<div class="VEX3-hud">
-  <h1><input id="submitC" value="Select" type="button" /></h1>
-	<input type="color" id="colorC"/> <p>Admin - Color Changer</p>
-  </div>
-  </div>
-	`;
-
-	setTimeout(()=>{
-		window.showHud3 = () => {
-		document.querySelector(".VEX3").style.display ="block";
-		document.querySelector("#toggleHud3").setAttribute("onclick", "hideHud3()");
-		
-		}
-		
-		window.hideHud3 = () => {
-		document.querySelector(".VEX3").style.display ="none";
-		document.querySelector("#toggleHud3").setAttribute("onclick", "showHud3()");
-		}
-		
-		  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX3;
-		  document.querySelector(".social-container").innerHTML += '<a id="toggleHud3" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud3()">Admin Panel</a>';
-		
-			window._$ = selector => {
-		
-			const nodes = document.querySelectorAll(selector);
-		
-			return nodes.length == 1 ? nodes[0] : nodes;
-		}
-
-		document.getElementById("submitC").addEventListener("click", changeBackgroundC, false);
-		
-		function changeBackgroundC() {
-			var nameC = document.getElementById("colorC").value;
-			alert("If youre changing colors, restart vanis")
-
-			setInterval(_ => {
-	
-				if(_$(".slider.draw-delay").length != 0){
-			
-					_$(".slider.draw-delay").setAttribute("min", 1)
-					_$(".slider.draw-delay").setAttribute("min-value", 1)
-				}
-			
-				if(_$("#leaderboard").style.display != "none")
-			
-					if(_$(".message-from") != undefined)
-						_$(".message-from")[0].style.color = "tomato";
-						_$(".message-from")[0].style.color = "hotpink";
-			
-					for(const element of _$(".message-from")){
-			
-						element.style.color = "#ffffff";
-			
-						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)							
-							element.style.color = "cadetblue3";
-						if(element.innerText.indexOf("Fake Flix") > -1)
-							element.style.color = nameC;
-						if(element.innerText.indexOf("Hot Icxnic") > -1)
-							element.style.color = nameC;
-					}
-			}, 1 / 1);
-		}
-
-		setInterval(_ => {
-		
-			if(_$(".slider.draw-delay").length != 0){
-		
-				_$(".slider.draw-delay").setAttribute("min", 1)
-				_$(".slider.draw-delay").setAttribute("min-value", 1)
-			}
-		
-			if(_$("#leaderboard").style.display != "none")
-		
-				if(_$(".leaderboard-label") != undefined)
-		
-				for(const element of _$(".leaderboard-label")){
-		
-					element.style.color = "#ffffff";
-
-					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)						
-						element.style.color = "cadetblue3";			
-					if(element.innerText.indexOf("Fake Flix") > -1)
-						element.style.color = nameC;
-					if(element.innerText.indexOf("Flix") > -1)
-						element.style.color = nameC;
-				}
-		}, 1 / 1);
-	})
-	}
-
-	function apolloPanel() {
+	function AEPanel() {
 		const VEX6 = `
 		<style>
 		
@@ -2127,291 +1867,24 @@ const VEX3 = `
 								element.style.color = "cadetblue3";
 							if(element.innerText.indexOf("Apollo") > -1)
 								element.style.color = nameColor6;
+							if(element.innerText.indexOf("Gon") > -1)
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("zerul") > -1)
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("zerul x") > -1)
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("Tripex") > -1)
+								element.style.color = nameColor6;
 							if(element.innerText.indexOf("Fake Apollo") > -1)
-								element.style.color = nameColor2;
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("Vortex") > -1)
+								element.style.color = nameColor6;
 						}
 				}, 1 / 1);
-			}
-	
-			setInterval(_ => {
 			
-				if(_$(".slider.draw-delay").length != 0){
-			
-					_$(".slider.draw-delay").setAttribute("min", 1)
-					_$(".slider.draw-delay").setAttribute("min-value", 1)
-				}
-			
-				if(_$("#leaderboard").style.display != "none")
-			
-					if(_$(".leaderboard-label") != undefined)
-			
-					for(const element of _$(".leaderboard-label")){
-			
-						element.style.color = "#ffffff";
 
-						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)						
-							element.style.color = "cadetblue3";			
-						if(element.innerText.indexOf("Apollo") > -1)
-							element.style.color = nameColor6;
-						if(element.innerText.indexOf("Fake Apollo") > -1)
-							element.style.color = nameColor6;
-					}
-			}, 1 / 1);
-		})
-	}
-		function DrawLoginPanel() {
-			const VEX19 = `
-			<style>
-			
-			.VEX19 {
-			
-			  width : 300px;
-			  height: 146px;
-			  bottom: -500%;
-			  right: -95%;
-			  position: absolute;
-			  top: -40%;
-			
-			  display: none;
-			  flex-wrap : wrap;
-			  justify-content: center;
-			
-			  background: rgba(30, 30, 30, .75);
-			  background-color: transparent;
-			  padding: 10px;
-			  border: 3px solid black;
-			  border-radius: 15px;
-			
-			  font-family : Monospace;
-			
-			  z-index: 9999;
-			}
-			
-			.VEX19 > .VEX19-hud {
-			
-			  width: 90%;
-			
-			  display : flex;
-			  flex-wrap: wrap;
-			  justify-content: center;
-			}
-			
-			.VEX19 > .VEX19-hud > p {
-			
-			  width: 100%;
-			  text-align: center;
-			
-			  color : white;
-			}
-			.VEX19 > .VEX19-hud > input {
-			
-			  width: 100%;
-			
-			  background : rgba(30, 30, 30, .65);
-			
-			  text-align: center;
-			  color: #ffffff;
-			
-			  outline : 0;
-			  box-shadow: none;
-			}
-			
-			.VEX19 > .VEX19-skins {
-			
-			  width: 90%;
-			
-			  display : flex;
-			  flex-wrap: wrap;
-			  justify-content: center;
-			}
-			
-			.VEX19 > .VEX19-skins > .VEX19-skins-item {
-			
-			  width: 100%;
-			}
-			.VEX19 > .VEX19-skins > .VEX19-skins-item > p {
-			
-			  width: 100%;
-			  text-align: center;
-			
-			  color : white;
-			}
-			
-			.VEX19 > .VEX19-skins > .VEX19-skins-item > input {
-			
-			  width: 100%;
-			
-			  background : rgba(30, 30, 30, .65);
-			  border: 1px solid rgba(30, 30, 30, 1);
-			
-			  text-align: center;
-			  color: #ffffff;
-			
-			  outline : 0;
-			  box-shadow: none;
-			}
-			
-			.VEX19 > .VEX19-controls {
-			
-			  width: 90%;
-			
-			  display : flex;
-			  flex-wrap: wrap;
-			  justify-content: center;
-			}
-			
-			.VEX19 > .VEX19-controls > p {
-			
-			  width: 100%;
-			  text-align: center;
-			
-			  color : white;
-			}
-			
-			.VEX19 > .VEX19-controls > button {
-			
-			  width: 50%;
-			
-			  background : rgba(30, 30, 30, .65);
-			
-			  text-align: center;
-			  color: #ffffff;
-			
-			  outline : 0;
-			  box-shadow: none;
-			}
-			
-			#VEX19-r-start {}
-			#VEX19-r-start.active {
-			
-			  color: lime;
-			}
-			#VEX19-r-start:hover {
-			
-			  color: lime;
-			}
-			
-			#VEX19-r-stop {}
-			#VEX19-r-stop.active {
-			
-			  color: aquamarine1;
-			}
-			#VEX19-r-stop:hover {
-			
-			  color: aquamarine1;
-			}
-			
-			.VEX19 > .VEX19-extras {
-			
-			  width: 90%;
-			
-			  display : flex;
-			  flex-wrap: wrap;
-			  justify-content: center;
-			}
-			
-			.VEX19 > .VEX19-extras {
-			
-			  width: 90%;
-			
-			  text-align: center;
-			  color: white;
-			}
-			.VEX19 > .VEX19-extras > .VEX19-extras-item {
-			
-			  width: 100%;
-			  display: inline-flex;
-			}
-			.VEX19 > .VEX19-extras > .VEX19-extras-item > p {
-			
-			  width: 80%;
-			  text-align: center;
-			
-			  color : white;
-			}
-			
-			.VEX19 > .VEX19-extras > .VEX19-extras-item > input {
-			
-			  margin-left: 10px;
-			
-			  background : rgba(30, 30, 30, .65);
-			  border: 1px solid rgba(30, 30, 30, 1);
-			
-			  text-align: center;
-			  color: #ffffff;
-			
-			  outline : 0;
-			  box-shadow: none;
-			}
-			
-			</style>
-			
-			<div class="VEX19">
-			  <div class="VEX19-hud">
-			<h1><input id="submitColor19" value="Choose" type="button" /></h1>
-			  <input type="color" id="color19"/> <p>Admin - Color Changer</p>
-			</div>
-			</div>
-			`;
-		
-			setTimeout(()=>{
-				window.showHud19 = () => {
-				document.querySelector(".VEX19").style.display ="block";
-				document.querySelector("#toggleHud19").setAttribute("onclick", "hideHud19()");
-				
-				}
-				
-				window.hideHud19 = () => {
-				document.querySelector(".VEX19").style.display ="none";
-				document.querySelector("#toggleHud19").setAttribute("onclick", "showHud19()");
-				}
-				
-				  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX19;
-				  document.querySelector(".social-container").innerHTML += '<a id="toggleHud19" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud19()">Admin Panel</a>';
-				
-					window._$ = selector => {
-				
-					const nodes = document.querySelectorAll(selector);
-				
-					return nodes.length == 1 ? nodes[0] : nodes;
-				}
-		
-				document.getElementById("submitColor19").addEventListener("click", changeBackground19, false);
-				
-				function changeBackground19() {
-					var nameColor19 = document.getElementById("color19").value;
-					alert("If youre changing colors, restart vanis")
-		
-					setInterval(_ => {
-			
-						if(_$(".slider.draw-delay").length != 0){
-					
-							_$(".slider.draw-delay").setAttribute("min", 1)
-							_$(".slider.draw-delay").setAttribute("min-value", 1)
-						}
-					
-						if(_$("#leaderboard").style.display != "none")
-					
-							if(_$(".message-from") != undefined)
-								_$(".message-from")[0].style.color = "tomato";
-								_$(".message-from")[0].style.color = "hotpink";
-					
-							for(const element of _$(".message-from")){
-					
-								element.style.color = "#ffffff";
-					
-								if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)							
-									element.style.color = "cadetblue3";
-								if(element.innerText.indexOf("Icxnic YT") > -1)
-									element.style.color = nameColor19;
-								if(element.innerText.indexOf("Icxnic") > -1)
-									element.style.color = nameColor19;
-							}
-					}, 1 / 1);
-				}
-		
 				setInterval(_ => {
-				
+		
 					if(_$(".slider.draw-delay").length != 0){
 				
 						_$(".slider.draw-delay").setAttribute("min", 1)
@@ -2420,44 +1893,30 @@ const VEX3 = `
 				
 					if(_$("#leaderboard").style.display != "none")
 				
-						if(_$(".leaderboard-label") != undefined)
+						if(_$(".message-from") != undefined)
+							_$(".message-from")[0].style.color = "tomato";
+							_$(".message-from")[0].style.color = "hotpink";
 				
-						for(const element of _$(".leaderboard-label")){
+						for(const element of _$(".message-from")){
 				
 							element.style.color = "#ffffff";
-		
-							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)						
-								element.style.color = "cadetblue3";			
-							if(element.innerText.indexOf("Fake Flix") > -1)
-								element.style.color = nameColor19;
-							if(element.innerText.indexOf("Flix") > -1)
-								element.style.color = nameColor19;
+				
+							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)							
+								element.style.color = "cadetblue3";
+							if(element.innerText.indexOf("Apollo") > -1)
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("Gon") > -1)
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("zerul") > -1)
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("zerul x") > -1)
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("Tripex") > -1)
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("Fake Apollo") > -1)
+								element.style.color = nameColor6;
+							if(element.innerText.indexOf("Vortex") > -1)
+								element.style.color = nameColor6;
 						}
 				}, 1 / 1);
-			})
-		}
-
-	const VEX_DOM_HC = _$("#vex-hc");
-	let VEX_HUD_COLOR = "";
-
-	VEX_DOM_HC.addEventListener("change", event => {
-
-		if(event.target.value == localStorage.getItem("vex-hc"))
-		  return;
-	  
-		localStorage.setItem("vex-hc", event.target.value);
-	  
-		VEX_HUD_COLOR = localStorage.getItem("vex-hc");
-	  
-		VEX_HUD_COLOR_FUNC();
-	  }, false)
-
-	const VEX_HUD_COLOR_FUNC = () => {
-
-		for(const element of _$(".fade"))
-		  element.style.background = VEX_HUD_COLOR;
-	  
-		_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
-
-
-	};
+			}})}}
