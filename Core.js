@@ -2075,7 +2075,7 @@ const VEX3 = `
 		}
 		
 		  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX3;
-		  document.querySelector(".social-container").innerHTML += '<a id="toggleHud3" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud3()">Flix Panel</a>';
+		  document.querySelector(".social-container").innerHTML += '<a id="toggleHud3" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud3()">Admin Panel</a>';
 		
 			window._$ = selector => {
 		
@@ -2084,16 +2084,14 @@ const VEX3 = `
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
 
-		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
+		document.getElementById("submitColor2").addEventListener("click", changeBackground6, false);
 		
-		function changeBackground2() {
+		function changeBackground6() {
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
-		}
-		
 
-		setInterval(_ => {
-		
+			setInterval(_ => {
+	
 				if(_$(".slider.draw-delay").length != 0){
 			
 					_$(".slider.draw-delay").setAttribute("min", 1)
@@ -2110,12 +2108,15 @@ const VEX3 = `
 			
 						element.style.color = "#ffffff";
 			
+						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)							
+							element.style.color = "cadetblue3";
 						if(element.innerText.indexOf("Fake Flix") > -1)
 							element.style.color = nameColor2;
-						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)
+						if(element.innerText.indexOf("Hot Icxnic") > -1)
 							element.style.color = nameColor2;
 					}
 			}, 1 / 1);
+		}
 
 		setInterval(_ => {
 		
@@ -2132,16 +2133,17 @@ const VEX3 = `
 				for(const element of _$(".leaderboard-label")){
 		
 					element.style.color = "#ffffff";
-		
+
 					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)						
-						element.style.color = nameColor2;
-					if(element.innerText.indexOf("Fake Flix") > -1)
-						element.style.color = nameColor2;
+						element.style.color = "cadetblue3";			
+					if(element.innerText.indexOf("Apollo") > -1)
+						element.style.color = nameColor6;
+					if(element.innerText.indexOf("Fake Apollo") > -1)
+						element.style.color = nameColor6;
 				}
 		}, 1 / 1);
+	})
 	}
-	)
-}
 
 	function apolloPanel() {
 		const VEX6 = `
