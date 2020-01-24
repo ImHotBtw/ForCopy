@@ -724,30 +724,9 @@ const init = _ => {
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getFunctionAutoRespawn(),
 							onchange: event => ConfigModel.setFunctionAutoRespawn()
-						})
-					)
+						}
+		)
 				),
-
-				m(SkinchangerView),
-
-				m(".menu-item",
-
-					m("p", "BINDS"),
-
-					m(".item-group",
-
-						m(".menu-item.slim",
-
-							m("p", "Split 32x"),
-							m("input[type=text]", {
-								value: ConfigModel.getBind("ultrasplit"),
-								onchange: event => {
-
-									ConfigModel.setBind("ultrasplit", p)
-									ConfigModel._sync();
-								}
-							})
-						),
 						m(".menu-item.slim",
 
 							m("p", "Ultra feed"),
@@ -804,9 +783,8 @@ const init = _ => {
 						})
 					)
 				)
-			)
-		}
-	};
+					}
+				};
 
 	const VexView = {
 
@@ -814,6 +792,7 @@ const init = _ => {
 
 			return m(".vex", {
 
+					class: `${VexController.visible ? '' : 'hide'}`,
 					onclick: event => {
 
 						VexController.toggle(event)
