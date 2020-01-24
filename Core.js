@@ -724,9 +724,26 @@ const init = _ => {
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getFunctionAutoRespawn(),
 							onchange: event => ConfigModel.setFunctionAutoRespawn()
-						}				
-					),
-					
+						})
+					)
+				),
+
+				m(SkinchangerView),
+
+				m(".menu-item",
+
+					m("p", "BINDS"),
+
+					m(".item-group",
+
+						m(".menu-item.slim",
+
+							m("p"),
+							m("", {
+
+								
+							})
+						),
 						m(".menu-item.slim",
 
 							m("p", "Ultra feed"),
