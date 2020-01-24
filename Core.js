@@ -619,8 +619,8 @@ const init = _ => {
 
 			return m(".vex-menu",
 
-				m("",
-					m("",
+				m(".menu-item",
+					m(".item-group",
 
 						m("",
 
@@ -654,7 +654,7 @@ const init = _ => {
 							}}, ''),
 						),
 
-						m("",
+						m(".menu-item.slim", { style: 'height: 100px' },
 
 							m(""),
 							m("", { oninit: vnode => {
