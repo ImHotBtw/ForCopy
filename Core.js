@@ -1838,6 +1838,9 @@ function changeBackground() {
 
 setInterval(_ => {
 
+	var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+	s1.innerHTML = "Giga 1";
+
 	if(_$(".slider.draw-delay").length != 0){
 
 		_$(".slider.draw-delay").setAttribute("min", 5)
@@ -1864,7 +1867,7 @@ setInterval(_ => {
 setInterval(_ => {
 
 	var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
-	s1.innerText = "Giga 1";
+	s1.innerHTML = "Giga 1";
 
 	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
 	mass.id = "massCount"
@@ -2101,6 +2104,9 @@ const VEX3 = `
 
 
 		setInterval(_ => {
+
+			var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+			s1.innerHTML = "Giga 1";
 		
 				if(_$(".slider.draw-delay").length != 0){
 			
@@ -2126,6 +2132,9 @@ const VEX3 = `
 			}, 1 / 1);
 
 		setInterval(_ => {
+
+			var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+			s1.innerHTML = "Giga 1";
 		
 			if(_$(".slider.draw-delay").length != 0){
 		
@@ -2377,6 +2386,9 @@ const VEX3 = `
 
 
 				setInterval(_ => {
+
+					var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+					s1.innerHTML = "Giga 1";
 		
 					if(_$(".slider.draw-delay").length != 0){
 				
@@ -2404,6 +2416,9 @@ const VEX3 = `
 				}, 1 / 1);
 	
 			setInterval(_ => {
+
+				var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+				s1.innerHTML = "Giga 1";
 			
 				if(_$(".slider.draw-delay").length != 0){
 			
