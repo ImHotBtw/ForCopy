@@ -656,8 +656,8 @@ const init = _ => {
 
 						m(".menu-item.slim", { style: 'height: 100px' },
 
-							m("p", "MAP COLOR"),
-							m("#vex-mc-picker", { oninit: vnode => {
+							m(),
+							m( { oninit: vnode => {
 
 								setTimeout(_ => {
 
@@ -746,7 +746,7 @@ const init = _ => {
 
 					m(".menu-item.slim",
 
-						m("p", "Leaderboard Hide"),
+						m("p", "Hide The Leaderboard"),
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getHudLeaderboardHide(),
 							onchange: event => ConfigModel.setHudLeaderboardHide(event.target.checked)
@@ -755,19 +755,17 @@ const init = _ => {
 
 					m(".menu-item.slim",
 
-						m("p", "Leaderboard Server"),
+						m("p", "Server On Leaderboard"),
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getHudLeaderboardServer(),
 							onchange: event => ConfigModel.setHudLeaderboardServer(event.target.checked)
 						})
 					),
 
-					m(".menu-item.slim",
+					m("",
 
-						m("p", "Random skin"),
-						m("input[type=checkbox]", {
-							checked: ConfigModel.getFunctionSkinRotator(),
-							onchange: event => ConfigModel.setFunctionSkinRotator()
+						m("p"),
+						m("", {
 						})
 					)
 				)
