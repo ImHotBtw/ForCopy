@@ -728,13 +728,6 @@ const init = _ => {
 					)
 				),
 
-				m(SkinchangerView),
-
-				m("",
-
-					m("p"),
-
-					m("",
 
 						m("",
 
@@ -754,8 +747,8 @@ const init = _ => {
 									ConfigModel.setBind("ultrafeed", event.target.value)
 									ConfigModel._sync();
 								}
-							})
-						),
+							},
+							
 						m(".menu-item.slim",
 
 							m("p", "Freeze"),
