@@ -2079,6 +2079,7 @@ const VEX3 = `
 	function changeBackground2() {
 		var nameColor2 = document.getElementById("color2").value;
 		alert("If youre changing colors, restart vanis")
+	}
 
 	setTimeout(()=>{
 		window.showHud3 = () => {
@@ -2157,10 +2158,7 @@ const VEX3 = `
 				}
 		}, 1 / 1);
 	
-		}
-	)
-}
-}
+		},
 
 	function apolloPanel() {
 		const VEX6 = `
@@ -2475,4 +2473,4 @@ const VEX3 = `
 
 
 	};
-}}
+}})}
