@@ -1221,22 +1221,6 @@ const init = _ => {
 	}
 }
 
-function login(password) {
-    var storedPassword = 'Copy';
-    var storedPassword = 'Reverse';
-	var storedPassword = 'Flix';
-
-    return password == storedPassword;
-}
-
-function status() {
-  if(loggedIn) {
-    console.log('You are in :)');
-  } else {
-    console.log('You are not in :(');
-  }
-}
-
 var objPeople = [
 	{ // Object @ 0 index
 		username1: "Tripex",
@@ -1261,7 +1245,7 @@ var objPeople = [
 	{
 		username9: "Gon",
 		password: "Small pp"
-	}
+	},
 
 ]
 
@@ -1301,6 +1285,7 @@ function getInfo() {
 			AEPanel();
 			guiAccess();
 		}
+	}
 
 const Player = {
 
@@ -1620,8 +1605,9 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-})
 }
+)
+
 
 	function AEPanel() {
 		const VEX6 = `
