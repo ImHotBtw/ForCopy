@@ -2056,7 +2056,7 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button"/></h1>
+	<h1><input id="submitColor2" value="Choose" type="button" /></h1>
 	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
