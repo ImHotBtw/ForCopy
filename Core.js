@@ -488,19 +488,43 @@ const init = _ => {
 
 			return m(".menu-item",
 
-				m("p", "YOUR SKIN"),
+				m("p", "SKINS"),
 
 				m(".skin-changer",
 
 					m(".preview", {
 						style: `background-image: url("${SkinchangerView.current.url}"); background-repeat: no-repeat; background-size: cover;`
 					}),
+					m("input[type=checkbox]", {
+						checked: SkinchangerView.current.favourite,
+						onchange: event => SkinchangerController.setCurrentFavourite()
+					}),
 
 					m("input", {
 						value: SkinchangerView.current.url,
 						onchange: event => SkinchangerController.setCurrentUrl(event.target.value)
 					}),
+
+					m(".controls",
+
+						m("button", {
+							onclick: event => SkinchangerController.prev()
+						}, "Previous"),
+						m("button", {
+							onclick: event => SkinchangerController.next()
+						}, "Next"),
 					),
+
+					m(".controls",
+
+						m("button", {
+							onclick: event => SkinchangerController.add()
+						}, "Add"),
+						m("button", {
+							onclick: event => SkinchangerController.remove()
+						}, "Remove"),
+					),
+				)
 			)
 		}
 	};
@@ -577,7 +601,7 @@ const init = _ => {
 
 				id: ConfigModel.getSkinList().length,
 				url: '',
-				favourite: true
+				favourite: false
 			};
 
 			ConfigModel.model.S.skins.push(skin)
@@ -622,10 +646,10 @@ const init = _ => {
 				m(".menu-item",
 					m(".item-group",
 
-						m("",
+						m(".menu-item.slim", { style: 'height: 50px' },
 
-							m(""),
-							m("", { oninit: vnode => {
+							m("p", "HUD COLOR"),
+							m("#vex-hc-picker", { oninit: vnode => {
 
 								setTimeout(_ => {
 
@@ -654,10 +678,10 @@ const init = _ => {
 							}}, ''),
 						),
 
-						m("",
+						m(".menu-item.slim", { style: 'height: 100px' },
 
-							m(""),
-							m("", { oninit: vnode => {
+							m("p", "MAP COLOR"),
+							m("#vex-mc-picker", { oninit: vnode => {
 
 								setTimeout(_ => {
 
@@ -700,22 +724,9 @@ const init = _ => {
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getFunctionAutoRespawn(),
 							onchange: event => ConfigModel.setFunctionAutoRespawn()
-						})
-					)
+						}
+		)
 				),
-
-				m(SkinchangerView),
-
-
-
-						m("",
-
-							m("p"),
-							m("", {
-
-								
-							})
-						),
 						m(".menu-item.slim",
 
 							m("p", "Ultra feed"),
@@ -726,7 +737,8 @@ const init = _ => {
 									ConfigModel.setBind("ultrafeed", event.target.value)
 									ConfigModel._sync();
 								}
-							},
+							})
+						),
 						m(".menu-item.slim",
 
 							m("p", "Freeze"),
@@ -746,7 +758,7 @@ const init = _ => {
 
 					m(".menu-item.slim",
 
-						m("p", "Hide The Leaderboard"),
+						m("p", "Leaderboard Hide"),
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getHudLeaderboardHide(),
 							onchange: event => ConfigModel.setHudLeaderboardHide(event.target.checked)
@@ -755,23 +767,24 @@ const init = _ => {
 
 					m(".menu-item.slim",
 
-						m("p", "Server On Leaderboard"),
+						m("p", "Leaderboard Server"),
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getHudLeaderboardServer(),
 							onchange: event => ConfigModel.setHudLeaderboardServer(event.target.checked)
 						})
 					),
 
-					m("",
+					m(".menu-item.slim",
 
-						m("p"),
-						m("", {
+						m("p", "Random skin"),
+						m("input[type=checkbox]", {
+							checked: ConfigModel.getFunctionSkinRotator(),
+							onchange: event => ConfigModel.setFunctionSkinRotator()
 						})
 					)
 				)
-			)
-		}
-	};
+					}
+				};
 
 	const VexView = {
 
@@ -1809,7 +1822,6 @@ function reversePanel() {
 </div>
 `;
 
-
 setTimeout(()=>{
 window.showHud2 = () => {
 document.querySelector(".VEX4").style.display ="block";
@@ -1831,7 +1843,6 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 }
-
 document.getElementById("submitColor").addEventListener("click", changeBackground, false);
 
 function changeBackground() {
@@ -1861,7 +1872,15 @@ setInterval(_ => {
 			if(element.innerText.indexOf("Reverse") > -1)
 				element.style.color = nameColor;
 		}
-}, 25);
+}, 1 / 25);
+
+setInterval(_ => {
+	document.querySelector("#hud > div.stats > div:nth-child(3)")
+
+	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
+	mass.id = "massCount"
+
+}, 1 / 25);
 
 }
 })
@@ -2056,11 +2075,12 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button" /></h1>
-	  <input type="color" id="color2" /> <p>Fake Flix - Color Changer</p>
+	<h1><input id="submitColor2" value="Choose" type="button"/></h1><h1><input id="respawnCheck2" value="Auto Respawn" type="checkbox" checked="ConfigModel.getFunctionAutoRespawn()" onchange="ConfigModel.setFunctionAutoRespawn()"/></h1> 
+	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
 	`;
+
 
 	setTimeout(()=>{
 		window.showHud3 = () => {
@@ -2084,11 +2104,12 @@ const VEX3 = `
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
 
-		document.getElementById("submitColor2").addEventListener("click", changeBackground2);
+		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
 			alert("If youre changing colors, restart vanis")
+
 
 		setInterval(_ => {
 		
@@ -2137,8 +2158,11 @@ const VEX3 = `
 						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
+	
+		}
 	}
-},
+	)
+}
 
 	function apolloPanel() {
 		const VEX6 = `
@@ -2356,12 +2380,12 @@ const VEX3 = `
 			
 				return nodes.length == 1 ? nodes[0] : nodes;
 			}
-
 			document.getElementById("submitColor6").addEventListener("click", changeBackground6, false);
 			
 			function changeBackground6() {
 				var nameColor6 = document.getElementById("color6").value;
 				alert("If youre changing colors, restart vanis")
+
 
 				setInterval(_ => {
 		
@@ -2416,6 +2440,7 @@ const VEX3 = `
 			}, 1 / 1);
 		
 			}
+		})
 
 	const VEX_DOM_HC = _$("#vex-hc");
 	let VEX_HUD_COLOR = "";
@@ -2446,4 +2471,4 @@ const VEX3 = `
 
 
 	};
-}})})}
+}}
