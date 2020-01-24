@@ -2084,11 +2084,11 @@ const VEX3 = `
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
 
-		document.getElementById("submitColor2").addEventListener("click", changeBackground2);
+		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
-			alert("If youre changing colors, restart vanis");
+			alert("If youre changing colors, restart vanis")
 		
 
 		setInterval(_ => {
