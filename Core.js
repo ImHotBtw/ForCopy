@@ -730,13 +730,13 @@ const init = _ => {
 
 				m(SkinchangerView),
 
-				m(".menu-item",
+				m("",
 
-					m("p", "BINDS"),
+					m("p"),
 
-					m(".item-group",
+					m("",
 
-						m(".menu-item.slim",
+						m("",
 
 							m("p"),
 							m("", {
