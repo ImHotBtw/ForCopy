@@ -235,7 +235,7 @@ const __REQ_IVL__ = setInterval(_ => {
 		clearInterval(__REQ_IVL__);
 		init();
 	}
-}, 5)
+}, 1 / 5)
 
 switch(window.location.hash){
 
@@ -1809,6 +1809,7 @@ function reversePanel() {
 </div>
 `;
 
+
 setTimeout(()=>{
 window.showHud2 = () => {
 document.querySelector(".VEX4").style.display ="block";
@@ -1830,6 +1831,7 @@ document.querySelector("#toggleHud2").setAttribute("onclick", "showHud2()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 }
+
 document.getElementById("submitColor").addEventListener("click", changeBackground, false);
 
 function changeBackground() {
@@ -1837,9 +1839,6 @@ function changeBackground() {
 	alert("If youre changing colors, restart vanis :)")
 
 setInterval(_ => {
-
-	var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
-	s1.innerHTML = "Giga 1";
 
 	if(_$(".slider.draw-delay").length != 0){
 
@@ -1862,17 +1861,7 @@ setInterval(_ => {
 			if(element.innerText.indexOf("Reverse") > -1)
 				element.style.color = nameColor;
 		}
-}, 25);
-
-setInterval(_ => {
-
-	var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
-	s1.innerHTML = "Giga 1";
-
-	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
-	mass.id = "massCount"
-
-}, 25);
+}, 1 / 1);
 
 }
 })
@@ -2067,12 +2056,11 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	<h1><input id="submitColor2" value="Choose" type="button"/></h1><h1><input id="respawnCheck2" value="Auto Respawn" type="checkbox" checked="ConfigModel.getFunctionAutoRespawn()" onchange="ConfigModel.setFunctionAutoRespawn()"/></h1> 
-	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
+	  <button onclick="changeBackground2()">Select</button>
+	  <input type="color" id="color2" /> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
 	`;
-
 
 	setTimeout(()=>{
 		window.showHud3 = () => {
@@ -2095,18 +2083,13 @@ const VEX3 = `
 		
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
-
-		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
-			alert("If youre changing colors, restart vanis")
-
+			alert("If youre changing colors, restart vanis");
+		
 
 		setInterval(_ => {
-
-			var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
-			s1.innerHTML = "Giga 1";
 		
 				if(_$(".slider.draw-delay").length != 0){
 			
@@ -2132,9 +2115,6 @@ const VEX3 = `
 			}, 1 / 1);
 
 		setInterval(_ => {
-
-			var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
-			s1.innerHTML = "Giga 1";
 		
 			if(_$(".slider.draw-delay").length != 0){
 		
@@ -2156,11 +2136,8 @@ const VEX3 = `
 						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
-	
-		}
 	}
-	)
-}
+},
 
 	function apolloPanel() {
 		const VEX6 = `
@@ -2378,17 +2355,14 @@ const VEX3 = `
 			
 				return nodes.length == 1 ? nodes[0] : nodes;
 			}
+
 			document.getElementById("submitColor6").addEventListener("click", changeBackground6, false);
 			
 			function changeBackground6() {
 				var nameColor6 = document.getElementById("color6").value;
 				alert("If youre changing colors, restart vanis")
 
-
 				setInterval(_ => {
-
-					var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
-					s1.innerHTML = "Giga 1";
 		
 					if(_$(".slider.draw-delay").length != 0){
 				
@@ -2416,9 +2390,6 @@ const VEX3 = `
 				}, 1 / 1);
 	
 			setInterval(_ => {
-
-				var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
-				s1.innerHTML = "Giga 1";
 			
 				if(_$(".slider.draw-delay").length != 0){
 			
@@ -2444,7 +2415,6 @@ const VEX3 = `
 			}, 1 / 1);
 		
 			}
-		})
 
 	const VEX_DOM_HC = _$("#vex-hc");
 	let VEX_HUD_COLOR = "";
@@ -2475,4 +2445,4 @@ const VEX3 = `
 
 
 	};
-}}
+}})})}
