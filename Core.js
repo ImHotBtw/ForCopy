@@ -728,6 +728,9 @@ const init = _ => {
 					)
 				),
 
+				m(SkinchangerView),
+
+
 
 						m("",
 
@@ -748,7 +751,6 @@ const init = _ => {
 									ConfigModel._sync();
 								}
 							},
-							
 						m(".menu-item.slim",
 
 							m("p", "Freeze"),
