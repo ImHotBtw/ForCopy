@@ -2158,8 +2158,8 @@ const VEX3 = `
 		}, 1 / 1);
 	
 		}
-	}
 	)
+}
 }
 
 	function apolloPanel() {
