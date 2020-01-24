@@ -724,21 +724,8 @@ const init = _ => {
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getFunctionAutoRespawn(),
 							onchange: event => ConfigModel.setFunctionAutoRespawn()
-						}
-		)
-				),
-						m(".menu-item.slim",
-
-							m("p", "Ultra feed"),
-							m("input[type=text]", {
-								value: ConfigModel.getBind("ultrafeed"),
-								onchange: event => {
-
-									ConfigModel.setBind("ultrafeed", event.target.value)
-									ConfigModel._sync();
-								}
-							})
-						),
+						})
+					),
 						m(".menu-item.slim",
 
 							m("p", "Freeze"),
@@ -782,7 +769,7 @@ const init = _ => {
 							onchange: event => ConfigModel.setFunctionSkinRotator()
 						})
 					)
-				)
+				);
 					}
 				};
 
