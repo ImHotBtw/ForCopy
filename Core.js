@@ -1620,8 +1620,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-}
-)
+})
 }
 
 	function AEPanel() {
