@@ -1796,11 +1796,11 @@ const VEX3 = `
 	</style>
 	
 	<div class="VEX3">
-	  <div class="VEX3-hud">
-	  <input id="submitColor2" value="Submit" type="button" />
-	  <input type="color" id="color2"/> <p>Fake Flix - Color Changer</p>
-	</div>
-	</div>
+	<div class="VEX3-hud">
+  <h1><input id="submitColor2" value="Select" type="button" /></h1>
+	<input type="color" id="color2"/> <p>Admin - Color Changer</p>
+  </div>
+  </div>
 	`;
 
 	setTimeout(()=>{
