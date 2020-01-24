@@ -2355,13 +2355,13 @@ const VEX3 = `
 			`;
 		
 			setTimeout(()=>{
-				window.showHud6 = () => {
+				window.showHud19 = () => {
 				document.querySelector(".VEX19").style.display ="block";
 				document.querySelector("#toggleHud19").setAttribute("onclick", "hideHud19()");
 				
 				}
 				
-				window.hideHud6 = () => {
+				window.hideHud19 = () => {
 				document.querySelector(".VEX19").style.display ="none";
 				document.querySelector("#toggleHud19").setAttribute("onclick", "showHud19()");
 				}
