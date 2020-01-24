@@ -2452,11 +2452,6 @@ const VEX3 = `
 		VEX_HUD_COLOR_FUNC();
 	  }, false)
 
-	  const init = () => {
-		VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
-		VEX_HUD_COLOR = VEX_DOM_HC.value;
-		VEX_HUD_COLOR_FUNC();
-
 	const VEX_HUD_COLOR_FUNC = () => {
 
 		for(const element of _$(".fade"))
@@ -2466,4 +2461,3 @@ const VEX3 = `
 
 
 	};
-}
