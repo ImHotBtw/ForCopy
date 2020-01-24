@@ -488,43 +488,19 @@ const init = _ => {
 
 			return m(".menu-item",
 
-				m("p", "SKINS"),
+				m("p", "YOUR SKIN"),
 
 				m(".skin-changer",
 
 					m(".preview", {
 						style: `background-image: url("${SkinchangerView.current.url}"); background-repeat: no-repeat; background-size: cover;`
 					}),
-					m("input[type=checkbox]", {
-						checked: SkinchangerView.current.favourite,
-						onchange: event => SkinchangerController.setCurrentFavourite()
-					}),
 
 					m("input", {
 						value: SkinchangerView.current.url,
 						onchange: event => SkinchangerController.setCurrentUrl(event.target.value)
 					}),
-
-					m(".controls",
-
-						m("button", {
-							onclick: event => SkinchangerController.prev()
-						}, "Previous"),
-						m("button", {
-							onclick: event => SkinchangerController.next()
-						}, "Next"),
 					),
-
-					m(".controls",
-
-						m("button", {
-							onclick: event => SkinchangerController.add()
-						}, "Add"),
-						m("button", {
-							onclick: event => SkinchangerController.remove()
-						}, "Remove"),
-					),
-				)
 			)
 		}
 	};
@@ -601,7 +577,7 @@ const init = _ => {
 
 				id: ConfigModel.getSkinList().length,
 				url: '',
-				favourite: false
+				favourite: true
 			};
 
 			ConfigModel.model.S.skins.push(skin)
