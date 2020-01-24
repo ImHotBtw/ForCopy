@@ -488,43 +488,19 @@ const init = _ => {
 
 			return m(".menu-item",
 
-				m("p", "SKINS"),
+				m("p", "YOUR SKIN"),
 
 				m(".skin-changer",
 
 					m(".preview", {
 						style: `background-image: url("${SkinchangerView.current.url}"); background-repeat: no-repeat; background-size: cover;`
 					}),
-					m("input[type=checkbox]", {
-						checked: SkinchangerView.current.favourite,
-						onchange: event => SkinchangerController.setCurrentFavourite()
-					}),
 
 					m("input", {
 						value: SkinchangerView.current.url,
 						onchange: event => SkinchangerController.setCurrentUrl(event.target.value)
 					}),
-
-					m(".controls",
-
-						m("button", {
-							onclick: event => SkinchangerController.prev()
-						}, "Previous"),
-						m("button", {
-							onclick: event => SkinchangerController.next()
-						}, "Next"),
 					),
-
-					m(".controls",
-
-						m("button", {
-							onclick: event => SkinchangerController.add()
-						}, "Add"),
-						m("button", {
-							onclick: event => SkinchangerController.remove()
-						}, "Remove"),
-					),
-				)
 			)
 		}
 	};
@@ -601,7 +577,7 @@ const init = _ => {
 
 				id: ConfigModel.getSkinList().length,
 				url: '',
-				favourite: false
+				favourite: true
 			};
 
 			ConfigModel.model.S.skins.push(skin)
@@ -646,10 +622,10 @@ const init = _ => {
 				m(".menu-item",
 					m(".item-group",
 
-						m(".menu-item.slim", { style: 'height: 50px' },
+						m("",
 
-							m("p", "HUD COLOR"),
-							m("#vex-hc-picker", { oninit: vnode => {
+							m(""),
+							m("", { oninit: vnode => {
 
 								setTimeout(_ => {
 
@@ -678,10 +654,10 @@ const init = _ => {
 							}}, ''),
 						),
 
-						m(".menu-item.slim", { style: 'height: 100px' },
+						m("",
 
-							m("p", "MAP COLOR"),
-							m("#vex-mc-picker", { oninit: vnode => {
+							m(""),
+							m("", { oninit: vnode => {
 
 								setTimeout(_ => {
 
@@ -728,6 +704,9 @@ const init = _ => {
 					)
 				),
 
+				m(SkinchangerView),
+
+
 
 						m("",
 
@@ -748,7 +727,6 @@ const init = _ => {
 									ConfigModel._sync();
 								}
 							},
-							
 						m(".menu-item.slim",
 
 							m("p", "Freeze"),
@@ -768,7 +746,7 @@ const init = _ => {
 
 					m(".menu-item.slim",
 
-						m("p", "Leaderboard Hide"),
+						m("p", "Hide The Leaderboard"),
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getHudLeaderboardHide(),
 							onchange: event => ConfigModel.setHudLeaderboardHide(event.target.checked)
@@ -777,19 +755,17 @@ const init = _ => {
 
 					m(".menu-item.slim",
 
-						m("p", "Leaderboard Server"),
+						m("p", "Server On Leaderboard"),
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getHudLeaderboardServer(),
 							onchange: event => ConfigModel.setHudLeaderboardServer(event.target.checked)
 						})
 					),
 
-					m(".menu-item.slim",
+					m("",
 
-						m("p", "Random skin"),
-						m("input[type=checkbox]", {
-							checked: ConfigModel.getFunctionSkinRotator(),
-							onchange: event => ConfigModel.setFunctionSkinRotator()
+						m("p"),
+						m("", {
 						})
 					)
 				)
@@ -1862,6 +1838,9 @@ function changeBackground() {
 
 setInterval(_ => {
 
+	var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+	s1.innerHTML = "Giga 1";
+
 	if(_$(".slider.draw-delay").length != 0){
 
 		_$(".slider.draw-delay").setAttribute("min", 5)
@@ -1883,15 +1862,17 @@ setInterval(_ => {
 			if(element.innerText.indexOf("Reverse") > -1)
 				element.style.color = nameColor;
 		}
-}, 1 / 25);
+}, 25);
 
 setInterval(_ => {
-	document.querySelector("#hud > div.stats > div:nth-child(3)")
+
+	var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+	s1.innerHTML = "Giga 1";
 
 	var mass=document.querySelector("#hud > div.stats > div:nth-child(3)");
 	mass.id = "massCount"
 
-}, 1 / 25);
+}, 25);
 
 }
 })
@@ -2123,6 +2104,9 @@ const VEX3 = `
 
 
 		setInterval(_ => {
+
+			var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+			s1.innerHTML = "Giga 1";
 		
 				if(_$(".slider.draw-delay").length != 0){
 			
@@ -2148,6 +2132,9 @@ const VEX3 = `
 			}, 1 / 1);
 
 		setInterval(_ => {
+
+			var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+			s1.innerHTML = "Giga 1";
 		
 			if(_$(".slider.draw-delay").length != 0){
 		
@@ -2399,6 +2386,9 @@ const VEX3 = `
 
 
 				setInterval(_ => {
+
+					var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+					s1.innerHTML = "Giga 1";
 		
 					if(_$(".slider.draw-delay").length != 0){
 				
@@ -2426,6 +2416,9 @@ const VEX3 = `
 				}, 1 / 1);
 	
 			setInterval(_ => {
+
+				var s1=document.querySelector("#tab-menu > div.server-list > div:nth-child(5) > div.server-name");
+				s1.innerHTML = "Giga 1";
 			
 				if(_$(".slider.draw-delay").length != 0){
 			
