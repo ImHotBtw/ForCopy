@@ -2056,7 +2056,7 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	  <div class="VEX3-hud">
-	  <button onclick="changeBackground2()">Select</button>
+	  <button onclick="changeBackground2();" id="submitColor2">Select</button>
 	  <input type="color" id="color2" /> <p>Fake Flix - Color Changer</p>
 	</div>
 	</div>
@@ -2083,6 +2083,8 @@ const VEX3 = `
 		
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
+
+		document.getElementById("submitColor2").addEventListener("click", changeBackground2);
 		
 		function changeBackground2() {
 			var nameColor2 = document.getElementById("color2").value;
