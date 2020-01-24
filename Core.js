@@ -2139,7 +2139,9 @@ const VEX3 = `
 						element.style.color = nameColor2;
 				}
 		}, 1 / 1);
-	}),
+	}
+	)
+}
 
 	function apolloPanel() {
 		const VEX6 = `
@@ -2390,6 +2392,7 @@ const VEX3 = `
 								element.style.color = nameColor2;
 						}
 				}, 1 / 1);
+			}
 	
 			setInterval(_ => {
 			
@@ -2415,8 +2418,7 @@ const VEX3 = `
 							element.style.color = nameColor6;
 					}
 			}, 1 / 1);
-		
-			}
+		})
 
 	const VEX_DOM_HC = _$("#vex-hc");
 	let VEX_HUD_COLOR = "";
@@ -2447,4 +2449,4 @@ const VEX3 = `
 
 
 	};
-}})}}
+}}
