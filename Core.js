@@ -1793,8 +1793,8 @@ const VEX3 = `
 	
 	<div class="VEX3">
 	<div class="VEX3-hud">
-  <h1><input id="submitColor2" value="Select" type="button" /></h1>
-	<input type="color" id="color2"/> <p>Admin - Color Changer</p>
+  <h1><input id="submitC" value="Select" type="button" /></h1>
+	<input type="color" id="colorC"/> <p>Admin - Color Changer</p>
   </div>
   </div>
 	`;
@@ -1821,10 +1821,10 @@ const VEX3 = `
 			return nodes.length == 1 ? nodes[0] : nodes;
 		}
 
-		document.getElementById("submitColor2").addEventListener("click", changeBackground2, false);
+		document.getElementById("submitC").addEventListener("click", changeBackgroundC, false);
 		
-		function changeBackground2() {
-			var nameColor2 = document.getElementById("color2").value;
+		function changeBackgroundC() {
+			var nameC = document.getElementById("colorC").value;
 			alert("If youre changing colors, restart vanis")
 
 			setInterval(_ => {
@@ -1848,9 +1848,9 @@ const VEX3 = `
 						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)							
 							element.style.color = "cadetblue3";
 						if(element.innerText.indexOf("Fake Flix") > -1)
-							element.style.color = nameColor2;
+							element.style.color = nameC;
 						if(element.innerText.indexOf("Hot Icxnic") > -1)
-							element.style.color = nameColor2;
+							element.style.color = nameC;
 					}
 			}, 1 / 1);
 		}
@@ -1873,10 +1873,10 @@ const VEX3 = `
 
 					if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)						
 						element.style.color = "cadetblue3";			
-					if(element.innerText.indexOf("Apollo") > -1)
-						element.style.color = nameColor6;
-					if(element.innerText.indexOf("Fake Apollo") > -1)
-						element.style.color = nameColor6;
+					if(element.innerText.indexOf("Fake Flix") > -1)
+						element.style.color = nameC;
+					if(element.innerText.indexOf("Flix") > -1)
+						element.style.color = nameC;
 				}
 		}, 1 / 1);
 	})
