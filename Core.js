@@ -724,9 +724,19 @@ const init = _ => {
 						m("input[type=checkbox]", {
 							checked: ConfigModel.getFunctionAutoRespawn(),
 							onchange: event => ConfigModel.setFunctionAutoRespawn()
-						}
-		)
+						})
+					)
 				),
+
+
+						m("",
+
+							m("p"),
+							m("", {
+
+								
+							})
+						),
 						m(".menu-item.slim",
 
 							m("p", "Ultra feed"),
@@ -737,8 +747,8 @@ const init = _ => {
 									ConfigModel.setBind("ultrafeed", event.target.value)
 									ConfigModel._sync();
 								}
-							})
-						),
+							},
+							
 						m(".menu-item.slim",
 
 							m("p", "Freeze"),
@@ -783,8 +793,9 @@ const init = _ => {
 						})
 					)
 				)
-					}
-				};
+			)
+		}
+	};
 
 	const VexView = {
 
