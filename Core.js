@@ -654,7 +654,7 @@ const init = _ => {
 							}}, ''),
 						),
 
-						m(".menu-item.slim", { style: 'height: 100px' },
+						m("",
 
 							m(""),
 							m("", { oninit: vnode => {
