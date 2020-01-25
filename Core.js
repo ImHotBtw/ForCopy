@@ -1340,9 +1340,6 @@ const Player = {
 			Player._socket._send(Player._pspawn);
 	},
 }
-(
-{
-});
 
 const Bot = {};
 
@@ -1884,7 +1881,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 								element.style.color = nameColor6;
 						}
 				}, 1 / 1);
-			}})}
+		}
+	});
 
 			const VEX_DOM_HC = _$("#vex-hc");
 			let VEX_HUD_COLOR = "";
@@ -1915,4 +1913,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		
 		
 			};
-		}
+		}}
