@@ -1773,14 +1773,6 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  <input type="color" id="color6"/> <p>AE - Color Changer</p>
 		</div>
 		</div>
-
-		<script>
-		document.getElementById("submitColor6").addEventListener("click", changeBackground6, false);
-			
-		function changeBackground6() {
-			var nameColor6 = document.getElementById("color6").value;
-			alert("If youre changing colors, restart vanis")
-			</script>
 		`;
 	
 		setTimeout(()=>{
@@ -1805,6 +1797,12 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 				return nodes.length == 1 ? nodes[0] : nodes;
 			}
 
+			document.getElementById("submitColor6").addEventListener("click", changeBackground6, false);
+			
+			function changeBackground6() {
+				var nameColor6 = document.getElementById("color6").value;
+				alert("If youre changing colors, restart vanis")
+
 				setInterval(_ => {
 		
 					if(_$(".slider.draw-delay").length != 0){
@@ -1879,8 +1877,11 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 								element.style.color = nameColor6;
 						}
 				}, 1 / 1);
-		})
-	}
+
+		const init = () => {
+			VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
+			VEX_HUD_COLOR = VEX_DOM_HC.value;
+			VEX_HUD_COLOR_FUNC();
 
 			const VEX_DOM_HC = _$("#vex-hc");
 			let VEX_HUD_COLOR = "";
@@ -1894,4 +1895,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 				_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 		
 		
-			};
+			}}}})};
