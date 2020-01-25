@@ -1339,36 +1339,16 @@ const Player = {
 		if(Player._socket)
 			Player._socket._send(Player._pspawn);
 	},
-
-	eject : _ => {
-
-		const packet = new DataView(new ArrayBuffer(1));
-		packet.setUint8(0, 21);
-		// packet.setUint8(1, 0);
-
-		if(Player._socket)
-			Player._socket._send(packet);
-	},
-
-	splitMax: _ => {
-
-		const packet = new DataView(new ArrayBuffer(2));
-		packet.setUint8(0, 17);
-		packet.setUint8(1, Player.getX());
-
-		if(Player._socket)
-			Player._socket._send(packet);
-	},
-
-	_pinit: new Uint8Array([]),
-	_pspawn: new Uint8Array([]),
-};
+}
+(
+{
+});
 
 const Bot = {};
 
 Object.assign(Bot, Player)
 
-};
+}
 
 const VEX2 = `
 <style>
