@@ -1803,11 +1803,11 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 				var nameColor6 = document.getElementById("color6").value;
 				alert("If youre changing colors, restart vanis")
 
-
 				const init = () => {
 					VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
 					VEX_HUD_COLOR = VEX_DOM_HC.value;
 					VEX_HUD_COLOR_FUNC();
+				}
 
 				setInterval(_ => {
 		
@@ -1883,7 +1883,10 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 								element.style.color = nameColor6;
 						}
 				}, 1 / 1);
-			}
+		}
+	}
+		)
+}
 
 			const VEX_DOM_HC = _$("#vex-hc");
 			let VEX_HUD_COLOR = "";
@@ -1897,4 +1900,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 				_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 		
 		
-			}}})};
+			};
