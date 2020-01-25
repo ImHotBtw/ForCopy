@@ -1258,10 +1258,7 @@ function getInfo() {
 
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username1 && password == objPeople[i].password) {
-			alert("Operation AE - Welcome back Tripex!")
-			hideHud();
-			AEPanel();
-			guiAccess();
+			alert("Hello Tripex, your account has been banned by Flix")
 		}
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			alert("Operation AE - Welcome Back Admin!")
