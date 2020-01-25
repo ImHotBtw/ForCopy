@@ -46,13 +46,13 @@ const __UTIL__ = {
 
 
 function guiAccess() {
-const VEX = `
+const OAE = `
 <style>
 body {
 	background: #141414;
 }
 
-.vex {
+.OAE {
 	width: 350px;
 	height: 98vh;
 	position: fixed;
@@ -65,15 +65,15 @@ body {
 	color: #ffffff;
 }
 
-.vex p {
+.OAE p {
 	text-align: center;
 }
 
-.vex p p {
+.OAE p p {
 	font-size: 9px;
 }
 
-.vex > .vex-menu {
+.OAE > .OAE-menu {
 	width: 96%;
 	display: flex;
 	flex-wrap: wrap;
@@ -81,13 +81,13 @@ body {
 	margin-left: 2%;
 }
 
-.vex > .vex-menu .item-group {
+.OAE > .OAE-menu .item-group {
 	width: 96%;
 	display: inline-flex;
 	justify-content: space-between;
 }
 
-.vex > .vex-menu .menu-item {
+.OAE > .OAE-menu .menu-item {
 	width: 96%;
 	display: flex;
 	flex-wrap: wrap;
@@ -96,16 +96,16 @@ body {
 	background: rgba(20, 20, 20, 0.5);
 }
 
-.vex > .vex-menu .menu-item p {
+.OAE > .OAE-menu .menu-item p {
 	width: 100%;
 	font-size : 12px;
 }
 
-.vex > .vex-menu .menu-item button {
+.OAE > .OAE-menu .menu-item button {
 	width: 100%;
 }
 
-.vex > .vex-menu .menu-item input {
+.OAE > .OAE-menu .menu-item input {
 	width: 96%;
 	height: 25px;
 	border: none;
@@ -115,25 +115,25 @@ body {
 	color: #ffffff;
 }
 
-.vex > .vex-menu .menu-item.slim {
+.OAE > .OAE-menu .menu-item.slim {
 	width: 30%;
 }
 
-.vex > .vex-menu .menu-item.slim input {
+.OAE > .OAE-menu .menu-item.slim input {
 	width: 90% !important;
 }
 
-.vex.hide {
+.OAE.hide {
 	left: -325px;
 }
 
-#vex-hc-picker {
+#OAE-hc-picker {
 	width: 90%;
 	height: 20px !important;
 	border: 1px solid #ffffff;
 }
 
-#vex-mc-picker {
+#OAE-mc-picker {
 	width: 90%;
 	height: 20px !important;
 	border: 1px solid #ffffff;
@@ -182,17 +182,17 @@ body {
 
 setTimeout(()=>{
 	window.showHudV = () => {
-	document.querySelector(".VEX").style.display ="block";
+	document.querySelector(".OAE").style.display ="block";
 	document.querySelector("#toggleHudV").setAttribute("onclick", "hideHudV()");
 	
 	}
 	
 	window.hideHudV = () => {
-	document.querySelector(".VEX").style.display ="none";
+	document.querySelector(".OAE").style.display ="none";
 	document.querySelector("#toggleHudV").setAttribute("onclick", "showHudV()");
 	}
 	
-	  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX;
+	  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += OAE;
 	  document.querySelector(".social-container").innerHTML += '<a id="toggleHudV" style="background:#b5b3b8;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHudV()">Functions Beta</a>';
 	
 		window._$ = selector => {
@@ -238,7 +238,7 @@ switch(window.location.hash){
 
 	case '#vreset':
 
-		localStorage.removeItem("vex_config")
+		localStorage.removeItem("OAE_config")
 		window.location.href = "/";
 	break;
 };
@@ -255,7 +255,7 @@ const init = _ => {
 
 	const ConfigModel = {
 
-		db_prefix: 'vex_',
+		db_prefix: 'OAE_',
 		db_name: 'config',
 
 		model: {
@@ -417,7 +417,7 @@ const init = _ => {
 
 			HudController._DOM_.elements = [
 
-				_$(".vex")
+				_$(".OAE")
 			];
 
 			if(!_$("#overlay").length == 0)
@@ -614,7 +614,7 @@ const init = _ => {
 
 		view: _ => {
 
-			return m(".vex-menu",
+			return m(".OAE-menu",
 
 				m(".menu-item",
 					m(".item-group",
@@ -765,58 +765,58 @@ const init = _ => {
 		}
 	};
 
-	const VexView = {
+	const OAEView = {
 
 		view: _ => {
 
-			return m(".vex", {
+			return m(".OAE", {
 
-					class: `${VexController.visible ? '' : 'hide'}`,
+					class: `${OAEController.visible ? '' : 'hide'}`,
 					onclick: event => {
 
-						VexController.toggle(event)
+						OAEController.toggle(event)
 						_$("canvas#canvas").click()
 					}
 				},
 
 				m(".toggle"),
-				m("p", ["Operation AE", m("p", "Menu Inspired By VEX", m("p", "Made By Flix - Sub2Icxnic"))]),
+				m("p", ["Operation AE", m("p", "Menu Inspired By OAE", m("p", "Made By Flix - Sub2Icxnic"))]),
 				m(MenuView)
 			)
 		}
 	};
 
-	const VexController = {
+	const OAEController = {
 
 		visible: true,
 
 		toggle: event => {
 
-			if(event.target.classList[0] != 'vex')
+			if(event.target.classList[0] != 'OAE')
 				return;
 
-			if(VexController.visible){
+			if(OAEController.visible){
 
-				VexController.visible = false;
+				OAEController.visible = false;
 
 				return;
 			}
 
-			VexController.visible = true;
+			OAEController.visible = true;
 		},
 
 		hide: _ => {
 
-			_$(".vex").style.display = "none";
+			_$(".OAE").style.display = "none";
 		},
 
 		show: _ => {
 
-			_$(".vex").style.display = "initial";
+			_$(".OAE").style.display = "initial";
 		}
 	};
 
-	m.mount(root, VexView);
+	m.mount(root, OAEView);
 
 	setInterval(_ => {
 
@@ -851,11 +851,11 @@ const init = _ => {
 		if(ConfigModel.getHudLeaderboardHide() == false)
 			HudController.showLeaderboard();
 
-		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "none")
-			VexController.hide();
+		if(ConfigModel.getHudIngamemenu() == false && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "none")
+			OAEController.hide();
 
-		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "")
-			VexController.show();
+		if(ConfigModel.getHudIngamemenu() == false && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "")
+			OAEController.show();
 
 }
 	)
@@ -1156,11 +1156,11 @@ const init = _ => {
 				for(let i=0; i<5; i++)
 					Player.splitMax();
 
-				_$(".vex input")[5].style.background = "tomato";
+				_$(".OAE input")[5].style.background = "tomato";
 
 				setTimeout(_ => {
 
-					_$(".vex input")[5].style.background = "";
+					_$(".OAE input")[5].style.background = "";
 				}, 100)
 			break;
 
@@ -1169,11 +1169,11 @@ const init = _ => {
 				for(let i=0; i<5; i++)
 					Player.eject();
 
-				_$(".vex input")[6].style.background = "tomato";
+				_$(".OAE input")[6].style.background = "tomato";
 
 				setTimeout(_ => {
 
-					_$(".vex input")[6].style.background = "";
+					_$(".OAE input")[6].style.background = "";
 				}, 100)
 			break;
 
@@ -1183,29 +1183,29 @@ const init = _ => {
 
 				if(Player.freeze){
 
-					_$(".vex input")[7].style.background = "tomato"
+					_$(".OAE input")[7].style.background = "tomato"
 					return;
 				}
 
-				_$(".vex input")[7].style.background = ""
+				_$(".OAE input")[7].style.background = ""
 			break;
 
 			case ConfigModel.getBind("vtoggle"):
 
-				VexController.toggle();
+				OAEController.toggle();
 			break;
 		};
 	}, false);
 
-	window.vex = {
+	window.OAE = {
 
 		ConfigModel: ConfigModel,
 		HudController: HudController,
 		SkinchangerView: SkinchangerView,
 		SkinchangerController: SkinchangerController,
 		MenuView: MenuView,
-		VexView: VexView,
-		VexController: VexController,
+		OAEView: OAEView,
+		OAEController: OAEController,
 		Player: Player,
 		Functions: Functions
 		
@@ -1369,10 +1369,10 @@ Object.assign(Bot, Player)
 };
 
 
-const VEX2 = `
+const OAE2 = `
 <style>
 
-.VEX2 {
+.OAE2 {
 
   width : 1450px;
   height: 789px;
@@ -1391,7 +1391,7 @@ const VEX2 = `
   z-index: 9999;
 }
 
-.VEX2 > .VEX2-hud {
+.OAE2 > .OAE2-hud {
 
   width: 90%;
 
@@ -1400,14 +1400,14 @@ const VEX2 = `
   justify-content: center;
 }
 
-.VEX2 > .VEX2-hud > p {
+.OAE2 > .OAE2-hud > p {
 
   width: 100%;
   text-align: center;
 
   color : white;
 }
-.VEX2 > .VEX2-hud > input {
+.OAE2 > .OAE2-hud > input {
 
   width: 100%;
 
@@ -1421,7 +1421,7 @@ const VEX2 = `
   box-shadow: none;
 }
 
-.VEX2 > .VEX2-skins {
+.OAE2 > .OAE2-skins {
 
   width: 90%;
 
@@ -1430,11 +1430,11 @@ const VEX2 = `
   justify-content: center;
 }
 
-.VEX2 > .VEX2-skins > .VEX2-skins-item {
+.OAE2 > .OAE2-skins > .OAE2-skins-item {
 
   width: 100%;
 }
-.VEX2 > .VEX2-skins > .VEX2-skins-item > p {
+.OAE2 > .OAE2-skins > .OAE2-skins-item > p {
 
   width: 100%;
   text-align: center;
@@ -1442,7 +1442,7 @@ const VEX2 = `
   color : white;
 }
 
-.VEX2 > .VEX2-skins > .VEX2-skins-item > input {
+.OAE2 > .OAE2-skins > .OAE2-skins-item > input {
 
   width: 100%;
 
@@ -1456,7 +1456,7 @@ const VEX2 = `
   box-shadow: none;
 }
 
-.VEX2 > .VEX2-controls {
+.OAE2 > .OAE2-controls {
 
   width: 90%;
 
@@ -1465,7 +1465,7 @@ const VEX2 = `
   justify-content: center;
 }
 
-.VEX2 > .VEX2-controls > p {
+.OAE2 > .OAE2-controls > p {
 
   width: 100%;
   text-align: center;
@@ -1473,7 +1473,7 @@ const VEX2 = `
   color : white;
 }
 
-.VEX2 > .VEX2-controls > button {
+.OAE2 > .OAE2-controls > button {
 
   width: 50%;
 
@@ -1487,27 +1487,27 @@ const VEX2 = `
   box-shadow: none;
 }
 
-#VEX2-r-start {}
-#VEX2-r-start.active {
+#OAE2-r-start {}
+#OAE2-r-start.active {
 
   color: lime;
 }
-#VEX2-r-start:hover {
+#OAE2-r-start:hover {
 
   color: lime;
 }
 
-#VEX2-r-stop {}
-#VEX2-r-stop.active {
+#OAE2-r-stop {}
+#OAE2-r-stop.active {
 
   color: aquamarine1;
 }
-#VEX2-r-stop:hover {
+#OAE2-r-stop:hover {
 
   color: aquamarine1;
 }
 
-.VEX2 > .VEX2-extras {
+.OAE2 > .OAE2-extras {
 
   width: 90%;
 
@@ -1516,19 +1516,19 @@ const VEX2 = `
   justify-content: center;
 }
 
-.VEX2 > .VEX2-extras {
+.OAE2 > .OAE2-extras {
 
   width: 90%;
 
   text-align: center;
   color: white;
 }
-.VEX2 > .VEX2-extras > .VEX2-extras-item {
+.OAE2 > .OAE2-extras > .OAE2-extras-item {
 
   width: 100%;
   display: inline-flex;
 }
-.VEX2 > .VEX2-extras > .VEX2-extras-item > p {
+.OAE2 > .OAE2-extras > .OAE2-extras-item > p {
 
   width: 80%;
   text-align: center;
@@ -1536,7 +1536,7 @@ const VEX2 = `
   color : white;
 }
 
-.VEX2 > .VEX2-extras > .VEX2-extras-item > input {
+.OAE2 > .OAE2-extras > .OAE2-extras-item > input {
 
   margin-left: 10px;
 
@@ -1552,8 +1552,8 @@ const VEX2 = `
 
 </style>
 
-<div class="VEX2">
-  <div class="VEX2-hud">
+<div class="OAE2">
+  <div class="OAE2-hud">
 <h1>LOGIN</h1>
 <input type="text" id="username" placeholder="Username">
 <input type="password" id="password" placeholer="Choose Password">
@@ -1583,18 +1583,18 @@ const VEX2 = `
 
 setTimeout(()=>{
 window.showHud = () => {
-document.querySelector(".VEX2").style.display ="block";
+document.querySelector(".OAE2").style.display ="block";
 document.querySelector("#toggleHud").setAttribute("onclick", "hideHud()");
 
 }
 
 window.hideHud = () => {
-document.querySelector(".VEX2").style.display ="none";
+document.querySelector(".OAE2").style.display ="none";
 document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 }
 
-  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX2;
+  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += OAE2;
   document.querySelector("#player-container > div.tabs").innerHTML += '<a id="toggleHud" style="background:#2f4f4f;cursor:pointer;border-right:2px solid #000;padding:9px;color:#dadada;box-shadow:0 0 1px 1px #000;" onclick="showHud()"><img src="https://i.imgur.com/6c8IbJ8.png"></a>';
   
 
@@ -1607,10 +1607,10 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 })
 
 	function AEPanel() {
-		const VEX6 = `
+		const OAE6 = `
 		<style>
 		
-		.VEX6 {
+		.OAE6 {
 		
 		  width : 300px;
 		  height: 146px;
@@ -1634,7 +1634,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  z-index: 9999;
 		}
 		
-		.VEX6 > .VEX6-hud {
+		.OAE6 > .OAE6-hud {
 		
 		  width: 90%;
 		
@@ -1643,14 +1643,14 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  justify-content: center;
 		}
 		
-		.VEX6 > .VEX6-hud > p {
+		.OAE6 > .OAE6-hud > p {
 		
 		  width: 100%;
 		  text-align: center;
 		
 		  color : white;
 		}
-		.VEX6 > .VEX6-hud > input {
+		.OAE6 > .OAE6-hud > input {
 		
 		  width: 100%;
 		
@@ -1663,7 +1663,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  box-shadow: none;
 		}
 		
-		.VEX6 > .VEX6-skins {
+		.OAE6 > .OAE6-skins {
 		
 		  width: 90%;
 		
@@ -1672,11 +1672,11 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  justify-content: center;
 		}
 		
-		.VEX6 > .VEX6-skins > .VEX6-skins-item {
+		.OAE6 > .OAE6-skins > .OAE6-skins-item {
 		
 		  width: 100%;
 		}
-		.VEX6 > .VEX6-skins > .VEX6-skins-item > p {
+		.OAE6 > .OAE6-skins > .OAE6-skins-item > p {
 		
 		  width: 100%;
 		  text-align: center;
@@ -1684,7 +1684,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  color : white;
 		}
 		
-		.VEX6 > .VEX6-skins > .VEX6-skins-item > input {
+		.OAE6 > .OAE6-skins > .OAE6-skins-item > input {
 		
 		  width: 100%;
 		
@@ -1698,7 +1698,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  box-shadow: none;
 		}
 		
-		.VEX6 > .VEX6-controls {
+		.OAE6 > .OAE6-controls {
 		
 		  width: 90%;
 		
@@ -1707,7 +1707,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  justify-content: center;
 		}
 		
-		.VEX6 > .VEX6-controls > p {
+		.OAE6 > .OAE6-controls > p {
 		
 		  width: 100%;
 		  text-align: center;
@@ -1715,7 +1715,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  color : white;
 		}
 		
-		.VEX6 > .VEX6-controls > button {
+		.OAE6 > .OAE6-controls > button {
 		
 		  width: 50%;
 		
@@ -1728,27 +1728,27 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  box-shadow: none;
 		}
 		
-		#VEX6-r-start {}
-		#VEX6-r-start.active {
+		#OAE6-r-start {}
+		#OAE6-r-start.active {
 		
 		  color: lime;
 		}
-		#VEX6-r-start:hover {
+		#OAE6-r-start:hover {
 		
 		  color: lime;
 		}
 		
-		#VEX6-r-stop {}
-		#VEX6-r-stop.active {
+		#OAE6-r-stop {}
+		#OAE6-r-stop.active {
 		
 		  color: aquamarine1;
 		}
-		#VEX6-r-stop:hover {
+		#OAE6-r-stop:hover {
 		
 		  color: aquamarine1;
 		}
 		
-		.VEX6 > .VEX6-extras {
+		.OAE6 > .OAE6-extras {
 		
 		  width: 90%;
 		
@@ -1757,19 +1757,19 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  justify-content: center;
 		}
 		
-		.VEX6 > .VEX6-extras {
+		.OAE6 > .OAE6-extras {
 		
 		  width: 90%;
 		
 		  text-align: center;
 		  color: white;
 		}
-		.VEX6 > .VEX6-extras > .VEX6-extras-item {
+		.OAE6 > .OAE6-extras > .OAE6-extras-item {
 		
 		  width: 100%;
 		  display: inline-flex;
 		}
-		.VEX6 > .VEX6-extras > .VEX6-extras-item > p {
+		.OAE6 > .OAE6-extras > .OAE6-extras-item > p {
 		
 		  width: 80%;
 		  text-align: center;
@@ -1777,7 +1777,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  color : white;
 		}
 		
-		.VEX6 > .VEX6-extras > .VEX6-extras-item > input {
+		.OAE6 > .OAE6-extras > .OAE6-extras-item > input {
 		
 		  margin-left: 10px;
 		
@@ -1793,8 +1793,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		
 		</style>
 		
-		<div class="VEX6">
-		  <div class="VEX6-hud">
+		<div class="OAE6">
+		  <div class="OAE6-hud">
 		<h1><input id="submitColor6" value="Choose" type="button" /></h1>
 		  <input type="color" id="color6"/> <p>AE - Color Changer</p>
 		</div>
@@ -1803,17 +1803,17 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	
 		setTimeout(()=>{
 			window.showHud6 = () => {
-			document.querySelector(".VEX6").style.display ="block";
+			document.querySelector(".OAE6").style.display ="block";
 			document.querySelector("#toggleHud6").setAttribute("onclick", "hideHud6()");
 			
 			}
 			
 			window.hideHud6 = () => {
-			document.querySelector(".VEX6").style.display ="none";
+			document.querySelector(".OAE6").style.display ="none";
 			document.querySelector("#toggleHud6").setAttribute("onclick", "showHud6()");
 			}
 			
-			  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX6;
+			  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += OAE6;
 			  document.querySelector("#player-container > div.tabs").innerHTML += '<a id="toggleHud6" style="background:#2f4f4f;cursor:pointer;padding:9px;color:#dadada;box-shadow:0 0 1px 1px #000;" onclick="showHud6()"><img src="https://i.imgur.com/GMnN5Dg.gif"></a>';
 			
 				window._$ = selector => {
@@ -1908,20 +1908,20 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		)
 
 		const init = () => {
-			VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
-			VEX_HUD_COLOR = VEX_DOM_HC.value;
-			VEX_HUD_COLOR_FUNC();
+			OAE_DOM_HC.value = localStorage.getItem("OAE-hc") || "";
+			OAE_HUD_COLOR = OAE_DOM_HC.value;
+			OAE_HUD_COLOR_FUNC();
 
-			const VEX_DOM_HC = _$("#vex-hc");
-			let VEX_HUD_COLOR = "";
+			const OAE_DOM_HC = _$("#OAE-hc");
+			let OAE_HUD_COLOR = "";
 
 		
-			const VEX_HUD_COLOR_FUNC = () => {
+			const OAE_HUD_COLOR_FUNC = () => {
 		
 				for(const element of _$(".fade"))
-				  element.style.background = VEX_HUD_COLOR;
+				  element.style.background = OAE_HUD_COLOR;
 			  
-				_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
+				_$("#overlay").style.background = "radial-gradient("+OAE_HUD_COLOR+" 300px,"+OAE_HUD_COLOR+")";
 		
 		
 			}}};
