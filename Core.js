@@ -1567,7 +1567,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 }
 
   document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX2;
-  document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:rgba(0,255,0);cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Login</a>';
+  document.querySelector(".tabs").innerHTML += '<a id="toggleHud" style="background:#b5b3b8;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Login</a>';
   
 
     window._$ = selector => {
