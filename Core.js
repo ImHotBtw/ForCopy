@@ -720,8 +720,8 @@ const init = _ => {
 
 							m("p"),
 							m("", {
-								
-							},
+						},
+
 						m(".menu-item.slim",
 
 							m("p", "Freeze"),
@@ -860,8 +860,8 @@ const init = _ => {
 		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "")
 			VexController.show();
 
+});
 }
-	)
 
 
 	const Player = {
@@ -1165,7 +1165,7 @@ const init = _ => {
 				setTimeout(_ => {
 
 					_$(".vex input")[5].style.background = "";
-				}, 100)
+				}, 1)
 			break;
 
 			case ConfigModel.getBind("ultrafeed"):
@@ -1214,7 +1214,6 @@ const init = _ => {
 		Functions: Functions
 		
 	}
-}
 
 var objPeople = [
 	{ // Object @ 0 index
@@ -1341,6 +1340,7 @@ const Bot = {};
 Object.assign(Bot, Player)
 
 }
+
 
 const VEX2 = `
 <style>
@@ -1577,8 +1577,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-}
-);
+})
 
 	function AEPanel() {
 		const VEX6 = `
