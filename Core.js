@@ -455,7 +455,7 @@ const init = _ => {
 
 			for(const element of HudController._DOM_.elements)
 				if(element != void(0))
-					element.style.background = color;
+					element.style.background = "darkslategray";
 		},
 
 		setHudMapColor: color => {
