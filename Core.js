@@ -720,8 +720,8 @@ const init = _ => {
 
 							m("p"),
 							m("", {
-						},
-
+								
+							},
 						m(".menu-item.slim",
 
 							m("p", "Freeze"),
@@ -860,8 +860,8 @@ const init = _ => {
 		if(ConfigModel.getHudIngamemenu() == false && (!_$(".vex").style.display != "none") && _$("#overlay").style.display == "")
 			VexController.show();
 
-});
 }
+	)
 
 
 	const Player = {
@@ -1165,7 +1165,7 @@ const init = _ => {
 				setTimeout(_ => {
 
 					_$(".vex input")[5].style.background = "";
-				}, 1)
+				}, 100)
 			break;
 
 			case ConfigModel.getBind("ultrafeed"):
@@ -1214,6 +1214,7 @@ const init = _ => {
 		Functions: Functions
 		
 	}
+}
 
 var objPeople = [
 	{ // Object @ 0 index
@@ -1339,7 +1340,7 @@ const Bot = {};
 
 Object.assign(Bot, Player)
 
-}
+};
 
 
 const VEX2 = `
@@ -1802,6 +1803,12 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 				var nameColor6 = document.getElementById("color6").value;
 				alert("If youre changing colors, restart vanis")
 
+				const init = () => {
+					VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
+					VEX_HUD_COLOR = VEX_DOM_HC.value;
+					VEX_HUD_COLOR_FUNC();
+				}
+
 				setInterval(_ => {
 		
 					if(_$(".slider.draw-delay").length != 0){
@@ -1885,11 +1892,6 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			let VEX_HUD_COLOR = "";
 
 		
-			  const init = () => {
-				VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
-				VEX_HUD_COLOR = VEX_DOM_HC.value;
-				VEX_HUD_COLOR_FUNC();
-		
 			const VEX_HUD_COLOR_FUNC = () => {
 		
 				for(const element of _$(".fade"))
@@ -1899,4 +1901,3 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		
 		
 			};
-		}
