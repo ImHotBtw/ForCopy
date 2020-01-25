@@ -1568,7 +1568,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 }
 
   document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX2;
-  document.querySelector("#player-container > div.tabs").innerHTML += '<a id="toggleHud" style="background:#2f4f4f;cursor:pointer;border-right:2px solid #000;padding:9px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:2px;" onclick="showHud()"><img src="https://i.imgur.com/6c8IbJ8.png"></a>';
+  document.querySelector("#player-container > div.tabs").innerHTML += '<a id="toggleHud" style="background:#2f4f4f;cursor:pointer;border-right:2px solid #000;padding:9px;color:#dadada;box-shadow:0 0 1px 1px #000;" onclick="showHud()"><img src="https://i.imgur.com/6c8IbJ8.png"></a>';
   
 
     window._$ = selector => {
