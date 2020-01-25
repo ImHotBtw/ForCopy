@@ -1577,7 +1577,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-})
+}
+);
 
 	function AEPanel() {
 		const VEX6 = `
@@ -1877,7 +1878,9 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 						}
 				}, 1 / 1);
 		}
-	});
+	}
+		)
+}
 
 			const VEX_DOM_HC = _$("#vex-hc");
 			let VEX_HUD_COLOR = "";
@@ -1897,4 +1900,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		
 		
 			};
-		}}
+		}
