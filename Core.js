@@ -716,16 +716,10 @@ const init = _ => {
 								
 							})
 						),
-						m(".menu-item.slim",
+						m("",
 
-							m("p", "Ultra feed"),
-							m("input[type=text]", {
-								value: ConfigModel.getBind("ultrafeed"),
-								onchange: event => {
-
-									ConfigModel.setBind("ultrafeed", event.target.value)
-									ConfigModel._sync();
-								}
+							m(),
+							m("", {
 							},
 						m(".menu-item.slim",
 
