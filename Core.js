@@ -1368,7 +1368,7 @@ const Bot = {};
 
 Object.assign(Bot, Player)
 
-}
+};
 
 const VEX2 = `
 <style>
