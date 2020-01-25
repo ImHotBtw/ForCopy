@@ -3,9 +3,7 @@ function sleep(ms) {
   }
   
   async function inis() {
-	console.log('Initializing');
 	await sleep(5000);
-	console.log('Successfuly Initialized!');
   }
 
 inis();
@@ -25,7 +23,6 @@ window._$ = selector => {
 
 const __MODC__ = {
 	clrscr: isNodeJs => isNodeJs ? (process.stdout.write('\033c')) : console.clear(),
-	print: console.log,
 	printo: console.dir,
 	printt: console.table,
 	pwarn: console.warn,
@@ -1117,7 +1114,6 @@ const init = _ => {
 	WebSocket.prototype.send = function(buffer){
 
 		if(buffer.byteLength == 2 && buffer.byteLength < 5)
-			console.log(buffer)
 
 		if(buffer.byteLength >= 2 && buffer.byteLength < 100 && buffer[0] == 5)
 			Player._pinit = buffer;
@@ -1241,6 +1237,18 @@ var objPeople = [
 		username9: "Gon",
 		password: "Small pp"
 	},
+	{
+		username10: "Veynome",
+		password: "king"
+	},
+	{
+		username11: "Leo",
+		password: "yello"
+	},
+	{
+		username12: "Zodiak",
+		password: "Zodiak5534"
+	}
 
 ]
 
@@ -1276,6 +1284,24 @@ function getInfo() {
 		}
 		if(username == objPeople[i].username9 && password == objPeople[i].password) {
 			alert("Operation AE - Welcome back Gon!")
+			hideHud();
+			AEPanel();
+			guiAccess();
+		}
+		if(username == objPeople[i].username10 && password == objPeople[i].password) {
+			alert("Operation AE - Welcome back Veynome!")
+			hideHud();
+			AEPanel();
+			guiAccess();
+		}
+		if(username == objPeople[i].username11 && password == objPeople[i].password) {
+			alert("Operation AE - Welcome back Leo!")
+			hideHud();
+			AEPanel();
+			guiAccess();
+		}
+		if(username == objPeople[i].username12 && password == objPeople[i].password) {
+			alert("Operation AE - Welcome back Zodiak!")
 			hideHud();
 			AEPanel();
 			guiAccess();
