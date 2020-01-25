@@ -1877,6 +1877,9 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 								element.style.color = nameColor6;
 						}
 				}, 1 / 1);
+			};
+		}
+		);
 
 		const init = () => {
 			VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
@@ -1895,4 +1898,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 				_$("#overlay").style.background = "radial-gradient("+VEX_HUD_COLOR+" 300px,"+VEX_HUD_COLOR+")";
 		
 		
-			}}}})};
+			}}};
