@@ -716,10 +716,11 @@ const init = _ => {
 								
 							})
 						),
-						m("",
+						m(".menu-item.slim",
 
-							m(),
+							m("p"),
 							m("", {
+								
 							},
 						m(".menu-item.slim",
 
@@ -1567,7 +1568,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 }
 
   document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += VEX2;
-  document.querySelector("#player-container > div.tabs").innerHTML += '<a id="toggleHud" style="background:#b5b3b8;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Login</a>';
+  document.querySelector(".social-container").innerHTML += '<a id="toggleHud" style="background:rgba(0,255,0);cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud()">Login</a>';
   
 
     window._$ = selector => {
@@ -1880,6 +1881,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 			const VEX_DOM_HC = _$("#vex-hc");
 			let VEX_HUD_COLOR = "";
+
 		
 			  const init = () => {
 				VEX_DOM_HC.value = localStorage.getItem("vex-hc") || "";
