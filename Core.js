@@ -788,7 +788,7 @@ const init = _ => {
 
 	const OAEController = {
 
-		visible: false,
+		visible: true,
 
 		toggle: event => {
 
@@ -802,7 +802,7 @@ const init = _ => {
 				return;
 			}
 
-			OAEController.visible = false;
+			OAEController.visible = true;
 		},
 
 		hide: _ => {
@@ -812,7 +812,7 @@ const init = _ => {
 
 		show: _ => {
 
-			_$(".OAE").style.display = "none";
+			_$(".OAE").style.display = "initial";
 		}
 	};
 
