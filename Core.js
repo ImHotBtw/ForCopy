@@ -1274,6 +1274,7 @@ function colorChange() {
 var on = true;
 var off = false;
 
+function menuOff() {
 if (on || off) {
 	_$(".OAE").style.display = "none";
 	return true;
@@ -1281,6 +1282,7 @@ if (on || off) {
 	_$(".OAE").style.display = "initial";
 	return false;
 	}
+}
 
 function getInfo() {
 	var username = document.getElementById('username').value
