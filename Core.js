@@ -1342,7 +1342,7 @@ const ConfigModel = {
 }
 
 function menuOff() {	
-	_$(".OAE").style.display = "none";
+	_$(".OAE").style.display = "initial";
 }
 
 function getInfo() {
