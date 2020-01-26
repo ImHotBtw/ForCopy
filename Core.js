@@ -1276,7 +1276,7 @@ function colorChange() {
 }
 
 function menuOff() {
-	OAE.Controller.hide();
+	OAEController.hide();
 }
 
 function getInfo() {
