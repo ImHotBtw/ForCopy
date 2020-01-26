@@ -855,7 +855,7 @@ const init = _ => {
 			OAEController.hide();
 
 		if(ConfigModel.getHudIngamemenu() == false && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "")
-			OAEController.show();
+			OAEController.hide();
 
 }
 	)
