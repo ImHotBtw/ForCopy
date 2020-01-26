@@ -1608,9 +1608,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	function colorChange() {
 		var nameColor19 = document.getElementById("color19").value;
 		alert("If youre changing colors, restart vanis")
-}
-}
-)
+};
+},
 
 	function AEPanel() {
 		const OAE19 = `
@@ -1883,4 +1882,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			}, 1 / 1);
 	}
 		)
-}
+})
