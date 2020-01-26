@@ -1271,7 +1271,13 @@ function colorChange() {
 }
 
 function menuOff() {	
-	_$(".OAE").style.display = "none";
+	if (menuOff === false) {
+		_$(".OAE").style.display = "none";
+		return true;
+	 } else {
+		 _$(".OAE").style.display = "initial";
+		 return false;
+}
 }
 
 const ConfigModel = {
