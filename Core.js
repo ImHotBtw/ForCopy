@@ -1890,7 +1890,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	
 			setInterval(_ => {
 			
-				var mass = document.querySelector("#hud > div.stats > div:nth-child(3)").innerText;
+				var team = document.getElementById("teamtag").innerText;
+				var mass = document.querySelector("#hud > div.stats > div:nth-child(3)").innerText.indexOf(team);
 				var nameColor19 = document.getElementById("color19").value;
 				var user = document.getElementById("nickname").value;
 
@@ -1910,7 +1911,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	
 						if(element.innerText.indexOf(user) > -1)
 							element.style.color = nameColor19;
-						if(element.innerText.indexOf("gae") > -1)
+						if(element.innerText.indexOf("Unnamed") > -1)
 							element.innerHTML = mass;
 					}
 			}, 1 / 1);
