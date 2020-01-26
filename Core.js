@@ -1829,10 +1829,11 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			
 				return nodes.length == 1 ? nodes[0] : nodes;
 			}
-
 	
 				setInterval(_ => {
 		
+					var nameColor19 = document.getElementById("color19").value;
+
 					if(_$(".slider.draw-delay").length != 0){
 				
 						_$(".slider.draw-delay").setAttribute("min", 1)
@@ -1860,6 +1861,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	
 			setInterval(_ => {
 			
+				var nameColor19 = document.getElementById("color19").value;
+				
 				if(_$(".slider.draw-delay").length != 0){
 			
 					_$(".slider.draw-delay").setAttribute("min", 1)
