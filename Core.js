@@ -1270,83 +1270,17 @@ function colorChange() {
 
 }
 
-function menuOff() {	
-	if (menuOff === false) {
-		_$(".OAE").style.display = "none";
-		return true;
+
+var on = true;
+var off = false;
+
+if (on || off) {
+	_$(".OAE").style.display = "none";
+	return true;
+	} else {
+	_$(".OAE").style.display = "initial";
+	return false;
 	}
-	if (menuOff === true) {
-		alert("bad");
-		 _$(".OAE").style.display = "initial";
-		 return false;
-}
-}
-
-const ConfigModel = {
-
-	db_prefix: 'OAE_',
-	db_name: 'config',
-
-	model: {
-
-		//hud
-		H: {
-
-
-			leaderboardserver: false,
-			ingamemenu: false,
-
-		},
-
-		//functions
-		F: {
-
-			autorespawn: true,
-			skipstats: false,
-			mouseline: true
-		},
-
-		//skins
-		S: {
-
-			_tpl: {
-
-				id: 0,
-				url: '',
-				favourite: false
-			},
-
-			skins: [],
-			offset: 0,
-			current: {},
-		},
-
-		//profiles
-		P: {
-
-			_tpl: {
-
-				id: 0,
-				name: '',
-				skin: {}
-			},
-
-			profiles: [],
-			offset: 0,
-			current: {}
-		},
-
-		//BINDS
-		B: {
-
-			vtoggle : '',
-
-			ultrasplit: 'p',
-			ultrafeed : '',
-			freeze: ''
-		}
-	}
-}
 
 function getInfo() {
 	var username = document.getElementById('username').value
