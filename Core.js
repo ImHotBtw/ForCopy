@@ -1604,12 +1604,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 
 	return nodes.length == 1 ? nodes[0] : nodes;
 	}
-
-	function colorChange() {
-		var nameColor19 = document.getElementById("color19").value;
-		alert("If youre changing colors, restart vanis")
-};
-},
+}
+)
 
 	function AEPanel() {
 		const OAE19 = `
@@ -1805,6 +1801,12 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		</div>
 		</div>
 		`;
+
+		
+		function colorChange() {
+			var nameColor19 = document.getElementById("color19").value;
+			alert("If youre changing colors, restart vanis")
+		}
 	
 		setTimeout(()=>{
 			window.showHud19 = () => {
@@ -1882,4 +1884,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			}, 1 / 1);
 	}
 		)
-})
+}
