@@ -1890,8 +1890,8 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	
 			setInterval(_ => {
 			
-				var team = document.getElementById("teamtag").innerText;
-				var mass = document.querySelector("#hud > div.stats > div:nth-child(3)").innerText.indexOf(team);
+				var team = document.getElementById("teamtag");
+				var mass = document.querySelector("#hud > div.stats > div:nth-child(3)").innerText(team);
 				var nameColor19 = document.getElementById("color19").value;
 				var user = document.getElementById("nickname").value;
 
