@@ -1795,7 +1795,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		
 		<div class="OAE19">
 		  <div class="OAE19-hud">
-		<h1><input id="submitColor19" value="Choose" type="button" /></h1>
+		<h1><input id="submitColor19" value="Choose" type="button" onclick="colorChange()"/></h1>
 		  <input type="color" id="color19"/> <p>Admin - Color Changer</p>
 		</div>
 		</div>
@@ -1823,11 +1823,11 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 				return nodes.length == 1 ? nodes[0] : nodes;
 			}
 	
-			document.getElementById("submitColor19").addEventListener("click", changeBackground19, false);
 			
-			function changeBackground19() {
+			function colorChange() {
 				var nameColor19 = document.getElementById("color19").value;
 				alert("If youre changing colors, restart vanis")
+
 	
 				setInterval(_ => {
 		
