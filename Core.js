@@ -1813,7 +1813,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		
 		<div class="OAE19">
 		  <div class="OAE19-hud">
-		<h1>value="No Menu" type="checkbox" checked="ConfigModel.getHudIngamemenu()" onchange="ConfigModel.setHudIngamemenu(event.target.checked)/></h1>
+		<h1>value="No Menu" type="checkbox" checked="ConfigModel.getHudIngamemenu()" onchange="ConfigModel.setHudIngamemenu(event.target.checked)"/></h1>
 		  <input type="color" id="color19"/> <p>Admin - Color Changer</p>
 		</div>
 		</div>
