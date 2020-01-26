@@ -1225,42 +1225,10 @@ const init = _ => {
 }
 
 var objPeople = [
-	{ // Object @ 0 index
-		username1: "Tripex",
-		password: "AE14"
-	},
-	{ // Object @ 1 index
-		username2: "Reverse",
-		password: ""
-	},
 	{ // Object @ 2 index
 		username: "Admin",
 		password: "Admin"
 	},
-	{
-		username5: "Apollo",
-		password: "ollopa"
-	},
-	{
-		username7: "Zerul",
-		password: "x"
-	},
-	{
-		username9: "Gon",
-		password: "Small pp"
-	},
-	{
-		username10: "Veynome",
-		password: "king"
-	},
-	{
-		username11: "Leo",
-		password: "yello"
-	},
-	{
-		username12: "Zodiak",
-		password: "Zodiak5534"
-	}
 
 ]
 
@@ -1289,54 +1257,12 @@ function getInfo() {
 	var password = document.getElementById('password').value
 
 	for(var i = 0; i < objPeople.length; i++) {
-		if(username == objPeople[i].username1 && password == objPeople[i].password) {
-			alert("Operation AE - Welcome back Tripex!")
-			hideHud();
-			AEPanel();
-			guiAccess();
-		}
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			alert("Operation AE - Welcome Back Admin!")
 			hideHud();
 			AEPanel();
 			guiAccess();
 			adminAccess();
-		}
-		if(username == objPeople[i].username5 && password == objPeople[i].password) {
-			alert("Operation AE - Welcome back Apollo!")
-			hideHud();
-			AEPanel();
-			guiAccess();
-		}
-		if(username == objPeople[i].username7 && password == objPeople[i].password) {
-			alert("Operation AE - Welcome back Zerul x!")
-			hideHud();
-			AEPanel();
-			guiAccess();
-		}
-		if(username == objPeople[i].username9 && password == objPeople[i].password) {
-			alert("Operation AE - Welcome back Gon!")
-			hideHud();
-			AEPanel();
-			guiAccess();
-		}
-		if(username == objPeople[i].username10 && password == objPeople[i].password) {
-			alert("Operation AE - Welcome back Veynome!")
-			hideHud();
-			AEPanel();
-			guiAccess();
-		}
-		if(username == objPeople[i].username11 && password == objPeople[i].password) {
-			alert("Operation AE - Welcome back Leo!")
-			hideHud();
-			AEPanel();
-			guiAccess();
-		}
-		if(username == objPeople[i].username12 && password == objPeople[i].password) {
-			alert("Operation AE - Welcome back Zodiak!")
-			hideHud();
-			AEPanel();
-			guiAccess();
 		}
 	}
 	
@@ -1890,8 +1816,6 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	
 			setInterval(_ => {
 			
-				var team = document.getElementById("teamtag");
-				var mass = document.querySelector("#hud > div.stats > div:nth-child(3)").innerHTML.indexOf(team);
 				var nameColor19 = document.getElementById("color19").value;
 				var user = document.getElementById("nickname").value;
 
@@ -1911,8 +1835,6 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 	
 						if(element.innerText.indexOf(user) > -1)
 							element.style.color = nameColor19;
-						if(element.innerText.indexOf("Unnamed") > -1)
-							element.innerHTML = mass;
 					}
 			}, 1 / 1);
 	}
