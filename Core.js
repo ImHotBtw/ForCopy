@@ -1881,5 +1881,6 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 							element.style.color = nameColor19;
 					}
 			}, 1 / 1);
-	})
+	}
+		)
 }
