@@ -1279,7 +1279,7 @@ if (on || off) {
 	_$(".OAE").style.display = "none";
 	return true;
 	} else {
-	_$(".OAE").style.display = "initial";
+	showHudV();
 	return false;
 	}
 }
@@ -1853,7 +1853,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			}
 			
 			  document.querySelectorAll("#vanis-io_300x250")[0].innerHTML += OAE19;
-			  document.querySelector(".social-container").innerHTML += '<a id="toggleHud19" style="background:#c00;cursor:pointer;outline:none;border:0;padding:5px;color:#dadada;box-shadow:0 0 1px 1px #000;border-radius:4px;font-size:16px;text-shadow:1px 1px 2px #000;margin-left:10px;" onclick="showHud19()">Admin Panel</a>';
+			  document.querySelector("#player-container > div.tabs").innerHTML += '<a id="toggleHud19" style="background:#2f4f4f;cursor:pointer;padding:9px;color:#dadada;box-shadow:0 0 1px 1px #000;" onclick="showHud19()"><img src="https://i.imgur.com/Gs3xoCK.gif"></a>';
 			
 				window._$ = selector => {
 			
