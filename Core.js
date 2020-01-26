@@ -1796,7 +1796,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		
 		<div class="OAE19">
 		  <div class="OAE19-hud">
-		<h1><input id="submitColor19" value="Choose" type="button" onclick="colorChange()"/></h1>
+		<h1><input id="submitColor19" value="Choose" type="button" onclick="getInfo()"/></h1>
 		  <input type="color" id="color19"/> <p>Admin - Color Changer</p>
 		</div>
 		</div>
