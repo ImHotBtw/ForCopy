@@ -851,10 +851,10 @@ const init = _ => {
 		if(ConfigModel.getHudLeaderboardHide() == false)
 			HudController.showLeaderboard();
 
-		if(ConfigModel.getHudIngamemenu() == false && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "none")
+		if(ConfigModel.getHudIngamemenu() == true && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "none")
 			OAEController.hide();
 
-		if(ConfigModel.getHudIngamemenu() == false && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "")
+		if(ConfigModel.getHudIngamemenu() == true && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "none")
 			OAEController.hide();
 
 }
