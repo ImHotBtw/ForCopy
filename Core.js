@@ -780,7 +780,7 @@ const init = _ => {
 				},
 
 				m(".toggle"),
-				m("p", ["Operation AE", m("p", "Menu Inspired By OAE", m("p", "Made By Flix - Sub2Icxnic"))]),
+				m("p", ["Operation AE", m("p", "Menu By OAE", m("p", "Made By Flix - Sub2Icxnic"))]),
 				m(MenuView)
 			)
 		}
@@ -788,7 +788,7 @@ const init = _ => {
 
 	const OAEController = {
 
-		visible: true,
+		visible: false,
 
 		toggle: event => {
 
@@ -802,7 +802,7 @@ const init = _ => {
 				return;
 			}
 
-			OAEController.visible = true;
+			OAEController.visible = false;
 		},
 
 		hide: _ => {
@@ -812,7 +812,7 @@ const init = _ => {
 
 		show: _ => {
 
-			_$(".OAE").style.display = "initial";
+			_$(".OAE").style.display = "none";
 		}
 	};
 
