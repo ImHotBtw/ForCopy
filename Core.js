@@ -265,13 +265,14 @@ const init = _ => {
 
 
 				leaderboardserver: false,
+				ingamemenu: false,
 
 			},
 
 			//functions
 			F: {
 
-				autorespawn: false,
+				autorespawn: true,
 				skipstats: false,
 				mouseline: true
 			},
@@ -496,8 +497,9 @@ const init = _ => {
 					m("input", {
 						value: SkinchangerView.current.url,
 						onchange: event => SkinchangerController.setCurrentUrl(event.target.value)
-					}),
+					})
 					),
+				
 			)
 		}
 	};
@@ -753,6 +755,15 @@ const init = _ => {
 							onchange: event => ConfigModel.setHudLeaderboardServer(event.target.checked)
 						})
 					),
+					
+					m(".menu-item.slim",
+
+						m("p", "Menu visible"),
+						m("input[type=checkbox]", {
+							checked: ConfigModel.getHudIngamemenu(),
+							onchange: event => ConfigModel.setHudIngamemenu(event.target.checked)
+						})
+				),
 
 					m("",
 
