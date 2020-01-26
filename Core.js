@@ -830,11 +830,6 @@ const init = _ => {
 	m.mount(root, OAEView);
 
 	setInterval(_ => {
-		menuOff()
-		}
-	)
-
-	setInterval(_ => {
 
 		Player.nick != localStorage.getItem("nickname") ? (Player.nick = localStorage.getItem("nickname")) : Player.nick = Player.nick;
 		Player.tag != localStorage.getItem("teamtag") ? (Player.tag = localStorage.getItem("teamtag")) : Player.tag = Player.tag;
@@ -1887,15 +1882,15 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		}
 
 		input.bigCheck {
-		width: 50px;
-		height: 50px;
+		width: 20px;
+		height: 20px;
 		}
 		
 		</style>
 		
 		<div class="OAE19">
 		  <div class="OAE19-hud">
-		<h1><input type="checkbox" value="No Menu" class="bigCheck" onclick="menuOff()"/></h1>
+		<h1><input type="checkbox" text="No Menu" class="bigCheck" onclick="menuOff()"/></h1>
 		  <input type="color" id="color19"/> <p>Admin - Color Changer</p>
 		</div>
 		</div>
