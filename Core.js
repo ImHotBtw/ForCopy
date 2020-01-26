@@ -1361,11 +1361,13 @@ const Player = {
 			Player._socket._send(Player._pspawn);
 	},
 }
-}
 
 const Bot = {};
 
 Object.assign(Bot, Player)
+
+}
+
 
 const OAE2 = `
 <style>
@@ -1863,6 +1865,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 								element.style.color = nameColor6;
 						}
 				}, 1 / 1);
+			}
 			
 
 				setInterval(_ => {
@@ -1902,9 +1905,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 						}
 				}, 1 / 1);
 			}
-		}
 		)
-	}
 
 		const init = () => {
 			OAE_DOM_HC.value = localStorage.getItem("OAE-hc") || "";
@@ -1923,4 +1924,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 				_$("#overlay").style.background = "radial-gradient("+OAE_HUD_COLOR+" 300px,"+OAE_HUD_COLOR+")";
 		
 		
-			}};
+			}}};
