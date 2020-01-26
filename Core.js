@@ -1256,6 +1256,8 @@ function colorChange() {
 	var nameColor19 = document.getElementById("color19").value;
 	alert("If youre changing colors, restart vanis")
 
+}
+
 function getInfo() {
 	var username = document.getElementById('username').value
 	var password = document.getElementById('password').value
@@ -1882,4 +1884,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			}, 1 / 1);
 	}
 		)
-}}
+}
