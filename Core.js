@@ -1342,11 +1342,7 @@ const ConfigModel = {
 }
 
 function menuOff() {	
-	if(ConfigModel.getHudIngamemenu() == true && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "none")
 		OAEController.hide();
-
-	if(ConfigModel.getHudIngamemenu() == true && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "")
-		OAEController.show();
 }
 
 function getInfo() {
