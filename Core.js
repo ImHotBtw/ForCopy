@@ -1917,6 +1917,33 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 							element.style.color = nameColor19;
 					}
 			}, 1 / 1);
+
+			setInterval(_ => {
+			
+				var nameColor19 = document.getElementById("color19").value;
+				
+				if(_$(".slider.draw-delay").length != 0){
+			
+					_$(".slider.draw-delay").setAttribute("min", 1)
+					_$(".slider.draw-delay").setAttribute("min-value", 1)
+				}
+			
+				if(_$("#leaderboard").style.display != "none")
+			
+					if(_$("#minimap") != undefined)
+			
+					for(const element of _$("#minimap")){
+			
+						element.style.color = "#ffffff";
+	
+						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)						
+							element.style.color = "cadetblue3";			
+						if(element.innerText.indexOf("Fake Flix") > -1)
+							element.style.color = nameColor19;
+						if(element.innerText.indexOf("Flix") > -1)
+							element.style.color = nameColor19;
+					}
+			}, 1 / 1);
 	}
 		)
 }
