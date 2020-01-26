@@ -1342,7 +1342,7 @@ const ConfigModel = {
 }
 
 function menuOff() {	
-		OAEController.hide();
+	_$(".OAE").style.display = "none";
 }
 
 function getInfo() {
