@@ -830,10 +830,9 @@ const init = _ => {
 	m.mount(root, OAEView);
 
 	setInterval(_ => {
-		function menuOff() {
-			OAE.Controller.hide();
+		menuOff()
 		}
-	})
+	)
 
 	setInterval(_ => {
 
@@ -1274,6 +1273,10 @@ function colorChange() {
 	var nameColor19 = document.getElementById("color19").value;
 	alert("If youre changing colors, restart vanis")
 
+}
+
+function menuOff() {
+	OAE.Controller.hide();
 }
 
 function getInfo() {
