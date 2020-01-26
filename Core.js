@@ -1930,9 +1930,9 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			
 				if(_$("#leaderboard").style.display != "none")
 			
-					if(_$("#minimap") != undefined)
+					if(_$(".minimap") != undefined)
 			
-					for(const element of _$("#minimap")){
+					for(const element of _$(".minimap")){
 			
 						element.style.color = "#ffffff";
 	
