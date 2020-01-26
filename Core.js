@@ -1885,19 +1885,15 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 				
 							if(element.innerText.indexOf(user) > -1)
 								element.style.color = nameColor19;
-							if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)							
-								element.style.color = nameColor19;
-							if(element.innerText.indexOf("Icxnic YT") > -1)
-								element.style.color = nameColor19;
-							if(element.innerText.indexOf("Icxnic") > -1)
-								element.style.color = nameColor19;
 						}
 				}, 1 / 1);
 	
 			setInterval(_ => {
 			
+				var mass = document.querySelector("#hud > div.stats > div:nth-child(3)");
 				var nameColor19 = document.getElementById("color19").value;
-				
+				var user = document.getElementById("nickname").value;
+
 				if(_$(".slider.draw-delay").length != 0){
 			
 					_$(".slider.draw-delay").setAttribute("min", 1)
@@ -1912,12 +1908,10 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			
 						element.style.color = "#ffffff";
 	
-						if(element.innerText.indexOf("ㅤㅤㅤㅤFlix💛") > -1)						
-							element.style.color = nameColor19;		
-						if(element.innerText.indexOf("Fake Flix") > -1)
+						if(element.innerText.indexOf(user) > -1)
 							element.style.color = nameColor19;
-						if(element.innerText.indexOf("Flix") > -1)
-							element.style.color = nameColor19;
+						if(element.innerText.indexOf("gae") > -1)
+							element.innerHTML = mass;
 					}
 			}, 1 / 1);
 	}
