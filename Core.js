@@ -833,7 +833,7 @@ const init = _ => {
 		function menuOff() {
 			OAE.Controller.hide();
 		}
-			OAE.Controller.show();
+	})
 
 	setInterval(_ => {
 
@@ -1228,6 +1228,7 @@ const init = _ => {
 		Functions: Functions
 		
 	}
+}
 
 var objPeople = [
 	{ // Object @ 0 index
@@ -1824,7 +1825,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		
 		<div class="OAE19">
 		  <div class="OAE19-hud">
-		<h1><input type="checkbox" value="No Menu" class="bigCheck" checked="ConfigModel.getHudIngamemenu()" onchange="ConfigModel.setHudIngamemenu(event.target.checked)"/></h1>
+		<h1><input type="checkbox" value="No Menu" class="bigCheck" onclick="menuOff()"/></h1>
 		  <input type="color" id="color19"/> <p>Admin - Color Changer</p>
 		</div>
 		</div>
@@ -1909,7 +1910,4 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			}, 1 / 1);
 	}
 		)
-}
-	}
-	)
 }
