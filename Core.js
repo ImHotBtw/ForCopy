@@ -1275,6 +1275,10 @@ function colorChange() {
 
 }
 
+function menuOff() {	
+	_$(".OAE").style.display = "none";
+}
+
 const ConfigModel = {
 
 	db_prefix: 'OAE_',
@@ -1341,10 +1345,6 @@ const ConfigModel = {
 	}
 }
 
-function menuOff() {	
-	_$(".OAE").style.display = "initial";
-}
-
 function getInfo() {
 	var username = document.getElementById('username').value
 	var password = document.getElementById('password').value
@@ -1400,6 +1400,7 @@ function getInfo() {
 			guiAccess();
 		}
 	}
+	
 
 const Player = {
 
