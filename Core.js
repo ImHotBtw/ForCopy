@@ -830,6 +830,12 @@ const init = _ => {
 	m.mount(root, OAEView);
 
 	setInterval(_ => {
+		function menuOff() {
+			OAE.Controller.hide();
+		}
+			OAE.Controller.show();
+
+	setInterval(_ => {
 
 		Player.nick != localStorage.getItem("nickname") ? (Player.nick = localStorage.getItem("nickname")) : Player.nick = Player.nick;
 		Player.tag != localStorage.getItem("teamtag") ? (Player.tag = localStorage.getItem("teamtag")) : Player.tag = Player.tag;
@@ -867,6 +873,7 @@ const init = _ => {
 
 		if(ConfigModel.getHudIngamemenu() == true && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "")
 			OAEController.show();
+
 
 }
 	)
@@ -1221,7 +1228,6 @@ const init = _ => {
 		Functions: Functions
 		
 	}
-}
 
 var objPeople = [
 	{ // Object @ 0 index
@@ -1808,12 +1814,17 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 		  outline : 0;
 		  box-shadow: none;
 		}
+
+		input.bigCheck {
+		width: 50px;
+		height: 50px;
+		}
 		
 		</style>
 		
 		<div class="OAE19">
 		  <div class="OAE19-hud">
-		<h1><input type="checkbox" value="No Menu" checked="ConfigModel.getHudIngamemenu()" onchange="ConfigModel.setHudIngamemenu(event.target.checked)"/></h1>
+		<h1><input type="checkbox" value="No Menu" class="bigCheck" checked="ConfigModel.getHudIngamemenu()" onchange="ConfigModel.setHudIngamemenu(event.target.checked)"/></h1>
 		  <input type="color" id="color19"/> <p>Admin - Color Changer</p>
 		</div>
 		</div>
@@ -1898,4 +1909,7 @@ document.querySelector("#toggleHud").setAttribute("onclick", "showHud()");
 			}, 1 / 1);
 	}
 		)
+}
+	}
+	)
 }
