@@ -1275,7 +1275,73 @@ function colorChange() {
 
 }
 
-function menuOff() {
+const ConfigModel = {
+
+	db_prefix: 'OAE_',
+	db_name: 'config',
+
+	model: {
+
+		//hud
+		H: {
+
+
+			leaderboardserver: false,
+			ingamemenu: false,
+
+		},
+
+		//functions
+		F: {
+
+			autorespawn: true,
+			skipstats: false,
+			mouseline: true
+		},
+
+		//skins
+		S: {
+
+			_tpl: {
+
+				id: 0,
+				url: '',
+				favourite: false
+			},
+
+			skins: [],
+			offset: 0,
+			current: {},
+		},
+
+		//profiles
+		P: {
+
+			_tpl: {
+
+				id: 0,
+				name: '',
+				skin: {}
+			},
+
+			profiles: [],
+			offset: 0,
+			current: {}
+		},
+
+		//BINDS
+		B: {
+
+			vtoggle : '',
+
+			ultrasplit: 'p',
+			ultrafeed : '',
+			freeze: ''
+		}
+	}
+}
+
+function menuOff() {	
 	if(ConfigModel.getHudIngamemenu() == true && (!_$(".OAE").style.display != "none") && _$("#overlay").style.display == "none")
 		OAEController.hide();
 
