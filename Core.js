@@ -1274,7 +1274,9 @@ function menuOff() {
 	if (menuOff === false) {
 		_$(".OAE").style.display = "none";
 		return true;
-	 } else {
+	}
+	if (menuOff === true) {
+		alert("bad");
 		 _$(".OAE").style.display = "initial";
 		 return false;
 }
