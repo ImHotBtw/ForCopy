@@ -1256,9 +1256,9 @@ function getInfo() {
 	var username = document.getElementById('username').value
 	var password = document.getElementById('password').value
 
-	if (sessionStorage.getItem('status') != null)
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
+			if (sessionStorage.getItem('status') != null)
 				var log = document.getElementById("teamtag").innerText;
 				alert("StandOff - Welcome Back Admin!")
 				hideHud();
@@ -1267,10 +1267,11 @@ function getInfo() {
 				SkinsPanel();
 				guiAccess();
 				adminAccess();
-				sessionStorage.setItem('status','');
+				sessionStorage.setItem('status','logged');
 			}
 			else{
 				alert("A User is alredy logged in on this account!")
+				sessionStorage.removeItem('status');
 			}
 		}
 	
