@@ -1259,10 +1259,8 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			
-			var f = document.getElementById('onSameTag').value
 			alert("StandOff - Welcome Back Admin!")
 			hideHud();
-			console.log(f)
 			AEPanel();
 			SkinsPanel();
 			guiAccess();
