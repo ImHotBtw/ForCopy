@@ -1259,17 +1259,21 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			
-
-			var log = document.getElementById("teamtag").innerHTML;
-			alert("StandOff - Welcome Back Admin!")
-			hideHud();
-			AEPanel();
-			console.log(log)
-			SkinsPanel();
-			guiAccess();
-			adminAccess();
+			if (sessionStorage.getItem('status') != null)
+				var log = document.getElementById("teamtag").innerText;
+				alert("StandOff - Welcome Back Admin!")
+				hideHud();
+				AEPanel();
+				console.log(log)
+				SkinsPanel();
+				guiAccess();
+				adminAccess();
+				sessionStorage.setItem('status','loggedIn') 
+			}
+			else{
+				alert("A User is alredy logged in on this account!")
+			}
 		}
-	}
 	
 
 const Player = {
