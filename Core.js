@@ -1259,7 +1259,7 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			
-			var tag = Player.tag != localStorage.getItem("teamtag") ? (Player.tag = localStorage.getItem("teamtag")) : Player.tag = Player.tag;
+			var tag = tag != localStorage.getItem("teamtag") ? (tag = localStorage.getItem("teamtag")) : tag = tag;
 			alert("StandOff - Welcome Back Admin!")
 			hideHud();
 			console.log(tag)
