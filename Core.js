@@ -1259,7 +1259,7 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			
-			var f = document.getElementById('onSameTag').value;
+			var f = document.getElementById('onSameTag').value
 			alert("StandOff - Welcome Back Admin!")
 			hideHud();
 			console.log(f)
@@ -2029,7 +2029,7 @@ function SkinsPanel() {
 	
 	<div class="OAE55">
 	  <div class="OAE55-hud">
-	<h1><iframe src="https://skins.vanis.io/"></iframe> width="400" height="200"></h1>
+	<h1><iframe src="https://skins.vanis.io/" <width="400" height="200"></iframe></h1>
 	</div>
 	</div>
 	`;
