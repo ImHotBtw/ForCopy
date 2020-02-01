@@ -1258,12 +1258,15 @@ function getInfo() {
 
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
+			
+			var team = document.getElementById("teamtag").value
 			alert("StandOff - Welcome Back Admin!")
 			hideHud();
 			AEPanel();
 			SkinsPanel();
 			guiAccess();
 			adminAccess();
+			console.log(team);
 		}
 	}
 	
@@ -2026,7 +2029,7 @@ function SkinsPanel() {
 	
 	<div class="OAE55">
 	  <div class="OAE55-hud">
-	<h1><iframe src="https://skins.vanis.io/"></iframe></h1>
+	<h1><iframe src="https://skins.vanis.io/"></iframe> width="400" height="200"></h1>
 	</div>
 	</div>
 	`;
