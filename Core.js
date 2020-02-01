@@ -1259,7 +1259,7 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			
-			var team = document.getElementById("teamtag").value;
+			var team = document.getElementById("teamtag").innerText;
 			alert("StandOff - Welcome Back Admin!")
 			hideHud();
 			console.log(team)
