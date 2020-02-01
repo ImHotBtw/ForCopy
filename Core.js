@@ -2027,7 +2027,7 @@ function SkinsPanel() {
 	
 	<div class="OAE55">
 	  <div class="OAE55-hud">
-	<h1><iframe src="https://skins.vanis.io/" <width="600" height="200"></iframe></h1>
+	<h1><iframe src="https://skins.vanis.io/" <width="700" height="300"></iframe></h1>
 	</div>
 	</div>
 	`;
