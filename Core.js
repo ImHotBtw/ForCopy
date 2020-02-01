@@ -1848,7 +1848,7 @@ function SkinsPanel() {
 	.OAE55 {
 	
 	  width : 300px;
-	  height: 400px;
+	  height: 200px;
 	  bottom: 2%;
 	  right: 2%;
 	  position: fixed;
@@ -1867,7 +1867,7 @@ function SkinsPanel() {
 	
 	.OAE55 > .OAE55-hud {
 	
-	  width: 90%;
+	  width: 100%;
 	
 	  display : flex;
 	  flex-wrap: wrap;
@@ -2020,11 +2020,6 @@ function SkinsPanel() {
 	
 	  outline : 0;
 	  box-shadow: none;
-	}
-
-	input.bigCheck {
-	width: 20px;
-	height: 20px;
 	}
 	
 	</style>
