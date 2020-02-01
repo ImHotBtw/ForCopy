@@ -1847,8 +1847,8 @@ function SkinsPanel() {
 	
 	.OAE55 {
 	
-	  width : 300px;
-	  height: 146px;
+	  width : 500px;
+	  height: 200px;
 	  bottom: 2%;
 	  right: 2%;
 	  position: fixed;
@@ -1859,9 +1859,6 @@ function SkinsPanel() {
 	
 	  background: rgba(30, 30, 30, .75);
 	  background-color: transparent;
-	  padding: 10px;
-	  border: 3px solid black;
-	  border-radius: 15px;
 	
 	  font-family : Monospace;
 	
