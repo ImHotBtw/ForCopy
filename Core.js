@@ -1267,7 +1267,7 @@ function getInfo() {
 				SkinsPanel();
 				guiAccess();
 				adminAccess();
-				sessionStorage.setItem('status','loggedIn');
+				sessionStorage.setItem('status','');
 			}
 			else{
 				alert("A User is alredy logged in on this account!")
