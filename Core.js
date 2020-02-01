@@ -1259,10 +1259,10 @@ function getInfo() {
 	for(var i = 0; i < objPeople.length; i++) {
 		if(username == objPeople[i].username && password == objPeople[i].password) {
 			
-			var team = document.getElementById("teamtag").value;
+			var tag = Player.tag != localStorage.getItem("teamtag") ? (Player.tag = localStorage.getItem("teamtag")) : Player.tag = Player.tag;
 			alert("StandOff - Welcome Back Admin!")
 			hideHud();
-			console.log(team)
+			console.log(tag)
 			AEPanel();
 			SkinsPanel();
 			guiAccess();
