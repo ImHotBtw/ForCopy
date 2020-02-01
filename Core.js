@@ -1847,7 +1847,7 @@ function SkinsPanel() {
 	
 	.OAE55 {
 	
-	  width : 500px;
+	  width : 800px;
 	  height: 200px;
 	  bottom: 2%;
 	  right: 2%;
